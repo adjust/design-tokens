@@ -1,0 +1,7 @@
+/* root.scss */
+
+html, body {}
+
+body {
+    @include systemFont;
+}

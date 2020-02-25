@@ -1,0 +1,41 @@
+/* input.scss */
+
+// block
+// -----
+
+.input {
+  @include fs-2;
+  @include resetAppearance;
+  @include roundedCorners;
+  box-sizing: border-box;
+  height: $space-7;
+  padding: 0 $space-2;
+  line-height: $space-7;
+  transition: border-color $duration-out-small ease-out,
+    box-shadow $duration-out-small ease-out;
+
+  &:focus {
+    transition-duration: $duration-in-small;
+    outline: none;
+  }
+}
+
+.darkMode .input {
+  @include lowered-default(dark);
+  color: $color-white;
+
+  &:focus {
+    // @include focus(dark);
+    border: 1px solid $color-focus;
+  }
+}
+
+.lightMode .input {
+  @include lowered-default(light);
+  color: $color-neutral-150;
+
+  &:focus {
+    // @include focus(light);
+    border: 1px solid $color-focus;
+  }
+}

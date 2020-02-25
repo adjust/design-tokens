@@ -1,0 +1,20 @@
+{
+  "name": "spree-foundation",
+  "version": "1.0.0",
+  "description": "Design System Foundation",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/index.scss ./style.css",
+    "serve": "browser-sync start --server --port 3004",
+    "start": "npm run build && npm run serve & npm run watch",
+    "watch": "chokidar '**/*.{html,scss}' -c 'npm run build && browser-sync reload --port 3004'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "chokidar-cli": "^2.1.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1"
+  }
+}

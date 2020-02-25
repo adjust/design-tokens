@@ -1,0 +1,251 @@
+@charset "UTF-8";
+/* reset.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* colors.scss */
+/*
+    "neutral" color shades
+
+    basic, most used colors for the whole UI -
+    the lower the number, the lighter the color
+*/
+/*
+    "negative" color shades
+
+    semantic coloring to mark destructive actions
+    or error messages - the lower the number,
+    the lighter the color
+*/
+/*
+    "primary" color shades
+
+    primary highlight color, also the primary
+    brand color, used for all kinds of CTAs -
+    the lower the number, the lighter the color
+*/
+/*
+    "focus" color
+
+    used to mark controls, eg. text inputs
+    which are in focus state
+*/
+/* spacing.scss */
+/*
+    spacing scale
+
+    used for all margins or paddings
+    across the whole UI
+*/
+/* transitions */
+/* typography.scss */
+/* styles.scss */
+/*
+    object styles
+
+    shared apperance (eg. button & select, text input & textarea)
+    abstracted into reusable mixins, referencing "layer styles"
+    by the same names in the shared Sketch library
+*/
+.darkMode {
+  background: #21253a; }
+
+.lightMode {
+  background: #f4f5f9; }
+
+/*
+    TODO:
+
+    - [ ] sync layer styles in sketch with object styles in SASS
+    - [x] sync neutral and negative color palette with Sketch
+*/
+/* root.scss */
+body {
+  font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif; }
+
+/* button.scss */
+.button {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  font-weight: 600;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  background-clip: padding-box;
+  font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  border: 0;
+  cursor: default;
+  display: inline-block;
+  flex-shrink: none;
+  height: 32px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0 12px;
+  text-decoration: none;
+  transition: background-color 120ms ease-out; }
+
+.button:hover {
+  transition-duration: 75ms; }
+
+.button--small {
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  height: 24px;
+  line-height: 24px; }
+
+.button--large {
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 28px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px; }
+
+.darkMode .button--primary, .darkMode .button--primary:link, .darkMode .button--primary:visited {
+  background-color: #0091a4;
+  box-shadow: 0 1px 0 0 rgba(0, 10, 11, 0.5), inset 0 1px 0 0 #00a8bf;
+  color: #fff; }
+
+.darkMode .button--primary:active {
+  box-shadow: none;
+  background-color: #0091a4; }
+
+.darkMode .button--primary:focus {
+  background-color: #0091a4;
+  box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff;
+  outline: 0; }
+
+.darkMode .button--primary:hover {
+  background-color: #05bdd5;
+  box-shadow: 0 1px 0 0 rgba(0, 10, 11, 0.5), inset 0 1px 0 0 #25d0e7; }
+
+.lightMode .button--primary, .lightMode .button--primary:link {
+  background-color: #0091a4;
+  box-shadow: inset 0 -1px 0 0 #007685, inset 0 1px 0 0 #00a8bf;
+  color: #fff; }
+
+.lightMode .button--primary:focus {
+  background-color: #0091a4;
+  box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff;
+  outline: 0; }
+
+.lightMode .button--primary:hover {
+  background-color: #05bdd5;
+  box-shadow: inset 0 -1px 0 0 #00a8bf, inset 0 1px 0 0 #25d0e7; }
+
+.lightMode .button--primary:active {
+  box-shadow: none;
+  background-color: #0091a4; }
+
+.darkMode .button--secondary, .darkMode .button--secondary:link, .darkMode .button--secondary:visited {
+  color: #fff; }
+
+.darkMode .button--secondary:active {
+  box-shadow: none;
+  background-color: #434862; }
+
+.lightMode .button--secondary, .lightMode .button--secondary:link, .lightMode .button--secondary:visited {
+  color: #434862; }
+
+.lightMode .button--secondary:active {
+  box-shadow: none;
+  background-color: #cdd0e0; }
+
+.darkMode .button--negative, .darkMode .button--negative:link, .darkMode .button--negative:visited {
+  background: #d25650;
+  box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), inset 0 1px 0 0 #df6a63;
+  color: #fff; }
+
+.darkMode .button--negative:active {
+  box-shadow: none;
+  background-color: #d25650; }
+
+.darkMode .button--negative:focus {
+  background: #d25650;
+  box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), 0 0 0 2px #1a62ff;
+  outline: 0; }
+
+.darkMode .button--negative:hover {
+  background: #ea807b;
+  box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), inset 0 1px 0 0 #f39994; }
+
+.lightMode .button--negative, .lightMode .button--negative:link, .lightMode .button--negative:visited {
+  background-color: #d25650;
+  box-shadow: inset 0 -1px 0 0 #c2433c, inset 0 1px 0 0 #df6a63;
+  color: #fff; }
+
+.lightMode .button--negative:active {
+  box-shadow: none;
+  background-color: #d25650; }
+
+.lightMode .button--negative:focus {
+  background-color: #d25650;
+  box-shadow: inset 0 1px 0 0 #df6a63, 0 0 0 2px #1a62ff;
+  outline: 0; }
+
+.lightMode .button--negative:hover {
+  background-color: #ea807b;
+  box-shadow: inset 0 -1px 0 0 #df6a63, inset 0 1px 0 0 #f39994; }
+
+.lightMode .button--ghost, .lightMode .button--ghost:link, .lightMode .button--ghost:visited {
+  background-color: transparent;
+  color: #21253a; }
+
+.lightMode .button--ghost:active {
+  background-color: rgba(110, 116, 146, 0.2); }
+
+.lightMode .button--ghost:focus {
+  background-color: rgba(110, 116, 146, 0.2); }
+
+.lightMode .button--ghost:hover {
+  background-color: rgba(181, 186, 208, 0.2); }
+
+.darkMode .button--ghost, .darkMode .button--ghost:link, .darkMode .button--ghost:visited {
+  background-color: transparent;
+  color: #f4f5f9; }
+
+.darkMode .button--ghost:active {
+  background-color: rgba(244, 245, 249, 0.1); }
+
+.darkMode .button--ghost:focus {
+  background-color: rgba(110, 116, 146, 0.2); }
+
+.darkMode .button--ghost:hover {
+  background-color: rgba(244, 245, 249, 0.2); }
+
+/* input.scss */
+.input {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 8px;
+  line-height: 32px;
+  transition: border-color 120ms ease-out, box-shadow 120ms ease-out; }
+  .input:focus {
+    transition-duration: 75ms;
+    outline: none; }
+
+.darkMode .input {
+  background: rgba(11, 13, 24, 0.1);
+  border: 1px solid #434862;
+  box-shadow: inset 0 2px 0 0 rgba(11, 13, 24, 0.1), inset 0 1px 0 0 rgba(11, 13, 24, 0.1);
+  color: #fff; }
+  .darkMode .input:focus {
+    border: 1px solid #1a62ff; }
+
+.lightMode .input {
+  background: rgba(67, 72, 98, 0.03);
+  border: 1px solid #cdd0e0;
+  box-shadow: inset 0 2px 0 0 rgba(67, 72, 98, 0.03), inset 0 1px 0 0 rgba(67, 72, 98, 0.03);
+  color: #121523; }
+  .lightMode .input:focus {
+    border: 1px solid #1a62ff; }
