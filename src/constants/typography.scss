@@ -3,69 +3,69 @@
 // font family
 
 @mixin systemFont {
-    font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
+  font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
 }
 
 // font weight
 
 @mixin fw-regular {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 @mixin fw-medium {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 @mixin fw-bold {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 // type scale
 
 @mixin fs-1 {
-    font-size: 12px;
-    letter-spacing: 0.2px;
-    line-height: 18px;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
 }
 
 @mixin fs-2 {
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
 }
 
 @mixin fs-3 {
-    font-size: 19px;
-    letter-spacing: 0;
-    line-height: 28px;
+  font-size: 19px;
+  letter-spacing: 0;
+  line-height: 28px;
 }
 
 @mixin fs-4 {
-    font-size: 23px;
-    letter-spacing: 0;
-    line-height: 32px;
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 32px;
 }
 
 @mixin fs-5 {
-    font-size: 27px;
-    letter-spacing: -0.5px;
-    line-height: 36px;
+  font-size: 27px;
+  letter-spacing: -0.5px;
+  line-height: 36px;
 }
 
 @mixin fs-6 {
-    font-size: 33px;
-    letter-spacing: -0.75px;
-    line-height: 38px;
+  font-size: 33px;
+  letter-spacing: -0.75px;
+  line-height: 38px;
 }
 
 @mixin fs-7 {
-    font-size: 39px;
-    letter-spacing: -1px;
-    line-height: 42px;
+  font-size: 39px;
+  letter-spacing: -1px;
+  line-height: 42px;
 }
 
 @mixin fs-8 {
-    font-size: 47px;
-    letter-spacing: -1.5px;
-    line-height: 48px;
+  font-size: 47px;
+  letter-spacing: -1.5px;
+  line-height: 48px;
 }

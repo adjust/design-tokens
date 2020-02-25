@@ -1,0 +1,81 @@
+/* checkbox.scss */
+
+.checkbox {
+  @include resetAppearance;
+  @include roundedCorners;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $space-5;
+  margin: 0;
+  position: relative;
+  vertical-align: top;
+  width: $space-5;
+
+  &:checked:after {
+    @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-10);
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    content: "";
+    height: $space-5;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: $space-5;
+  }
+
+  .darkMode & {
+    @include lowered-default(dark);
+    color: $color-white;
+
+    &:focus {
+      @include lowered-focus(dark);
+    }
+
+    &:checked,
+    &:checked:focus {
+      @include raised-primary-default(dark);
+      border: 0;
+    }
+
+    &:checked:disabled:after {
+      @include icon-checkmark($size: 20, $stroke: 2, $color: $color-neutral-90);
+    }
+
+    &:checked:focus {
+      box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
+    }
+
+    &:disabled,
+    &:checked:disabled {
+      @include lowered-disabled(light);
+    }
+  }
+
+  .lightMode & {
+    @include lowered-default(light);
+    color: $color-white;
+
+    &:focus {
+      @include lowered-focus(light);
+    }
+
+    &:checked,
+    &:checked:focus {
+      @include raised-primary-default(light);
+      border: 0;
+    }
+
+    &:checked:disabled:after {
+      @include icon-checkmark($size: 20, $stroke: 2, $color: $color-neutral-50);
+    }
+
+    &:checked:focus {
+      box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
+    }
+
+    &:disabled,
+    &:checked:disabled {
+      @include lowered-disabled(light);
+    }
+  }
+}
