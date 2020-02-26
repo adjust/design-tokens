@@ -587,23 +587,24 @@ body {
 
 /* select.scss */
 .select {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
   -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: 2px;
   background-clip: padding-box;
-  font-size: 12px;
-  letter-spacing: 0.2px;
-  line-height: 18px;
+  background-position: right 4px center;
+  background-repeat: no-repeat;
   border: 0;
-  padding: 0 32px 0 12px;
   box-sizing: border-box;
   display: inline-block;
   height: 32px;
+  line-height: 32px;
   margin: 0;
-  vertical-align: top;
-  background-repeat: no-repeat;
-  background-position: right 4px center;
-  transition: box-shadow 120ms ease-out; }
+  padding: 0 32px 0 12px;
+  transition: box-shadow 120ms ease-out;
+  vertical-align: top; }
   .select:focus {
     transition-duration: 75ms; }
   .darkMode .select {

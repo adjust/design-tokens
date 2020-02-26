@@ -1,19 +1,20 @@
 /* select.scss */
 
 .select {
+  @include fs-2;
   @include resetAppearance;
   @include roundedCorners;
-  @include fs-1;
+  background-position: right $space-1 center;
+  background-repeat: no-repeat;
   border: 0;
-  padding: 0 $space-7 0 $space-3;
   box-sizing: border-box;
   display: inline-block;
   height: $space-7;
+  line-height: $space-7;
   margin: 0;
-  vertical-align: top;
-  background-repeat: no-repeat;
-  background-position: right $space-1 center;
+  padding: 0 $space-7 0 $space-3;
   transition: box-shadow $duration-out-small ease-out;
+  vertical-align: top;
 
   &:focus {
     transition-duration: $duration-in-small;
