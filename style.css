@@ -50,10 +50,10 @@
     by the same names in the Sketch library
 */
 .darkMode {
-  background: #21253a; }
+  background-color: #21253a; }
 
 .lightMode {
-  background: #f4f5f9; }
+  background-color: #f4f5f9; }
 
 /* button.scss */
 .button {
@@ -132,17 +132,17 @@
   background-color: #0091a4; }
 
 .darkMode .button--secondary, .darkMode .button--secondary:link, .darkMode .button--secondary:visited {
-  background: #434862;
+  background-color: #434862;
   box-shadow: 0 1px 0 0 rgba(11, 13, 24, 0.5), inset 0 1px 0 0 #565c78;
   color: #fff; }
 
 .darkMode .button--secondary:focus {
-  background: #434862;
+  background-color: #434862;
   box-shadow: inset 0 1px 0 0 #565c78, 0 0 0 2px #1a62ff;
   outline: 0; }
 
 .darkMode .button--secondary:hover {
-  background: #565c78;
+  background-color: #565c78;
   box-shadow: 0 1px 0 0 rgba(11, 13, 24, 0.5), inset 0 1px 0 0 #6e7492; }
 
 .darkMode .button--secondary:active {
@@ -150,17 +150,17 @@
   background-color: #434862; }
 
 .lightMode .button--secondary, .lightMode .button--secondary:link, .lightMode .button--secondary:visited {
-  background: #e0e2ec;
+  background-color: #e0e2ec;
   box-shadow: inset 0 -1px 0 0 #cdd0e0;
   color: #434862; }
 
 .lightMode .button--secondary:focus {
-  background: #e0e2ec;
+  background-color: #e0e2ec;
   box-shadow: inset 0 -1px 0 0 #cdd0e0, 0 0 0 2px #1a62ff;
   outline: 0; }
 
 .lightMode .button--secondary:hover {
-  background: #eceef4;
+  background-color: #eceef4;
   box-shadow: inset 0 -1px 0 0 #e0e2ec; }
 
 .lightMode .button--secondary:active {
@@ -168,17 +168,17 @@
   background-color: #e0e2ec; }
 
 .darkMode .button--negative, .darkMode .button--negative:link, .darkMode .button--negative:visited {
-  background: #d25650;
+  background-color: #d25650;
   box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), inset 0 1px 0 0 #df6a63;
   color: #fff; }
 
 .darkMode .button--negative:focus {
-  background: #d25650;
+  background-color: #d25650;
   box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), 0 0 0 2px #1a62ff;
   outline: 0; }
 
 .darkMode .button--negative:hover {
-  background: #df6a63;
+  background-color: #df6a63;
   box-shadow: 0 1px 0 0 rgba(11, 1, 1, 0.5), inset 0 1px 0 0 #ea807b; }
 
 .darkMode .button--negative:active {
@@ -247,9 +247,13 @@
   height: 20px;
   margin: 0;
   position: relative;
+  transition: box-shadow 120ms ease-out;
   vertical-align: top;
   width: 20px; }
-  .checkbox:checked:after {
+  .checkbox:focus {
+    transition-duration: 75ms;
+    z-index: 2; }
+  .checkbox:checked:after, .checkbox:checked:disabled:after {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' vector-effect='non-scaling-stroke' stroke='#f4f5f9' stroke-width='2' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='20 6 9 17 4 12'></polyline></svg>");
     background-position: 2px 2px;
     background-repeat: no-repeat;
@@ -260,12 +264,17 @@
     top: 0;
     width: 20px; }
   .darkMode .checkbox {
-    background: rgba(11, 13, 24, 0.1);
+    background-color: rgba(11, 13, 24, 0.2);
     border: 1px solid #565c78;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1);
     color: #fff; }
+    .darkMode .checkbox:invalid, .darkMode .checkbox.is--invalid {
+      background-color: rgba(11, 13, 24, 0.2);
+      border: 1px solid #565c78;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #d25650;
+      outline: 0; }
     .darkMode .checkbox:focus {
-      background: rgba(11, 13, 24, 0.1);
+      background-color: rgba(11, 13, 24, 0.2);
       border: 1px solid #565c78;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #1a62ff;
       outline: 0; }
@@ -274,20 +283,26 @@
       box-shadow: 0 1px 0 0 rgba(0, 10, 11, 0.5), inset 0 1px 0 0 #00a8bf;
       border: 0; }
     .darkMode .checkbox:checked:disabled:after {
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#565c78' stroke-width='2' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='20 6 9 17 4 12'></polyline></svg>"); }
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' vector-effect='non-scaling-stroke' stroke='#565c78' stroke-width='2' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+      background-position: 1px 1px; }
     .darkMode .checkbox:checked:focus {
       box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff; }
     .darkMode .checkbox:disabled, .darkMode .checkbox:checked:disabled {
       background-color: transparent;
-      border: 1px solid rgba(181, 186, 208, 0.5);
+      border: 1px solid rgba(181, 186, 208, 0.2);
       box-shadow: none; }
   .lightMode .checkbox {
-    background: rgba(67, 72, 98, 0.03);
+    background-color: rgba(67, 72, 98, 0.05);
     border: 1px solid #cdd0e0;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05);
     color: #fff; }
+    .lightMode .checkbox:invalid, .lightMode .checkbox.is--invalid {
+      background-color: rgba(67, 72, 98, 0.05);
+      border: 1px solid #cdd0e0;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #d25650;
+      outline: 0; }
     .lightMode .checkbox:focus {
-      background: rgba(67, 72, 98, 0.03);
+      background-color: rgba(67, 72, 98, 0.05);
       border: 1px solid #cdd0e0;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #1a62ff;
       outline: 0; }
@@ -296,7 +311,8 @@
       box-shadow: inset 0 -1px 0 0 #007685, inset 0 1px 0 0 #00a8bf;
       border: 0; }
     .lightMode .checkbox:checked:disabled:after {
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#b5bad0' stroke-width='2' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='20 6 9 17 4 12'></polyline></svg>"); }
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' vector-effect='non-scaling-stroke' stroke='#b5bad0' stroke-width='2' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+      background-position: 1px 1px; }
     .lightMode .checkbox:checked:focus {
       box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff; }
     .lightMode .checkbox:disabled, .lightMode .checkbox:checked:disabled {
@@ -305,7 +321,13 @@
       box-shadow: none; }
 
 /* input.scss */
-.input {
+.input[type="email"],
+.input[type="number"],
+.input[type="password"],
+.input[type="search"],
+.input[type="tel"],
+.input[type="text"],
+.input[type="url"] {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
@@ -315,34 +337,162 @@
   background-clip: padding-box;
   box-sizing: border-box;
   height: 32px;
-  padding: 0 8px;
   line-height: 32px;
+  padding: 0 8px;
+  position: relative;
   transition: border-color 120ms ease-out, box-shadow 120ms ease-out; }
-  .input:focus {
-    transition-duration: 75ms; }
-  .darkMode .input {
-    background: rgba(11, 13, 24, 0.1);
+  .input[type="email"]:focus,
+  .input[type="number"]:focus,
+  .input[type="password"]:focus,
+  .input[type="search"]:focus,
+  .input[type="tel"]:focus,
+  .input[type="text"]:focus,
+  .input[type="url"]:focus {
+    transition-duration: 75ms;
+    z-index: 2; }
+  .input[type="email"]::placeholder,
+  .input[type="number"]::placeholder,
+  .input[type="password"]::placeholder,
+  .input[type="search"]::placeholder,
+  .input[type="tel"]::placeholder,
+  .input[type="text"]::placeholder,
+  .input[type="url"]::placeholder {
+    font-weight: normal; }
+  .darkMode .input[type="email"], .darkMode
+  .input[type="number"], .darkMode
+  .input[type="password"], .darkMode
+  .input[type="search"], .darkMode
+  .input[type="tel"], .darkMode
+  .input[type="text"], .darkMode
+  .input[type="url"] {
+    background-color: rgba(11, 13, 24, 0.2);
     border: 1px solid #565c78;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1);
     color: #fff; }
-    .darkMode .input:focus {
-      background: rgba(11, 13, 24, 0.1);
+    .darkMode .input[type="email"]:disabled, .darkMode
+    .input[type="number"]:disabled, .darkMode
+    .input[type="password"]:disabled, .darkMode
+    .input[type="search"]:disabled, .darkMode
+    .input[type="tel"]:disabled, .darkMode
+    .input[type="text"]:disabled, .darkMode
+    .input[type="url"]:disabled {
+      background-color: transparent;
+      border: 1px solid rgba(181, 186, 208, 0.2);
+      box-shadow: none;
+      color: #565c78; }
+    .darkMode .input[type="email"]:disabled::placeholder, .darkMode
+    .input[type="number"]:disabled::placeholder, .darkMode
+    .input[type="password"]:disabled::placeholder, .darkMode
+    .input[type="search"]:disabled::placeholder, .darkMode
+    .input[type="tel"]:disabled::placeholder, .darkMode
+    .input[type="text"]:disabled::placeholder, .darkMode
+    .input[type="url"]:disabled::placeholder {
+      color: #565c78; }
+    .darkMode .input[type="email"]:invalid, .darkMode .input[type="email"].is--invalid, .darkMode
+    .input[type="number"]:invalid, .darkMode
+    .input[type="number"].is--invalid, .darkMode
+    .input[type="password"]:invalid, .darkMode
+    .input[type="password"].is--invalid, .darkMode
+    .input[type="search"]:invalid, .darkMode
+    .input[type="search"].is--invalid, .darkMode
+    .input[type="tel"]:invalid, .darkMode
+    .input[type="tel"].is--invalid, .darkMode
+    .input[type="text"]:invalid, .darkMode
+    .input[type="text"].is--invalid, .darkMode
+    .input[type="url"]:invalid, .darkMode
+    .input[type="url"].is--invalid {
+      background-color: rgba(11, 13, 24, 0.2);
+      border: 1px solid #565c78;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #d25650;
+      outline: 0; }
+    .darkMode .input[type="email"]:focus, .darkMode
+    .input[type="number"]:focus, .darkMode
+    .input[type="password"]:focus, .darkMode
+    .input[type="search"]:focus, .darkMode
+    .input[type="tel"]:focus, .darkMode
+    .input[type="text"]:focus, .darkMode
+    .input[type="url"]:focus {
+      background-color: rgba(11, 13, 24, 0.2);
       border: 1px solid #565c78;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #1a62ff;
       outline: 0; }
-  .lightMode .input {
-    background: rgba(67, 72, 98, 0.03);
+    .darkMode .input[type="email"]::placeholder, .darkMode
+    .input[type="number"]::placeholder, .darkMode
+    .input[type="password"]::placeholder, .darkMode
+    .input[type="search"]::placeholder, .darkMode
+    .input[type="tel"]::placeholder, .darkMode
+    .input[type="text"]::placeholder, .darkMode
+    .input[type="url"]::placeholder {
+      color: #858ca9; }
+  .lightMode .input[type="email"], .lightMode
+  .input[type="number"], .lightMode
+  .input[type="password"], .lightMode
+  .input[type="search"], .lightMode
+  .input[type="tel"], .lightMode
+  .input[type="text"], .lightMode
+  .input[type="url"] {
+    background-color: rgba(67, 72, 98, 0.05);
     border: 1px solid #cdd0e0;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05);
     color: #121523; }
-    .lightMode .input:focus {
-      background: rgba(67, 72, 98, 0.03);
+    .lightMode .input[type="email"]:disabled, .lightMode
+    .input[type="number"]:disabled, .lightMode
+    .input[type="password"]:disabled, .lightMode
+    .input[type="search"]:disabled, .lightMode
+    .input[type="tel"]:disabled, .lightMode
+    .input[type="text"]:disabled, .lightMode
+    .input[type="url"]:disabled {
+      background-color: transparent;
+      border: 1px solid rgba(181, 186, 208, 0.5);
+      box-shadow: none;
+      color: #cdd0e0; }
+    .lightMode .input[type="email"]:disabled::placeholder, .lightMode
+    .input[type="number"]:disabled::placeholder, .lightMode
+    .input[type="password"]:disabled::placeholder, .lightMode
+    .input[type="search"]:disabled::placeholder, .lightMode
+    .input[type="tel"]:disabled::placeholder, .lightMode
+    .input[type="text"]:disabled::placeholder, .lightMode
+    .input[type="url"]:disabled::placeholder {
+      color: #cdd0e0; }
+    .lightMode .input[type="email"]:invalid, .lightMode .input[type="email"].is--invalid, .lightMode
+    .input[type="number"]:invalid, .lightMode
+    .input[type="number"].is--invalid, .lightMode
+    .input[type="password"]:invalid, .lightMode
+    .input[type="password"].is--invalid, .lightMode
+    .input[type="search"]:invalid, .lightMode
+    .input[type="search"].is--invalid, .lightMode
+    .input[type="tel"]:invalid, .lightMode
+    .input[type="tel"].is--invalid, .lightMode
+    .input[type="text"]:invalid, .lightMode
+    .input[type="text"].is--invalid, .lightMode
+    .input[type="url"]:invalid, .lightMode
+    .input[type="url"].is--invalid {
+      background-color: rgba(67, 72, 98, 0.05);
+      border: 1px solid #cdd0e0;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #d25650;
+      outline: 0; }
+    .lightMode .input[type="email"]:focus, .lightMode
+    .input[type="number"]:focus, .lightMode
+    .input[type="password"]:focus, .lightMode
+    .input[type="search"]:focus, .lightMode
+    .input[type="tel"]:focus, .lightMode
+    .input[type="text"]:focus, .lightMode
+    .input[type="url"]:focus {
+      background-color: rgba(67, 72, 98, 0.05);
       border: 1px solid #cdd0e0;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #1a62ff;
       outline: 0; }
+    .lightMode .input[type="email"]::placeholder, .lightMode
+    .input[type="number"]::placeholder, .lightMode
+    .input[type="password"]::placeholder, .lightMode
+    .input[type="search"]::placeholder, .lightMode
+    .input[type="tel"]::placeholder, .lightMode
+    .input[type="text"]::placeholder, .lightMode
+    .input[type="url"]::placeholder {
+      color: #6e7492; }
 
-/* radiobutton.scss */
-.radiobutton {
+/* radio.scss */
+.radio {
   -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: 50%;
@@ -351,9 +501,13 @@
   height: 20px;
   margin: 0;
   position: relative;
+  transition: box-shadow 120ms ease-out;
   vertical-align: top;
   width: 20px; }
-  .radiobutton:checked:after {
+  .radio:focus {
+    transition-duration: 75ms;
+    z-index: 2; }
+  .radio:checked:after {
     background: #fff;
     border-radius: 50%;
     content: "";
@@ -362,45 +516,69 @@
     position: absolute;
     top: 6px;
     width: 8px; }
-  .darkMode .radiobutton {
-    background: rgba(11, 13, 24, 0.1);
+  .darkMode .radio {
+    background-color: rgba(11, 13, 24, 0.2);
     border: 1px solid #565c78;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1);
     color: #fff; }
-    .darkMode .radiobutton:focus {
-      background: rgba(11, 13, 24, 0.1);
+    .darkMode .radio:invalid, .darkMode .radio.is--invalid {
+      background-color: rgba(11, 13, 24, 0.2);
+      border: 1px solid #565c78;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #d25650;
+      outline: 0; }
+    .darkMode .radio:focus {
+      background-color: rgba(11, 13, 24, 0.2);
       border: 1px solid #565c78;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.1), 0 0 0 2px #1a62ff;
       outline: 0; }
-    .darkMode .radiobutton:checked, .darkMode .radiobutton:checked:focus {
+    .darkMode .radio:checked, .darkMode .radio:checked:focus {
       background-color: #0091a4;
       box-shadow: 0 1px 0 0 rgba(0, 10, 11, 0.5), inset 0 1px 0 0 #00a8bf;
       border: 0; }
-    .darkMode .radiobutton:checked:focus {
+    .darkMode .radio:checked:focus {
       box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff; }
-    .darkMode .radiobutton:disabled, .darkMode .radiobutton:checked:disabled {
+    .darkMode .radio:disabled {
       background-color: transparent;
-      border: 1px solid rgba(181, 186, 208, 0.5);
+      border: 1px solid rgba(181, 186, 208, 0.2);
       box-shadow: none; }
-  .lightMode .radiobutton {
-    background: rgba(67, 72, 98, 0.03);
+    .darkMode .radio:checked:disabled {
+      background: #353a52;
+      border: 0;
+      box-shadow: none; }
+    .darkMode .radio:checked:disabled:after {
+      background: #565c78;
+      box-shadow: none; }
+  .lightMode .radio {
+    background-color: rgba(67, 72, 98, 0.05);
     border: 1px solid #cdd0e0;
     box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05);
     color: #fff; }
-    .lightMode .radiobutton:focus {
-      background: rgba(67, 72, 98, 0.03);
+    .lightMode .radio:invalid, .lightMode .radio.is--invalid {
+      background-color: rgba(67, 72, 98, 0.05);
+      border: 1px solid #cdd0e0;
+      box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #d25650;
+      outline: 0; }
+    .lightMode .radio:focus {
+      background-color: rgba(67, 72, 98, 0.05);
       border: 1px solid #cdd0e0;
       box-shadow: inset 0 1px 0 0 rgba(11, 13, 24, 0.05), 0 0 0 2px #1a62ff;
       outline: 0; }
-    .lightMode .radiobutton:checked, .lightMode .radiobutton:checked:focus {
+    .lightMode .radio:checked, .lightMode .radio:checked:focus {
       background-color: #0091a4;
       box-shadow: inset 0 -1px 0 0 #007685, inset 0 1px 0 0 #00a8bf;
       border: 0; }
-    .lightMode .radiobutton:checked:focus {
+    .lightMode .radio:checked:focus {
       box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff; }
-    .lightMode .radiobutton:disabled, .lightMode .radiobutton:checked:disabled {
+    .lightMode .radio:disabled {
       background-color: transparent;
       border: 1px solid rgba(181, 186, 208, 0.5);
+      box-shadow: none; }
+    .lightMode .radio:checked:disabled {
+      background: #e0e2ec;
+      border: 0;
+      box-shadow: none; }
+    .lightMode .radio:checked:disabled:after {
+      background: #b5bad0;
       box-shadow: none; }
 
 /* root.scss */
@@ -408,3 +586,59 @@ body {
   font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif; }
 
 /* select.scss */
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 2px;
+  background-clip: padding-box;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  border: 0;
+  padding: 0 32px 0 12px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 32px;
+  margin: 0;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  transition: box-shadow 120ms ease-out; }
+  .select:focus {
+    transition-duration: 75ms; }
+  .darkMode .select {
+    background-color: #434862;
+    box-shadow: 0 1px 0 0 rgba(11, 13, 24, 0.5), inset 0 1px 0 0 #565c78;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#b5bad0' stroke-width='1' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    color: #fff; }
+    .darkMode .select:invalid, .darkMode .select.is--invalid {
+      background-color: #434862;
+      box-shadow: inset 0 1px 0 0 #565c78, 0 0 0 2px #d25650;
+      outline: 0; }
+    .darkMode .select:focus {
+      background-color: #434862;
+      box-shadow: inset 0 1px 0 0 #565c78, 0 0 0 2px #1a62ff;
+      outline: 0; }
+    .darkMode .select:disabled {
+      background-color: rgba(110, 116, 146, 0.2);
+      box-shadow: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#565c78' stroke-width='1' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+      color: #565c78; }
+  .lightMode .select {
+    background-color: #e0e2ec;
+    box-shadow: inset 0 -1px 0 0 #cdd0e0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#565c78' stroke-width='1' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    color: #121523; }
+    .lightMode .select:invalid, .lightMode .select.is--invalid {
+      background-color: #e0e2ec;
+      box-shadow: inset 0 -1px 0 0 #cdd0e0, 0 0 0 2px #d25650;
+      outline: 0; }
+    .lightMode .select:focus {
+      background-color: #e0e2ec;
+      box-shadow: inset 0 -1px 0 0 #cdd0e0, 0 0 0 2px #1a62ff;
+      outline: 0; }
+    .lightMode .select:disabled {
+      background-color: rgba(236, 238, 244, 0.5);
+      box-shadow: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' vector-effect='non-scaling-stroke' stroke='#b5bad0' stroke-width='1' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+      color: #cdd0e0; }

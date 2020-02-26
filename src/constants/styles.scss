@@ -18,6 +18,19 @@
     by the same names in the Sketch library
 */
 
+// raised diasbled
+
+@mixin raised-disabled($colorScheme) {
+  @if $colorScheme == "dark" {
+    background-color: rgba($color-neutral-80, 0.2);
+    box-shadow: none;
+  }
+  @if $colorScheme == "light" {
+    background-color: rgba($color-neutral-20, 0.5);
+    box-shadow: none;
+  }
+}
+
 // raised primary
 
 @mixin raised-primary-default($colorScheme) {
@@ -65,7 +78,7 @@
   }
 }
 
-@mixin raised-primary-error($colorScheme) {
+@mixin raised-primary-invalid($colorScheme) {
   @if $colorScheme == "dark" {
     background-color: $color-primary-90;
     box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-negative-80;
@@ -82,22 +95,22 @@
 
 @mixin raised-secondary-default($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-neutral-100;
+    background-color: $color-neutral-100;
     box-shadow: 0 1px 0 0 rgba($color-neutral-160, 0.5), inset 0 1px 0 0 $color-neutral-90;
   }
   @if $colorScheme == "light" {
-    background: $color-neutral-30;
+    background-color: $color-neutral-30;
     box-shadow: inset 0 -1px 0 0 $color-neutral-40;
   }
 }
 
 @mixin raised-secondary-hover($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-neutral-90;
+    background-color: $color-neutral-90;
     box-shadow: 0 1px 0 0 rgba($color-neutral-160, 0.5), inset 0 1px 0 0 $color-neutral-80;
   }
   @if $colorScheme == "light" {
-    background: $color-neutral-20;
+    background-color: $color-neutral-20;
     box-shadow: inset 0 -1px 0 0 $color-neutral-30;
   }
 }
@@ -114,25 +127,25 @@
 
 @mixin raised-secondary-focus($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-neutral-100;
+    background-color: $color-neutral-100;
     box-shadow: inset 0 1px 0 0 $color-neutral-90, 0 0 0 2px $color-focus;
     outline: 0;
   }
   @if $colorScheme == "light" {
-    background: $color-neutral-30;
+    background-color: $color-neutral-30;
     box-shadow: inset 0 -1px 0 0 $color-neutral-40, 0 0 0 2px $color-focus;
     outline: 0;
   }
 }
 
-@mixin raised-secondary-error($colorScheme) {
+@mixin raised-secondary-invalid($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-neutral-100;
+    background-color: $color-neutral-100;
     box-shadow: inset 0 1px 0 0 $color-neutral-90, 0 0 0 2px $color-negative-80;
     outline: 0;
   }
   @if $colorScheme == "light" {
-    background: $color-neutral-30;
+    background-color: $color-neutral-30;
     box-shadow: inset 0 -1px 0 0 $color-neutral-40, 0 0 0 2px $color-negative-80;
     outline: 0;
   }
@@ -142,7 +155,7 @@
 
 @mixin raised-negative-default($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-negative-80;
+    background-color: $color-negative-80;
     box-shadow: 0 1px 0 0 rgba($color-negative-160, 0.5), inset 0 1px 0 0 $color-negative-70;
   }
   @if $colorScheme == "light" {
@@ -153,7 +166,7 @@
 
 @mixin raised-negative-hover($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-negative-70;
+    background-color: $color-negative-70;
     box-shadow: 0 1px 0 0 rgba($color-negative-160, 0.5), inset 0 1px 0 0 $color-negative-60;
   }
   @if $colorScheme == "light" {
@@ -174,7 +187,7 @@
 
 @mixin raised-negative-focus($colorScheme) {
   @if $colorScheme == "dark" {
-    background: $color-negative-80;
+    background-color: $color-negative-80;
     box-shadow: 0 1px 0 0 rgba($color-negative-160, 0.5), 0 0 0 2px $color-focus;
     outline: 0;
   }
@@ -189,12 +202,12 @@
 
 @mixin lowered-default($colorScheme) {
   @if $colorScheme == "dark" {
-    background: rgba($color-neutral-160, 0.1);
+    background-color: rgba($color-neutral-160, 0.2);
     border: 1px solid $color-neutral-90;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.1);
   }
   @if $colorScheme == "light" {
-    background: rgba($color-neutral-100, 0.03);
+    background-color: rgba($color-neutral-100, 0.05);
     border: 1px solid $color-neutral-40;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.05);
   }
@@ -202,28 +215,28 @@
 
 @mixin lowered-focus($colorScheme) {
   @if $colorScheme == "dark" {
-    background: rgba($color-neutral-160, 0.1);
+    background-color: rgba($color-neutral-160, 0.2);
     border: 1px solid $color-neutral-90;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.1), 0 0 0 2px $color-focus;
     outline: 0;
   }
   @if $colorScheme == "light" {
-    background: rgba($color-neutral-100, 0.03);
+    background-color: rgba($color-neutral-100, 0.05);
     border: 1px solid $color-neutral-40;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.05), 0 0 0 2px $color-focus;
     outline: 0;
   }
 }
 
-@mixin lowered-error($colorScheme) {
+@mixin lowered-invalid($colorScheme) {
   @if $colorScheme == "dark" {
-    background: rgba($color-neutral-160, 0.1);
+    background-color: rgba($color-neutral-160, 0.2);
     border: 1px solid $color-neutral-90;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.1), 0 0 0 2px $color-negative-80;
     outline: 0;
   }
   @if $colorScheme == "light" {
-    background: rgba($color-neutral-100, 0.03);
+    background-color: rgba($color-neutral-100, 0.05);
     border: 1px solid $color-neutral-40;
     box-shadow: inset 0 1px 0 0 rgba($color-neutral-160, 0.05), 0 0 0 2px $color-negative-80;
     outline: 0;
@@ -246,9 +259,9 @@
 // temporarly for testing
 
 .darkMode {
-  background: $color-neutral-130;
+  background-color: $color-neutral-130;
 }
 
 .lightMode {
-  background: $color-neutral-10;
+  background-color: $color-neutral-10;
 }

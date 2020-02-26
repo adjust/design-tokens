@@ -1,1 +1,63 @@
 /* select.scss */
+
+.select {
+  @include resetAppearance;
+  @include roundedCorners;
+  @include fs-1;
+  border: 0;
+  padding: 0 $space-7 0 $space-3;
+  box-sizing: border-box;
+  display: inline-block;
+  height: $space-7;
+  margin: 0;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: right $space-1 center;
+  transition: box-shadow $duration-out-small ease-out;
+
+  &:focus {
+    transition-duration: $duration-in-small;
+  }
+
+  .darkMode & {
+    @include raised-secondary-default(dark);
+    @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-50);
+    color: $color-white;
+
+    &:invalid,
+    &.is--invalid {
+      @include raised-secondary-invalid(dark);
+    }
+
+    &:focus {
+      @include raised-secondary-focus(dark);
+    }
+
+    &:disabled {
+      @include raised-disabled(dark);
+      @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);
+      color: $color-neutral-90;
+    }
+  }
+
+  .lightMode & {
+    @include raised-secondary-default(light);
+    @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);
+    color: $color-neutral-150;
+
+    &:invalid,
+    &.is--invalid {
+      @include raised-secondary-invalid(light);
+    }
+
+    &:focus {
+      @include raised-secondary-focus(light);
+    }
+
+    &:disabled {
+      @include raised-disabled(light);
+      @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-50);
+      color: $color-neutral-40;
+    }
+  }
+}

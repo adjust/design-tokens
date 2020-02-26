@@ -8,10 +8,17 @@
   height: $space-5;
   margin: 0;
   position: relative;
+  transition: box-shadow $duration-out-small ease-out;
   vertical-align: top;
   width: $space-5;
 
-  &:checked:after {
+  &:focus {
+    transition-duration: $duration-in-small;
+    z-index: 2;
+  }
+
+  &:checked:after,
+  &:checked:disabled:after {
     @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-10);
     background-position: 2px 2px;
     background-repeat: no-repeat;
@@ -27,6 +34,11 @@
     @include lowered-default(dark);
     color: $color-white;
 
+    &:invalid,
+    &.is--invalid {
+      @include lowered-invalid(dark);
+    }
+
     &:focus {
       @include lowered-focus(dark);
     }
@@ -38,7 +50,8 @@
     }
 
     &:checked:disabled:after {
-      @include icon-checkmark($size: 20, $stroke: 2, $color: $color-neutral-90);
+      @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-90);
+      background-position: 1px 1px;
     }
 
     &:checked:focus {
@@ -47,13 +60,18 @@
 
     &:disabled,
     &:checked:disabled {
-      @include lowered-disabled(light);
+      @include lowered-disabled(dark);
     }
   }
 
   .lightMode & {
     @include lowered-default(light);
     color: $color-white;
+
+    &:invalid,
+    &.is--invalid {
+      @include lowered-invalid(light);
+    }
 
     &:focus {
       @include lowered-focus(light);
@@ -66,7 +84,8 @@
     }
 
     &:checked:disabled:after {
-      @include icon-checkmark($size: 20, $stroke: 2, $color: $color-neutral-50);
+      @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-50);
+      background-position: 1px 1px;
     }
 
     &:checked:focus {

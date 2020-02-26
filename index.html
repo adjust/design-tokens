@@ -56,41 +56,53 @@
     <div class="darkMode" style="padding:32px;">
       <p style="margin-bottom:16px">
         <input type="checkbox" class="checkbox" />
-        <input type="checkbox" class="checkbox" />
-        <input type="checkbox" class="checkbox" />
+        <input type="checkbox" class="checkbox" checked />
+        <input type="checkbox" class="checkbox is--invalid" />
+        <input type="checkbox" class="checkbox" disabled />
+        <input type="checkbox" class="checkbox" disabled checked />
       </p>
     </div>
     <div class="lightMode" style="padding:32px;">
       <p style="margin-bottom:16px">
         <input type="checkbox" class="checkbox" />
-        <input type="checkbox" class="checkbox" />
-        <input type="checkbox" class="checkbox" />
+        <input type="checkbox" class="checkbox" checked />
+        <input type="checkbox" class="checkbox is--invalid" />
+        <input type="checkbox" class="checkbox" disabled />
+        <input type="checkbox" class="checkbox" disabled checked />
       </p>
     </div>
     <h2 style="margin:16px 0">Input</h2>
     <div class="darkMode" style="padding:32px;">
       <p style="margin-bottom:16px">
         <input type="text" class="input" />
+        <input type="text" class="input" placeholder="Your darkest secret" />
+        <input type="text" class="input" placeholder="Your darkest secret" disabled />
+        <input type="text" class="input is--invalid" value="Nope" />
       </p>
     </div>
     <div class="lightMode" style="padding:32px;">
       <p style="margin-bottom:16px">
         <input type="text" class="input" />
+        <input type="text" class="input" placeholder="Your darkest secret" />
+        <input type="text" class="input" placeholder="Your darkest secret" disabled />
+        <input type="text" class="input is--invalid" value="Nope" />
       </p>
     </div>
     <h2 style="margin:16px 0">Radio Button</h2>
     <div class="darkMode" style="padding:32px;">
       <p style="margin-bottom:16px">
-        <input type="radio" class="radiobutton" name="foo" />
-        <input type="radio" class="radiobutton" name="foo" />
-        <input type="radio" class="radiobutton" name="foo" />
+        <input type="radio" class="radio" name="foo" />
+        <input type="radio" class="radio is--invalid" name="foo" />
+        <input type="radio" class="radio" disabled name="foo" />
+        <input type="radio" class="radio" disabled checked name="foo" />
       </p>
     </div>
     <div class="lightMode" style="padding:32px;">
       <p style="margin-bottom:16px">
-        <input type="radio" class="radiobutton" name="bar" />
-        <input type="radio" class="radiobutton" name="bar" />
-        <input type="radio" class="radiobutton" name="bar" />
+        <input type="radio" class="radio" name="bar" />
+        <input type="radio" class="radio is--invalid" name="bar" />
+        <input type="radio" class="radio" disabled name="bar" />
+        <input type="radio" class="radio" disabled checked name="bar" />
       </p>
     </div>
     <h2 style="margin:16px 0">Select</h2>
@@ -103,11 +115,39 @@
           <option>depression</option>
           <option>acceptance</option>
         </select>
+        <select class="select is--invalid">
+          <option>denial</option>
+          <option>anger</option>
+          <option>bargaining</option>
+          <option>depression</option>
+          <option>acceptance</option>
+        </select>
+        <select class="select" disabled>
+          <option>denial</option>
+          <option>anger</option>
+          <option>bargaining</option>
+          <option>depression</option>
+          <option>acceptance</option>
+        </select>
       </p>
     </div>
     <div class="lightMode" style="padding:32px;">
       <p style="margin-bottom:16px">
         <select class="select">
+          <option>denial</option>
+          <option>anger</option>
+          <option>bargaining</option>
+          <option>depression</option>
+          <option>acceptance</option>
+        </select>
+        <select class="select is--invalid">
+          <option>denial</option>
+          <option>anger</option>
+          <option>bargaining</option>
+          <option>depression</option>
+          <option>acceptance</option>
+        </select>
+        <select class="select" disabled>
           <option>denial</option>
           <option>anger</option>
           <option>bargaining</option>
