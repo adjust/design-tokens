@@ -41,6 +41,7 @@
     }
   }
 
+  &,
   .lightMode & {
     @include raised-secondary-default(light);
     @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);

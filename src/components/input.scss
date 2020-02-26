@@ -53,6 +53,7 @@
     }
   }
 
+  &,
   .lightMode & {
     @include lowered-default(light);
     color: $color-neutral-150;

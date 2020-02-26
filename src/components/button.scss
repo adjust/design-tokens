@@ -67,6 +67,7 @@
     }
   }
 
+  &,
   .lightMode & {
     &,
     &:link {
@@ -112,6 +113,7 @@
     }
   }
 
+  &,
   .lightMode & {
     &,
     &:link,
@@ -158,6 +160,7 @@
     }
   }
 
+  &,
   .lightMode & {
     &,
     &:link,
@@ -205,7 +208,8 @@
     }
   }
 
-  .darkMode & {
+  &,
+  .lightMode & {
     &,
     &:link,
     &:visited {

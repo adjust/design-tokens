@@ -67,6 +67,7 @@
     }
   }
 
+  &,
   .lightMode & {
     @include lowered-default(light);
     color: $color-white;
