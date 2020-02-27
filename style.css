@@ -226,11 +226,13 @@
 
 .button:disabled, .button:disabled:link, .button:disabled:visited, .button:disabled:focus, .button:disabled:hover, .button:disabled:active {
   background-color: rgba(236, 238, 244, 0.5);
-  box-shadow: none; }
+  box-shadow: none;
+  color: #b5bad0; }
 
 .darkMode .button:disabled, .darkMode .button:disabled:link, .darkMode .button:disabled:visited, .darkMode .button:disabled:focus, .darkMode .button:disabled:hover, .darkMode .button:disabled:active {
   background-color: rgba(110, 116, 146, 0.2);
-  box-shadow: none; }
+  box-shadow: none;
+  color: #6e7492; }
 
 /* checkbox.scss */
 .checkbox {

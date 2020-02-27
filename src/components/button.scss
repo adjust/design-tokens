@@ -243,6 +243,7 @@
   &:hover,
   &:active {
     @include raised-disabled(light);
+    color: $color-neutral-50;
   }
 
   // dark mode
@@ -255,6 +256,7 @@
     &:hover,
     &:active {
       @include raised-disabled(dark);
+      color: $color-neutral-80;
     }
   }
 }
