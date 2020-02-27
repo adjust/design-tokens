@@ -1,9 +1,11 @@
 /* checkbox.scss */
 
 .checkbox {
+  @include lowered-default(light);
   @include resetAppearance;
   @include roundedCorners;
   box-sizing: border-box;
+  color: $color-white;
   display: inline-block;
   height: $space-5;
   margin: 0;
@@ -11,11 +13,6 @@
   transition: box-shadow $duration-out-small ease-out;
   vertical-align: top;
   width: $space-5;
-
-  &:focus {
-    transition-duration: $duration-in-small;
-    z-index: 2;
-  }
 
   &:checked:after,
   &:checked:disabled:after {
@@ -29,6 +26,39 @@
     top: 0;
     width: $space-5;
   }
+
+  &:invalid,
+  &.is--invalid {
+    @include lowered-invalid(light);
+  }
+
+  &:focus {
+    @include lowered-focus(light);
+    transition-duration: $duration-in-small;
+    z-index: 2;
+  }
+
+  &:checked,
+  &:checked:focus {
+    @include raised-primary-default(light);
+    border: 0;
+  }
+
+  &:checked:disabled:after {
+    @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-50);
+    background-position: 1px 1px;
+  }
+
+  &:checked:focus {
+    box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
+  }
+
+  &:disabled,
+  &:checked:disabled {
+    @include lowered-disabled(light);
+  }
+
+  // dark mode
 
   .darkMode & {
     @include lowered-default(dark);
@@ -61,41 +91,6 @@
     &:disabled,
     &:checked:disabled {
       @include lowered-disabled(dark);
-    }
-  }
-
-  &,
-  .lightMode & {
-    @include lowered-default(light);
-    color: $color-white;
-
-    &:invalid,
-    &.is--invalid {
-      @include lowered-invalid(light);
-    }
-
-    &:focus {
-      @include lowered-focus(light);
-    }
-
-    &:checked,
-    &:checked:focus {
-      @include raised-primary-default(light);
-      border: 0;
-    }
-
-    &:checked:disabled:after {
-      @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-50);
-      background-position: 1px 1px;
-    }
-
-    &:checked:focus {
-      box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
-    }
-
-    &:disabled,
-    &:checked:disabled {
-      @include lowered-disabled(light);
     }
   }
 }

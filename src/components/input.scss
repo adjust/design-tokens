@@ -8,23 +8,43 @@
 .input[type="text"],
 .input[type="url"] {
   @include fs-2;
+  @include lowered-default(light);
   @include resetAppearance;
   @include roundedCorners;
   box-sizing: border-box;
+  color: $color-neutral-150;
   height: $space-7;
   line-height: $space-7;
   padding: 0 $space-2;
   position: relative;
   transition: border-color $duration-out-small ease-out, box-shadow $duration-out-small ease-out;
 
+  &:disabled {
+    @include lowered-disabled(light);
+    color: $color-neutral-40;
+  }
+
+  &:disabled::placeholder {
+    color: $color-neutral-40;
+  }
+
+  &:invalid,
+  &.is--invalid {
+    @include lowered-invalid(light);
+  }
+
   &:focus {
+    @include lowered-focus(light);
     transition-duration: $duration-in-small;
     z-index: 2;
   }
 
   &::placeholder {
     @include fw-normal;
+    color: $color-neutral-80;
   }
+
+  // dark mode
 
   .darkMode & {
     @include lowered-default(dark);
@@ -50,34 +70,6 @@
 
     &::placeholder {
       color: $color-neutral-70;
-    }
-  }
-
-  &,
-  .lightMode & {
-    @include lowered-default(light);
-    color: $color-neutral-150;
-
-    &:disabled {
-      @include lowered-disabled(light);
-      color: $color-neutral-40;
-    }
-
-    &:disabled::placeholder {
-      color: $color-neutral-40;
-    }
-
-    &:invalid,
-    &.is--invalid {
-      @include lowered-invalid(light);
-    }
-
-    &:focus {
-      @include lowered-focus(light);
-    }
-
-    &::placeholder {
-      color: $color-neutral-80;
     }
   }
 }

@@ -2,12 +2,15 @@
 
 .select {
   @include fs-2;
+  @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);
+  @include raised-secondary-default(light);
   @include resetAppearance;
   @include roundedCorners;
   background-position: right $space-1 center;
   background-repeat: no-repeat;
   border: 0;
   box-sizing: border-box;
+  color: $color-neutral-150;
   display: inline-block;
   height: $space-7;
   line-height: $space-7;
@@ -16,9 +19,23 @@
   transition: box-shadow $duration-out-small ease-out;
   vertical-align: top;
 
+  &:invalid,
+  &.is--invalid {
+    @include raised-secondary-invalid(light);
+  }
+
   &:focus {
+    @include raised-secondary-focus(light);
     transition-duration: $duration-in-small;
   }
+
+  &:disabled {
+    @include raised-disabled(light);
+    @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-50);
+    color: $color-neutral-40;
+  }
+
+  // dark mode
 
   .darkMode & {
     @include raised-secondary-default(dark);
@@ -38,28 +55,6 @@
       @include raised-disabled(dark);
       @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);
       color: $color-neutral-90;
-    }
-  }
-
-  &,
-  .lightMode & {
-    @include raised-secondary-default(light);
-    @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-90);
-    color: $color-neutral-150;
-
-    &:invalid,
-    &.is--invalid {
-      @include raised-secondary-invalid(light);
-    }
-
-    &:focus {
-      @include raised-secondary-focus(light);
-    }
-
-    &:disabled {
-      @include raised-disabled(light);
-      @include icon-chevron-down($size: 20, $stroke: 1, $color: $color-neutral-50);
-      color: $color-neutral-40;
     }
   }
 }

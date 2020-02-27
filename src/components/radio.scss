@@ -1,9 +1,11 @@
 /* radio.scss */
 
 .radio {
+  @include lowered-default(light);
   @include resetAppearance;
   border-radius: 50%;
   box-sizing: border-box;
+  color: $color-white;
   display: inline-block;
   height: $space-5;
   margin: 0;
@@ -12,9 +14,25 @@
   vertical-align: top;
   width: $space-5;
 
+  &:invalid,
+  &.is--invalid {
+    @include lowered-invalid(light);
+  }
+
   &:focus {
+    @include lowered-focus(light);
     transition-duration: $duration-in-small;
     z-index: 2;
+  }
+
+  &:checked,
+  &:checked:focus {
+    @include raised-primary-default(light);
+    border: 0;
+  }
+
+  &:checked:focus {
+    box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
   }
 
   &:checked:after {
@@ -27,6 +45,23 @@
     top: 6px;
     width: $space-2;
   }
+
+  &:disabled {
+    @include lowered-disabled(light);
+  }
+
+  &:checked:disabled {
+    background: $color-neutral-30;
+    border: 0;
+    box-shadow: none;
+  }
+
+  &:checked:disabled:after {
+    background: $color-neutral-50;
+    box-shadow: none;
+  }
+
+  // dark mode
 
   .darkMode & {
     @include lowered-default(dark);
@@ -63,46 +98,6 @@
 
     &:checked:disabled:after {
       background: $color-neutral-90;
-      box-shadow: none;
-    }
-  }
-
-  &,
-  .lightMode & {
-    @include lowered-default(light);
-    color: $color-white;
-
-    &:invalid,
-    &.is--invalid {
-      @include lowered-invalid(light);
-    }
-
-    &:focus {
-      @include lowered-focus(light);
-    }
-
-    &:checked,
-    &:checked:focus {
-      @include raised-primary-default(light);
-      border: 0;
-    }
-
-    &:checked:focus {
-      box-shadow: inset 0 1px 0 0 $color-primary-80, 0 0 0 2px $color-focus;
-    }
-
-    &:disabled {
-      @include lowered-disabled(light);
-    }
-
-    &:checked:disabled {
-      background: $color-neutral-30;
-      border: 0;
-      box-shadow: none;
-    }
-
-    &:checked:disabled:after {
-      background: $color-neutral-50;
       box-shadow: none;
     }
   }

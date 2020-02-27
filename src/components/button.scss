@@ -4,7 +4,6 @@
 // -----
 
 .button {
-  @include fs-2;
   @include fw-medium;
   @include resetAppearance;
   @include roundedCorners;
@@ -13,10 +12,7 @@
   cursor: default;
   display: inline-block;
   flex-shrink: none;
-  height: $space-7;
-  line-height: $space-7;
   margin: 0;
-  padding: 0 $space-3;
   text-decoration: none;
   transition: background-color $duration-out-small ease-out, box-shadow $duration-out-small ease-out;
 }
@@ -34,6 +30,14 @@
   @include fs-1;
   height: $space-6;
   line-height: $space-6;
+  padding: 0 $space-3;
+}
+
+.button--medium {
+  @include fs-2;
+  height: $space-7;
+  line-height: $space-7;
+  padding: 0 $space-3;
 }
 
 .button--large {
@@ -46,6 +50,27 @@
 // primary
 
 .button--primary {
+  &,
+  &:link,
+  &:visited {
+    @include raised-primary-default(light);
+    color: $color-white;
+  }
+
+  &:focus {
+    @include raised-primary-focus(light);
+  }
+
+  &:hover {
+    @include raised-primary-hover(light);
+  }
+
+  &:active {
+    @include raised-primary-active(light);
+  }
+
+  // dark mode
+
   .darkMode & {
     &,
     &:link,
@@ -66,32 +91,32 @@
       @include raised-primary-active(dark);
     }
   }
-
-  &,
-  .lightMode & {
-    &,
-    &:link {
-      @include raised-primary-default(light);
-      color: $color-white;
-    }
-
-    &:focus {
-      @include raised-primary-focus(light);
-    }
-
-    &:hover {
-      @include raised-primary-hover(light);
-    }
-
-    &:active {
-      @include raised-primary-active(light);
-    }
-  }
 }
 
 // secondary
 
 .button--secondary {
+  &,
+  &:link,
+  &:visited {
+    @include raised-secondary-default(light);
+    color: $color-neutral-100;
+  }
+
+  &:focus {
+    @include raised-secondary-focus(light);
+  }
+
+  &:hover {
+    @include raised-secondary-hover(light);
+  }
+
+  &:active {
+    @include raised-secondary-active(light);
+  }
+
+  // dark mode
+
   .darkMode & {
     &,
     &:link,
@@ -112,33 +137,32 @@
       @include raised-secondary-active(dark);
     }
   }
-
-  &,
-  .lightMode & {
-    &,
-    &:link,
-    &:visited {
-      @include raised-secondary-default(light);
-      color: $color-neutral-100;
-    }
-
-    &:focus {
-      @include raised-secondary-focus(light);
-    }
-
-    &:hover {
-      @include raised-secondary-hover(light);
-    }
-
-    &:active {
-      @include raised-secondary-active(light);
-    }
-  }
 }
 
 // negative
 
 .button--negative {
+  &,
+  &:link,
+  &:visited {
+    @include raised-negative-default(light);
+    color: $color-white;
+  }
+
+  &:focus {
+    @include raised-negative-focus(light);
+  }
+
+  &:hover {
+    @include raised-negative-hover(light);
+  }
+
+  &:active {
+    @include raised-negative-active(light);
+  }
+
+  // dark mode
+
   .darkMode & {
     &,
     &:link,
@@ -159,57 +183,34 @@
       @include raised-negative-active(dark);
     }
   }
-
-  &,
-  .lightMode & {
-    &,
-    &:link,
-    &:visited {
-      @include raised-negative-default(light);
-      color: $color-white;
-    }
-
-    &:focus {
-      @include raised-negative-focus(light);
-    }
-
-    &:hover {
-      @include raised-negative-hover(light);
-    }
-
-    &:active {
-      @include raised-negative-active(light);
-    }
-  }
 }
 
 // ghost
 
 .button--ghost {
-  .lightMode & {
-    &,
-    &:link,
-    &:visited {
-      background-color: transparent;
-      color: $color-neutral-130;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px $color-focus;
-      outline: 0;
-    }
-
-    &:hover {
-      background-color: rgba($color-neutral-50, 0.2);
-    }
-
-    &:active {
-      background-color: rgba($color-neutral-80, 0.2);
-    }
+  &,
+  &:link,
+  &:visited {
+    background-color: transparent;
+    color: $color-neutral-130;
   }
 
-  &,
-  .lightMode & {
+  &:focus {
+    box-shadow: 0 0 0 2px $color-focus;
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: rgba($color-neutral-50, 0.2);
+  }
+
+  &:active {
+    background-color: rgba($color-neutral-80, 0.2);
+  }
+
+  // dark mode
+
+  .darkMode & {
     &,
     &:link,
     &:visited {
@@ -232,8 +233,28 @@
   }
 }
 
-/*
-    TODO:
+// disabled
 
-    - [ ] add styling for "disabled"
-*/
+.button:disabled {
+  &,
+  &:link,
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    @include raised-disabled(light);
+  }
+
+  // dark mode
+
+  .darkMode & {
+    &,
+    &:link,
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active {
+      @include raised-disabled(dark);
+    }
+  }
+}
