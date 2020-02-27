@@ -7,53 +7,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body style="margin:32px">
-    <h2 style="margin-bottom:16px">Button</h2>
-    <div class="darkMode" style="padding:32px">
+    <div style="padding:32px;">
+      <h2 style="margin-bottom:32px">Button</h2>
+      <p style="margin-bottom:16px">
+        <button class="button button--secondary button--small" tabindex="0" disabled>Button</button>
+        <button class="button button--secondary button--medium" tabindex="0" disabled>Button</button>
+        <button class="button button--secondary button--large" tabindex="0" disabled>Button</button>
+      </p>
       <p style="margin-bottom:16px">
         <button class="button button--ghost button--small" tabindex="0">Button</button>
-        <button class="button button--ghost" tabindex="0">Button</button>
+        <button class="button button--ghost button--medium" tabindex="0">Button</button>
         <button class="button button--ghost button--large" tabindex="0">Button</button>
       </p>
       <p style="margin-bottom:16px">
         <button class="button button--primary button--small" tabindex="0">Button</button>
-        <button class="button button--primary" tabindex="0">Button</button>
+        <button class="button button--primary button--medium" tabindex="0">Button</button>
         <button class="button button--primary button--large" tabindex="0">Button</button>
       </p>
       <p style="margin-bottom:16px">
         <button class="button button--secondary button--small" tabindex="0">Button</button>
-        <button class="button button--secondary" tabindex="0">Button</button>
+        <button class="button button--secondary button--medium" tabindex="0">Button</button>
         <button class="button button--secondary button--large" tabindex="0">Button</button>
       </p>
       <p style="margin-bottom:16px">
         <button class="button button--negative button--small" tabindex="0">Button</button>
-        <button class="button button--negative" tabindex="0">Button</button>
+        <button class="button button--negative button--medium" tabindex="0">Button</button>
         <button class="button button--negative button--large" tabindex="0">Button</button>
       </p>
     </div>
-    <div class="lightMode" style="padding:32px;">
-      <p style="margin-bottom:16px">
-        <button class="button button--ghost button--small" tabindex="0">Button</button>
-        <button class="button button--ghost" tabindex="0">Button</button>
-        <button class="button button--ghost button--large" tabindex="0">Button</button>
-      </p>
-      <p style="margin-bottom:16px">
-        <button class="button button--primary button--small" tabindex="0">Button</button>
-        <button class="button button--primary" tabindex="0">Button</button>
-        <button class="button button--primary button--large" tabindex="0">Button</button>
-      </p>
-      <p style="margin-bottom:16px">
-        <button class="button button--secondary button--small" tabindex="0">Button</button>
-        <button class="button button--secondary" tabindex="0">Button</button>
-        <button class="button button--secondary button--large" tabindex="0">Button</button>
-      </p>
-      <p style="margin-bottom:16px">
-        <button class="button button--negative button--small" tabindex="0">Button</button>
-        <button class="button button--negative" tabindex="0">Button</button>
-        <button class="button button--negative button--large" tabindex="0">Button</button>
-      </p>
-    </div>
-    <h2 style="margin:16px 0">Checkbox</h2>
-    <div class="darkMode" style="padding:32px;">
+    <div style="padding:32px; border-top:#ddd 1px solid">
+      <h2 style="margin-bottom:32px;">Checkbox</h2>
       <p style="margin-bottom:16px">
         <input type="checkbox" class="checkbox" />
         <input type="checkbox" class="checkbox" checked />
@@ -62,17 +45,8 @@
         <input type="checkbox" class="checkbox" disabled checked />
       </p>
     </div>
-    <div class="lightMode" style="padding:32px;">
-      <p style="margin-bottom:16px">
-        <input type="checkbox" class="checkbox" />
-        <input type="checkbox" class="checkbox" checked />
-        <input type="checkbox" class="checkbox is--invalid" />
-        <input type="checkbox" class="checkbox" disabled />
-        <input type="checkbox" class="checkbox" disabled checked />
-      </p>
-    </div>
-    <h2 style="margin:16px 0">Input</h2>
-    <div class="darkMode" style="padding:32px;">
+    <div style="padding:32px; border-top:#ddd 1px solid">
+      <h2 style="margin-bottom:32px;">Input</h2>
       <p style="margin-bottom:16px">
         <input type="text" class="input" />
         <input type="text" class="input" placeholder="Your darkest secret" />
@@ -80,16 +54,8 @@
         <input type="text" class="input is--invalid" value="Nope" />
       </p>
     </div>
-    <div class="lightMode" style="padding:32px;">
-      <p style="margin-bottom:16px">
-        <input type="text" class="input" />
-        <input type="text" class="input" placeholder="Your darkest secret" />
-        <input type="text" class="input" placeholder="Your darkest secret" disabled />
-        <input type="text" class="input is--invalid" value="Nope" />
-      </p>
-    </div>
-    <h2 style="margin:16px 0">Radio Button</h2>
-    <div class="darkMode" style="padding:32px;">
+    <div style="padding:32px; border-top:#ddd 1px solid">
+      <h2 style="margin-bottom:32px;">Radio</h2>
       <p style="margin-bottom:16px">
         <input type="radio" class="radio" name="foo" />
         <input type="radio" class="radio is--invalid" name="foo" />
@@ -97,16 +63,8 @@
         <input type="radio" class="radio" disabled checked name="foo" />
       </p>
     </div>
-    <div class="lightMode" style="padding:32px;">
-      <p style="margin-bottom:16px">
-        <input type="radio" class="radio" name="bar" />
-        <input type="radio" class="radio is--invalid" name="bar" />
-        <input type="radio" class="radio" disabled name="bar" />
-        <input type="radio" class="radio" disabled checked name="bar" />
-      </p>
-    </div>
-    <h2 style="margin:16px 0">Select</h2>
-    <div class="darkMode" style="padding:32px;">
+    <div style="padding:32px; border-top:#ddd 1px solid">
+      <h2 style="margin-bottom:32px;">Select</h2>
       <p style="margin-bottom:16px">
         <select class="select">
           <option>denial</option>
@@ -131,30 +89,32 @@
         </select>
       </p>
     </div>
-    <div class="lightMode" style="padding:32px;">
-      <p style="margin-bottom:16px">
-        <select class="select">
-          <option>denial</option>
-          <option>anger</option>
-          <option>bargaining</option>
-          <option>depression</option>
-          <option>acceptance</option>
-        </select>
-        <select class="select is--invalid">
-          <option>denial</option>
-          <option>anger</option>
-          <option>bargaining</option>
-          <option>depression</option>
-          <option>acceptance</option>
-        </select>
-        <select class="select" disabled>
-          <option>denial</option>
-          <option>anger</option>
-          <option>bargaining</option>
-          <option>depression</option>
-          <option>acceptance</option>
-        </select>
-      </p>
-    </div>
+    <script>
+      (function() {
+        /**
+         * Crappy color scheme switcher
+         **/
+
+        let toggleButton = document.createElement("button");
+        let toggleButtonLabel = document.createTextNode("Toggle Display Mode");
+
+        toggleButton.appendChild(toggleButtonLabel);
+        toggleButton.classList.add("button", "button--medium", "button--secondary");
+        toggleButton.style.position = "fixed";
+        toggleButton.style.top = "8px";
+        toggleButton.style.right = "8px";
+
+        toggleButton.addEventListener("click", function() {
+          if (document.body.classList.contains("darkMode")) {
+            document.body.classList.remove("darkMode");
+            return;
+          }
+
+          document.body.classList.add("darkMode");
+        });
+
+        document.body.appendChild(toggleButton);
+      })();
+    </script>
   </body>
 </html>
