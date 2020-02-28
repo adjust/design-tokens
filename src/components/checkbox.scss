@@ -16,15 +16,15 @@
 
   &:checked:after,
   &:checked:disabled:after {
-    @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-10);
-    background-position: 2px 2px;
+    @include icon-check($size: 12, $stroke: 4, $color: $color-neutral-10);
+    background-position: 0 0;
     background-repeat: no-repeat;
     content: "";
-    height: $space-5;
-    left: 0;
+    height: 12px;
+    left: 4px;
     position: absolute;
-    top: 0;
-    width: $space-5;
+    top: 4px;
+    width: 12px;
   }
 
   &:invalid,
@@ -45,8 +45,9 @@
   }
 
   &:checked:disabled:after {
-    @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-50);
-    background-position: 1px 1px;
+    @include icon-check($size: 12, $stroke: 4, $color: $color-neutral-50);
+    left: 3px;
+    top: 3px;
   }
 
   &:checked:focus {
@@ -80,8 +81,7 @@
     }
 
     &:checked:disabled:after {
-      @include icon-checkmark($size: 16, $stroke: 2, $color: $color-neutral-90);
-      background-position: 1px 1px;
+      @include icon-check($size: 12, $stroke: 3, $color: $color-neutral-90);
     }
 
     &:checked:focus {
