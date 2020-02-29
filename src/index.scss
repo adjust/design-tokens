@@ -17,12 +17,3 @@
 @import "components/radio.scss";
 @import "components/root.scss";
 @import "components/select.scss";
-
-#testIcon {
-  @include icon-arrow-down($size: 56, $stroke: 1, $color: #000000);
-  background-color: tomato;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  height: 56px;
-  width: 56px;
-}

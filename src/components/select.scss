@@ -2,7 +2,7 @@
 
 .select {
   @include fs-2;
-  @include icon-chevron-down($size: 16, $stroke: 1.5, $color: $color-neutral-90);
+  @include icon-chevron-down($size: 16, $stroke: 1, $color: $color-neutral-90);
   @include raised-secondary-default(light);
   @include resetAppearance;
   @include roundedCorners;
@@ -31,7 +31,7 @@
 
   &:disabled {
     @include raised-disabled(light);
-    @include icon-chevron-down($size: 16, $stroke: 1.5, $color: $color-neutral-50);
+    @include icon-chevron-down($size: 16, $stroke: 1, $color: $color-neutral-50);
     color: $color-neutral-40;
   }
 
@@ -39,7 +39,7 @@
 
   .darkMode & {
     @include raised-secondary-default(dark);
-    @include icon-chevron-down($size: 16, $stroke: 1.5, $color: $color-neutral-50);
+    @include icon-chevron-down($size: 16, $stroke: 1, $color: $color-neutral-50);
     color: $color-white;
 
     &:invalid,
@@ -53,7 +53,7 @@
 
     &:disabled {
       @include raised-disabled(dark);
-      @include icon-chevron-down($size: 16, $stroke: 1.5, $color: $color-neutral-90);
+      @include icon-chevron-down($size: 16, $stroke: 1, $color: $color-neutral-90);
       color: $color-neutral-90;
     }
   }

@@ -37,9 +37,6 @@
 /* transitions */
 /* typography.scss */
 /* icons.scss */
-/**
- * Basic ui icons, taken from https://iconsvg.xyz
- **/
 /* shared.scss */
 /*
     object styles
@@ -256,7 +253,7 @@
   vertical-align: top;
   width: 20px; }
   .checkbox:checked:after, .checkbox:checked:disabled:after {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#f4f5f9' stroke-width='4' stroke-linecap='butt' stroke-linejoin='arcs'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23f4f5f9%22 stroke-width=%224%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpolyline points=%2220 6 9 17 4 12%22%3E%3C/polyline%3E%3C/svg%3E");
     background-position: 0 0;
     background-repeat: no-repeat;
     content: "";
@@ -282,7 +279,7 @@
     box-shadow: inset 0 -1px 0 0 #007685, inset 0 1px 0 0 #00a8bf;
     border: 0; }
   .checkbox:checked:disabled:after {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#b5bad0' stroke-width='4' stroke-linecap='butt' stroke-linejoin='arcs'><polyline points='20 6 9 17 4 12'></polyline></svg>");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%224%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpolyline points=%2220 6 9 17 4 12%22%3E%3C/polyline%3E%3C/svg%3E");
     left: 3px;
     top: 3px; }
   .checkbox:checked:focus {
@@ -311,7 +308,7 @@
       box-shadow: 0 1px 0 0 rgba(0, 10, 11, 0.5), inset 0 1px 0 0 #00a8bf;
       border: 0; }
     .darkMode .checkbox:checked:disabled:after {
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#565c78' stroke-width='3' stroke-linecap='butt' stroke-linejoin='arcs'><polyline points='20 6 9 17 4 12'></polyline></svg>"); }
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23565c78%22 stroke-width=%224%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpolyline points=%2220 6 9 17 4 12%22%3E%3C/polyline%3E%3C/svg%3E"); }
     .darkMode .checkbox:checked:focus {
       box-shadow: inset 0 1px 0 0 #00a8bf, 0 0 0 2px #1a62ff; }
     .darkMode .checkbox:disabled, .darkMode .checkbox:checked:disabled {
@@ -577,7 +574,7 @@ body {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='#565c78' stroke-width='1.5' stroke-linecap='butt' stroke-linejoin='arcs'><path d='M6 9l6 6 6-6'/></svg>");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23565c78%22 stroke-width=%221.5%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E");
   background-color: #e0e2ec;
   box-shadow: inset 0 -1px 0 0 #cdd0e0;
   -moz-appearance: none;
@@ -608,12 +605,12 @@ body {
   .select:disabled {
     background-color: rgba(236, 238, 244, 0.5);
     box-shadow: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='#b5bad0' stroke-width='1.5' stroke-linecap='butt' stroke-linejoin='arcs'><path d='M6 9l6 6 6-6'/></svg>");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%221.5%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E");
     color: #cdd0e0; }
   .darkMode .select {
     background-color: #434862;
     box-shadow: 0 1px 0 0 rgba(11, 13, 24, 0.5), inset 0 1px 0 0 #565c78;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='#b5bad0' stroke-width='1.5' stroke-linecap='butt' stroke-linejoin='arcs'><path d='M6 9l6 6 6-6'/></svg>");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%221.5%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E");
     color: #fff; }
     .darkMode .select:invalid, .darkMode .select.is--invalid {
       background-color: #434862;
@@ -626,13 +623,5 @@ body {
     .darkMode .select:disabled {
       background-color: rgba(110, 116, 146, 0.2);
       box-shadow: none;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='#565c78' stroke-width='1.5' stroke-linecap='butt' stroke-linejoin='arcs'><path d='M6 9l6 6 6-6'/></svg>");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23565c78%22 stroke-width=%221.5%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E");
       color: #565c78; }
-
-#testIcon {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 24 24' fill='none' stroke='#000000' stroke-width='0.5' stroke-linecap='butt' stroke-linejoin='arcs'>xxx</svg>");
-  background-color: tomato;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  height: 56px;
-  width: 56px; }

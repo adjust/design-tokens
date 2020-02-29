@@ -16,7 +16,7 @@
 
   &:checked:after,
   &:checked:disabled:after {
-    @include icon-check($size: 12, $stroke: 4, $color: $color-neutral-10);
+    @include icon-check($size: 12, $stroke: 2, $color: $color-neutral-10);
     background-position: 0 0;
     background-repeat: no-repeat;
     content: "";
@@ -45,7 +45,7 @@
   }
 
   &:checked:disabled:after {
-    @include icon-check($size: 12, $stroke: 4, $color: $color-neutral-50);
+    @include icon-check($size: 12, $stroke: 2, $color: $color-neutral-50);
     left: 3px;
     top: 3px;
   }
@@ -81,7 +81,7 @@
     }
 
     &:checked:disabled:after {
-      @include icon-check($size: 12, $stroke: 3, $color: $color-neutral-90);
+      @include icon-check($size: 12, $stroke: 2, $color: $color-neutral-90);
     }
 
     &:checked:focus {
