@@ -625,3 +625,45 @@ body {
       box-shadow: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23565c78%22 stroke-width=%221.5%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E");
       color: #565c78; }
+
+/* tooltip.scss */
+.tooltip {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background: #434862;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 8px;
+  position: relative; }
+  .tooltip:after {
+    background: #434862;
+    content: "";
+    height: 8px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 8px; }
+  .tooltip.tooltip--pointUp:after {
+    left: 50%;
+    margin-left: -4px;
+    top: -4px; }
+  .tooltip.tooltip--pointRight:after {
+    margin-top: -4px;
+    right: -4px;
+    top: 50%; }
+  .tooltip.tooltip--pointDown:after {
+    bottom: -4px;
+    left: 50%;
+    margin-left: -4px; }
+  .tooltip.tooltip--pointLeft:after {
+    left: -4px;
+    margin-top: -4px;
+    top: 50%; }
+  .darkMode .tooltip {
+    background: #eceef4;
+    color: #121523; }
+    .darkMode .tooltip:after {
+      background: #eceef4; }
