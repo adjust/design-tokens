@@ -4,10 +4,12 @@
   "description": "Design System Foundation",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass src/index.scss ./style.css",
-    "serve": "browser-sync start --server --port 3004",
+    "build": "npm run build-styles && npm run build templates",
+    "build-styles": "node-sass src/styles/index.scss --output dist/",
+    "build-templates": "nunjucks *.njk --path src/templates --out dist",
+    "serve": "browser-sync start --cwd dist/ --server --port 3004",
     "start": "npm run build && npm run serve & npm run watch",
-    "watch": "chokidar '**/*.{html,scss}' -c 'npm run build && browser-sync reload --port 3004'"
+    "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "browser-sync": "^2.26.7",
     "chokidar-cli": "^2.1.0",
     "node-sass": "^4.13.1",
+    "nunjucks-cli": "^1.0.0",
     "prettier": "^1.19.1"
   }
 }
