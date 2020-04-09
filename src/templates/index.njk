@@ -1,6 +1,5 @@
-<html>
-    <body>
-        {% include "partials/header.njk" %}
-        Oh hi
-    </body>
-</html>
+{% extends '_layouts/base.njk' %}
+{% block main %}
+    hi
+    {% include '_partials/footer.njk' %}
+{% endblock %}
