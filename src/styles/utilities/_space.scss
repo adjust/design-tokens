@@ -1,0 +1,17 @@
+/* _space.scss */
+
+// margin
+
+@include utility-classes($className: "m", $source: $space, $property: "margin");
+@include utility-classes($className: "m-t", $source: $space, $property: "margin-top");
+@include utility-classes($className: "m-r", $source: $space, $property: "margin-right");
+@include utility-classes($className: "m-b", $source: $space, $property: "margin-bottom");
+@include utility-classes($className: "m-l", $source: $space, $property: "margin-left");
+
+// padding
+
+@include utility-classes($className: "p", $source: $space, $property: "padding");
+@include utility-classes($className: "p-t", $source: $space, $property: "padding-top");
+@include utility-classes($className: "p-r", $source: $space, $property: "padding-right");
+@include utility-classes($className: "p-b", $source: $space, $property: "padding-bottom");
+@include utility-classes($className: "p-l", $source: $space, $property: "padding-left");

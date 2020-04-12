@@ -1,0 +1,9 @@
+/* _color.scss */
+
+// background color
+
+@include utility-classes($className: "bg-neutral", $source: $color-neutral, $property: "background-color", $responsive: false);
+
+// text color
+
+@include utility-classes($className: "c-neutral", $source: $color-neutral, $property: "color", $responsive: false);

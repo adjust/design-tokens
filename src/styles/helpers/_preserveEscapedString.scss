@@ -1,0 +1,12 @@
+/* _preserveEscapedString.scss */
+
+@function preserveEscapedString($string) {
+  /**
+   * Fixes the problem that Sass un-escapes escaped strings during concatenation
+   * (see https://github.com/sass/sass/issues/659).
+   **/
+
+  $backSlash: str-slice("\\", 1, 1); // yes, this is ugly :(
+
+  @return unquote(str-insert($string, $backSlash, str-index($string, ":")));
+}

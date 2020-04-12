@@ -1,0 +1,95 @@
+/* _color.scss */
+
+// "neutral" color shades
+// basic, most used colors for the whole UI -
+// the lower the number, the lighter the color
+
+$color-neutral: (
+  "10": #f4f5f9,
+  "20": #eceef4,
+  "30": #e0e2ec,
+  "40": #cdd0e0,
+  "50": #b5bad0,
+  "60": #9ca2bd,
+  "70": #858ca9,
+  "80": #6e7492,
+  "90": #565c78,
+  "100": #434862,
+  "110": #353a52,
+  "120": #2a2f45,
+  "130": #21253a,
+  "140": #191d2f,
+  "150": #121523,
+  "160": #0b0d18
+);
+
+// "negative" color shades
+// semantic coloring to mark destructive actions
+// or error messages - the lower the number,
+// the lighter the color
+
+$color-negative: (
+  "10": #fff5f5,
+  "20": #ffe4e2,
+  "30": #fdcecc,
+  "40": #f9b3b0,
+  "50": #f39994,
+  "60": #ea807b,
+  "70": #df6a63,
+  "80": #d25650,
+  "90": #c2433c,
+  "100": #ab332d,
+  "110": #902520,
+  "120": #6c1914,
+  "130": #4d0f0c,
+  "140": #360a07,
+  "150": #200504,
+  "160": #0b0101
+);
+
+// "primary" color shades
+// primary highlight color, also the primary
+// brand color, used for all kinds of CTAs -
+// the lower the number, the lighter the color
+
+$color-primary: (
+  "10": #e5fcff,
+  "20": #bdf6fe,
+  "30": #97f0fc,
+  "40": #6ee8f8,
+  "50": #47ddf1,
+  "60": #25d0e7,
+  "70": #05bdd5,
+  "80": #00a8bf,
+  "90": #0091a4,
+  "100": #007685,
+  "110": #005b67,
+  "120": #00424b,
+  "130": #002e35,
+  "140": #002125,
+  "150": #00171a,
+  "160": #000a0b
+);
+
+// achromatic colors
+
+$color-white: #fff;
+$color-black: #030511;
+
+// "focus" color
+// used to mark controls, eg. text inputs
+// which are in focus state
+
+$color-focus: #1a62ff;
+
+// global text and background colors
+
+$lightmode-color-text: map-get($color-neutral, "160");
+$lightmode-color-background-z1: map-get($color-neutral, "20");
+$lightmode-color-background-z2: map-get($color-neutral, "10");
+$lightmode-color-background-z3: $color-white;
+
+$darkmode-color-text: map-get($color-neutral, "10");
+$darkmode-color-background-z1: map-get($color-neutral, "160");
+$darkmode-color-background-z2: map-get($color-neutral, "150");
+$darkmode-color-background-z3: map-get($color-neutral, "140");

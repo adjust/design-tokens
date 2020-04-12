@@ -1,0 +1,5 @@
+/* _textAlign.scss */
+
+$textAlign: left, right, center, justify;
+
+@include utility-classes($className: "al", $source: $textAlign, $property: "text-align");

@@ -1,22 +1,10 @@
-/* shared.scss */
-
-// helpers
-
-@mixin roundedCorners {
-  border-radius: 2px;
-  background-clip: padding-box;
-}
-
-@mixin resetAppearance() {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
+/* _layerStyles.scss */
 
 /*
-    object styles
+    layer styles
 
     shared appearance (eg. button & select, text input & textarea)
-    abstracted into reusable mixins, referencing "layer styles"
+    abstracted into reusable mixins, referencing layer styles
     by the same names in the Sketch library
 */
 

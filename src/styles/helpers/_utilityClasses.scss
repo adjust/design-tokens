@@ -1,0 +1,65 @@
+/* _utility-classes.scss */
+
+@mixin print-utility-classes($className, $source, $property) {
+  @if type-of($source) == "map" {
+    @each $key, $value in $source {
+      &-#{$key} {
+        #{$property}: $value !important;
+      }
+    }
+  } @else if type-of($source) == "list" {
+    @each $value in $source {
+      &-#{$value} {
+        #{$property}: $value !important;
+      }
+    }
+  }
+}
+
+@mixin utility-classes($className, $source, $property, $responsive: true) {
+  .#{$className} {
+    @include print-utility-classes($className, $source, $property);
+  }
+
+  @if $responsive {
+    // fluid: medium, large, extra large
+
+    @include breakpoint-m() {
+      .m\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
+    @include breakpoint-l() {
+      .l\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
+    @include breakpoint-xl() {
+      .xl\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
+    // strict: medium, large, extra large
+
+    @include breakpoint-only-m() {
+      .only-m\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
+    @include breakpoint-only-l() {
+      .only-l\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
+    @include breakpoint-only-xl() {
+      .only-xl\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+  }
+}

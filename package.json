@@ -1,8 +1,8 @@
 {
-  "name": "spree-foundation",
+  "name": "adjust-design-tokens",
   "version": "1.0.0",
-  "description": "Design System Foundation",
-  "main": "index.js",
+  "description": "Adjust Design Tokens",
+  "main": "",
   "scripts": {
     "clear": "rm -rf dist && mkdir -p dist",
     "build": "npm run build-templates && npm run build-styles",
@@ -12,7 +12,7 @@
     "start": "npm run clear && npm run build && npm run serve & npm run watch",
     "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'"
   },
-  "author": "",
+  "author": "Adjust Design System Team",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",

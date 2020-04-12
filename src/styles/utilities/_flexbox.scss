@@ -1,0 +1,184 @@
+/* _flexBox.scss */
+
+@mixin flex-utilities($breakPointPrefix: "") {
+  .#{$breakPointPrefix}flx {
+    display: flex;
+  }
+
+  .#{$breakPointPrefix}inline-flx {
+    display: inline-flex;
+  }
+
+  .#{$breakPointPrefix}flx-auto {
+    flex: 1 1 auto;
+  }
+
+  .#{$breakPointPrefix}flx-none {
+    flex: none;
+  }
+
+  .#{$breakPointPrefix}flx-column {
+    flex-direction: column;
+  }
+
+  .#{$breakPointPrefix}flx-row {
+    flex-direction: row;
+  }
+  .#{$breakPointPrefix}flx-wrap {
+    flex-wrap: wrap;
+  }
+
+  .#{$breakPointPrefix}flx-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .#{$breakPointPrefix}flx-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  .#{$breakPointPrefix}flx-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .#{$breakPointPrefix}flx-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .#{$breakPointPrefix}flx-items-start {
+    align-items: flex-start;
+  }
+
+  .#{$breakPointPrefix}flx-items-end {
+    align-items: flex-end;
+  }
+
+  .#{$breakPointPrefix}flx-items-center {
+    align-items: center;
+  }
+
+  .#{$breakPointPrefix}flx-items-baseline {
+    align-items: baseline;
+  }
+
+  .#{$breakPointPrefix}flx-items-stretch {
+    align-items: stretch;
+  }
+
+  .#{$breakPointPrefix}flx-self-start {
+    align-self: flex-start;
+  }
+
+  .#{$breakPointPrefix}flx-self-end {
+    align-self: flex-end;
+  }
+
+  .#{$breakPointPrefix}flx-self-center {
+    align-self: center;
+  }
+
+  .#{$breakPointPrefix}flx-self-baseline {
+    align-self: baseline;
+  }
+
+  .#{$breakPointPrefix}flx-self-stretch {
+    align-self: stretch;
+  }
+
+  .#{$breakPointPrefix}flx-justify-start {
+    justify-content: flex-start;
+  }
+
+  .#{$breakPointPrefix}flx-justify-end {
+    justify-content: flex-end;
+  }
+
+  .#{$breakPointPrefix}flx-justify-center {
+    justify-content: center;
+  }
+
+  .#{$breakPointPrefix}flx-justify-between {
+    justify-content: space-between;
+  }
+
+  .#{$breakPointPrefix}flx-justify-around {
+    justify-content: space-around;
+  }
+
+  .#{$breakPointPrefix}flx-content-start {
+    align-content: flex-start;
+  }
+
+  .#{$breakPointPrefix}flx-content-end {
+    align-content: flex-end;
+  }
+
+  .#{$breakPointPrefix}flx-content-center {
+    align-content: center;
+  }
+
+  .#{$breakPointPrefix}flx-content-between {
+    align-content: space-between;
+  }
+
+  .#{$breakPointPrefix}flx-content-around {
+    align-content: space-around;
+  }
+
+  .#{$breakPointPrefix}flx-content-stretch {
+    align-content: stretch;
+  }
+
+  .#{$breakPointPrefix}flx-order-0 {
+    order: 0;
+  }
+
+  .#{$breakPointPrefix}flx-order-1 {
+    order: 1;
+  }
+
+  .#{$breakPointPrefix}flx-order-2 {
+    order: 2;
+  }
+
+  .#{$breakPointPrefix}flx-order-3 {
+    order: 3;
+  }
+
+  .#{$breakPointPrefix}flx-order-4 {
+    order: 4;
+  }
+
+  .#{$breakPointPrefix}flx-order-5 {
+    order: 5;
+  }
+
+  .#{$breakPointPrefix}flx-order-6 {
+    order: 6;
+  }
+
+  .#{$breakPointPrefix}flx-order-7 {
+    order: 7;
+  }
+
+  .#{$breakPointPrefix}flx-order-8 {
+    order: 8;
+  }
+
+  .#{$breakPointPrefix}flx-order-last {
+    order: 99999;
+  }
+}
+
+@include flex-utilities();
+
+@include breakpoint-m() {
+  @include flex-utilities($breakPointPrefix: preserveEscapedString("m\:"));
+}
+
+@include breakpoint-l() {
+  @include flex-utilities($breakPointPrefix: preserveEscapedString("l\:"));
+}
+
+@include breakpoint-xl() {
+  @include flex-utilities($breakPointPrefix: preserveEscapedString("xl\:"));
+}

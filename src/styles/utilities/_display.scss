@@ -1,0 +1,5 @@
+/* _display.scss */
+
+$display: none, inline, inline-block;
+
+@include utility-classes($className: "d", $source: $display, $property: "display");

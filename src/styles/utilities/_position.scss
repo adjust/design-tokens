@@ -1,0 +1,5 @@
+/* _position.scss */
+
+$position: static, relative, absolute;
+
+@include utility-classes($className: "pos", $source: $position, $property: "position");
