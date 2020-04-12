@@ -1,8 +1,12 @@
 /* _breakPoint.scss */
 
-$bp-m-minwidth: 650px;
-$bp-l-minwidth: 960px;
-$bp-xl-minwidth: 1440px;
+$bp-m-minWidth: 650px;
+$bp-l-minWidth: 960px;
+$bp-xl-minWidth: 1440px;
+
+$bp-s-maxWidth: $bp-m-minWidth - 1px;
+$bp-m-maxWidth: $bp-l-minWidth - 1px;
+$bp-l-maxWidth: $bp-xl-minWidth - 1px;
 
 // "fluid" breakpoints
 
@@ -13,21 +17,21 @@ $bp-xl-minwidth: 1440px;
 */
 
 @mixin breakpoint-m {
-    @media (min-width: #{$bp-m-minwidth}) {
-        @content;
-    }
+  @media (min-width: #{$bp-m-minWidth}) {
+    @content;
+  }
 }
 
 @mixin breakpoint-l {
-    @media (min-width: #{$bp-l-minwidth}) {
-        @content;
-    }
+  @media (min-width: #{$bp-l-minWidth}) {
+    @content;
+  }
 }
 
 @mixin breakpoint-xl {
-    @media (min-width: #{$bp-xl-minwidth}) {
-        @content;
-    }
+  @media (min-width: #{$bp-xl-minWidth}) {
+    @content;
+  }
 }
 
 // "strict" breakpoints
@@ -37,20 +41,20 @@ $bp-xl-minwidth: 1440px;
     Example: .only-m:* is active only on screens within the width range of breakpoint "m".
 */
 
+@mixin breakpoint-only-s {
+  @media (min-width: 0) and (max-width: #{$bp-s-maxWidth}) {
+    @content;
+  }
+}
+
 @mixin breakpoint-only-m {
-    @media (min-width: #{$bp-m-minwidth}) and (max-width: #{$bp-m-minwidth - 1px}) {
-        @content;
-    }
+  @media (min-width: #{$bp-m-minWidth}) and (max-width: #{$bp-m-maxWidth}) {
+    @content;
+  }
 }
 
 @mixin breakpoint-only-l {
-    @media (min-width: #{$bp-l-minwidth}) and (max-width: #{$bp-l-minwidth - 1px}) {
-        @content;
-    }
-}
-
-@mixin breakpoint-only-xl {
-    @media (min-width: #{$bp-xl-minwidth}) and (max-width: #{$bp-xl-minwidth - 1px}) {
-        @content;
-    }
+  @media (min-width: #{$bp-l-minWidth}) and (max-width: #{$bp-l-maxWidth}) {
+    @content;
+  }
 }

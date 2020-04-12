@@ -44,6 +44,12 @@
 
     // strict: medium, large, extra large
 
+    @include breakpoint-only-s() {
+      .only-s\:#{$className} {
+        @include print-utility-classes($className, $source, $property);
+      }
+    }
+
     @include breakpoint-only-m() {
       .only-m\:#{$className} {
         @include print-utility-classes($className, $source, $property);
@@ -52,12 +58,6 @@
 
     @include breakpoint-only-l() {
       .only-l\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
-      }
-    }
-
-    @include breakpoint-only-xl() {
-      .only-xl\:#{$className} {
         @include print-utility-classes($className, $source, $property);
       }
     }
