@@ -1,0 +1,80 @@
+/* _typography.scss */
+
+@use "../design-tokens/typography" as *;
+
+// font weight
+
+.fw-normal {
+  @include fontWeight-normal(!important);
+}
+
+.fw-medium {
+  @include fontWeight-medium(!important);
+}
+
+.fw-bold {
+  @include fontWeight-bold(!important);
+}
+
+// type scale
+
+.ts-1,
+.ts-2,
+.ts-3,
+.ts-4,
+.ts-4,
+.ts-6,
+.ts-7,
+.ts-8 {
+  @include uiFont(!important);
+}
+
+.ts-1 {
+  @include typeScale-1(!important);
+}
+
+.ts-2 {
+  @include typeScale-2(!important);
+}
+
+.ts-3 {
+  @include typeScale-3(!important);
+}
+
+.ts-4 {
+  @include typeScale-4(!important);
+}
+
+.ts-5 {
+  @include typeScale-5(!important);
+}
+
+.ts-6 {
+  @include typeScale-6(!important);
+}
+
+.ts-7 {
+  @include typeScale-7(!important);
+}
+
+.ts-8 {
+  @include typeScale-8(!important);
+}
+
+// headings
+
+.h1 {
+  @include heading-1(!important);
+}
+
+.h2 {
+  @include heading-2(!important);
+}
+
+.h3 {
+  @include heading-3(!important);
+}
+
+.h4 {
+  @include heading-4(!important);
+}

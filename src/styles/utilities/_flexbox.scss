@@ -1,11 +1,73 @@
 /* _flexBox.scss */
 
+@use "../design-tokens/breakPoint" as *;
+@use "../helpers/preserveEscapedString" as *;
+
+/*
+Generates utilities for flexbox rules:
+
+.flx                 = display:flex
+.flx-inline          = display:inline-flex
+.flx-auto            = flex: 1 1 auto
+.flx-none            = flex: none
+.flx-column          = flex-direction: column
+.flx-row             = flex-direction: row
+.flx-wrap            = flex-wrap: wrap
+.flx-nowrap          = flex-wrap: nowrap
+.flx-wrap-reverse    = flex-wrap: wrap-reverse
+.flx-column-reverse  = flex-direction: column-reverse
+.flx-row-reverse     = flex-direction: row-reverse
+.flx-items-start     = align-items: flex-start
+.flx-items-end       = align-items: flex-end
+.flx-items-center    = align-items: center
+.flx-items-baseline  = align-items: baseline
+.flx-items-stretch   = align-items: stretch
+.flx-self-start      = align-self: flex-start
+.flx-self-end        = align-self: flex-end
+.flx-self-center     = align-self: center
+.flx-self-baseline   = align-self: baseline
+.flx-self-stretch    = align-self: stretch
+.flx-justify-start   = justify-content: flex-start
+.flx-justify-end     = justify-content: flex-end
+.flx-justify-center  = justify-content: center
+.flx-justify-between = justify-content: space-between
+.flx-justify-around  = justify-content: space-around
+.flx-content-start   = align-content: flex-start
+.flx-content-end     = align-content: flex-end
+.flx-content-center  = align-content: center
+.flx-content-between = align-content: space-between
+.flx-content-around  = align-content: space-around
+.flx-content-stretch = align-content: stretch
+.flx-order-[0-9]     = order: [0-9]
+.flx-order-last      = order: 99999
+
+The following prefixes for "fluid" breakpoints
+are available:
+
+.m:[flx ... flx-order-last]
+.l:[flx ... flx-order-last]
+.xl:[flx ... flx-order-last]
+
+The following prefixes for "strict" breakpoints
+are available:
+
+.only-s:[flx ... flx-order-last]
+.only-m:[flx ... flx-order-last]
+.only-l:[flx ... flx-order-last]
+
+Fluid breakpoint = styling applies on the
+very breakpoint and all larger breakpoints.
+
+Strict breakpoint = styling applies only
+on the very breakpoint.
+*/
+
 @mixin flex-utilities($breakPointPrefix: "") {
   .#{$breakPointPrefix}flx {
     display: flex;
   }
 
-  .#{$breakPointPrefix}inline-flx {
+  .#{$breakPointPrefix}flx-inline {
     display: inline-flex;
   }
 
@@ -162,6 +224,10 @@
 
   .#{$breakPointPrefix}flx-order-8 {
     order: 8;
+  }
+
+  .#{$breakPointPrefix}flx-order-9 {
+    order: 9;
   }
 
   .#{$breakPointPrefix}flx-order-last {

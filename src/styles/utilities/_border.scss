@@ -1,0 +1,40 @@
+/* _border.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/color" as *;
+@use "../helpers/utilityClasses" as *;
+
+// default borders for dark and light mode
+
+.b-darkmode-default {
+  @include darkmode-defaultBorder(!important);
+}
+
+.b-lightmode-default {
+  @include lightmode-defaultBorder(!important);
+}
+
+// default rounded corners
+
+.b-rounded {
+  @include defaultBorderRadius(!important);
+}
+
+// solid border, no border color
+
+.b-solid {
+  border-width: 1px !important;
+  border-style: solid;
+}
+
+/*
+Generates neutral border color utilities
+from design-tokens/_color.scss:
+
+.bc-neutral-10
+.bc-neutral-20
+...
+.bc-neutral-160
+*/
+
+@include utility-classes($className: "bc-neutral", $source: $color-neutral, $property: "border-color", $responsive: false);

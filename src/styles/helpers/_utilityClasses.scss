@@ -1,6 +1,13 @@
-/* _utility-classes.scss */
+/* _utilityClasses.scss */
 
-@mixin print-utility-classes($className, $source, $property) {
+@use "../design-tokens/breakPoint" as *;
+
+/*
+"Private" mixin to generate a set of utility classes
+from either a list or map.
+*/
+
+@mixin _print-utility-classes($className, $source, $property) {
   @if type-of($source) == "map" {
     @each $key, $value in $source {
       &-#{$key} {
@@ -16,9 +23,15 @@
   }
 }
 
+/*
+"Public" mixin to generate utility classes and
+responsive utility classes for all breakpoints
+(which can be disabled).
+*/
+
 @mixin utility-classes($className, $source, $property, $responsive: true) {
   .#{$className} {
-    @include print-utility-classes($className, $source, $property);
+    @include _print-utility-classes($className, $source, $property);
   }
 
   @if $responsive {
@@ -26,19 +39,19 @@
 
     @include breakpoint-m() {
       .m\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
 
     @include breakpoint-l() {
       .l\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
 
     @include breakpoint-xl() {
       .xl\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
 
@@ -46,19 +59,19 @@
 
     @include breakpoint-only-s() {
       .only-s\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
 
     @include breakpoint-only-m() {
       .only-m\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
 
     @include breakpoint-only-l() {
       .only-l\:#{$className} {
-        @include print-utility-classes($className, $source, $property);
+        @include _print-utility-classes($className, $source, $property);
       }
     }
   }

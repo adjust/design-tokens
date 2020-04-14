@@ -1,19 +1,61 @@
 /* _space.scss */
 
 /*
-    spacing scale
+Spacing Scale
 
-    used for all margins or paddings
-    across the whole UI
+You can read the numeric values as multiplicants of 8px, eg:
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px
+etc.
 */
 
 $space: (
-  1: 4px,
-  2: 8px,
-  3: 12px,
-  4: 16px,
-  5: 20px,
-  6: 24px,
-  7: 32px,
-  8: 40px
+  "05": 4px,
+  "10": 8px,
+  "15": 12px,
+  "20": 16px,
+  "25": 20px,
+  "30": 24px,
+  "35": 28px,
+  "40": 32px,
+  "45": 36px,
+  "50": 40px,
+  "100": 80px,
+  "200": 160px,
+  "300": 240px,
+  "400": 320px,
+  "500": 400px
 );
+
+// numeric variables
+
+$space-05: map-get($space, "05");
+$space-10: map-get($space, "10");
+$space-15: map-get($space, "15");
+$space-20: map-get($space, "20");
+$space-25: map-get($space, "25");
+$space-30: map-get($space, "30");
+$space-35: map-get($space, "35");
+$space-40: map-get($space, "40");
+$space-45: map-get($space, "45");
+$space-50: map-get($space, "50");
+$space-100: map-get($space, "100");
+$space-200: map-get($space, "200");
+$space-300: map-get($space, "300");
+$space-400: map-get($space, "400");
+$space-500: map-get($space, "500");
+
+// semantic variables
+
+$space-xs: map-get($space, "05");
+$space-s: map-get($space, "10");
+$space-m: map-get($space, "20");
+$space-l: map-get($space, "50");
+$space-xl: map-get($space, "500");
+
+// vertical rhythm
+
+$defaultVerticalSpace: $space-30;
+$decreasedVerticalSpace: $space-10;
+$verticalSpaceBeforeHeading: $space-20;

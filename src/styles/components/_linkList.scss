@@ -1,0 +1,48 @@
+/* _linkList.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+@use "../design-tokens/typography" as *;
+
+.linkList {
+  @include uiFont;
+  list-style: none;
+  padding: 0;
+}
+
+.linkList__item {
+  padding: 0;
+}
+
+.linkList__anchor {
+  align-items: flex-start;
+  border-bottom: 1px solid $color-neutral-30;
+  display: flex;
+  padding: $space-20 0;
+  text-decoration: none;
+
+  .linkList__item:last-child & {
+    border: 0;
+  }
+}
+
+.linkList__icon {
+  margin: 0 $space-10 0 0;
+  flex-shrink: 0;
+}
+
+.linkList__title {
+  @include fontWeight-normal;
+  @include typeScale-2;
+  color: $lightmode-color-text;
+  line-height: $space-30;
+  margin: 0;
+}
+
+.linkList__description {
+  @include typeScale-2;
+  color: $color-neutral-70;
+  line-height: $space-30;
+  margin: 0 0 0 $space-20;
+}

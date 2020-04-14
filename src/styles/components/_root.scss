@@ -1,0 +1,29 @@
+/* _root.scss */
+
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+
+html,
+body {
+  background-color: $lightmode-color-background-z2;
+  color: $lightmode-color-text;
+  margin: 0;
+  padding: 0;
+}
+
+html::after {
+  background-color: $color-primary-60;
+  content: " ";
+  height: 50%;
+  left: 0;
+  position: fixed;
+  top: -25%;
+  width: 100%;
+  z-index: -1;
+}
+
+body {
+  border-top: 4px solid $color-primary-60;
+  position: relative;
+  min-height: 90vh;
+}

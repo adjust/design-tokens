@@ -1,17 +1,190 @@
 /* _space.scss */
 
+@use "../design-tokens/breakPoint" as *;
+@use "../design-tokens/space" as *;
+@use "../helpers/preserveEscapedString" as *;
+@use "../helpers/utilityClasses" as *;
+
 // margin
 
+/*
+Generates margin utilities from
+design-tokens/_space.scss:
+
+.m-05
+.m-10
+...
+.m-500
+
+The following prefixes for "fluid" breakpoints
+are available:
+
+.m:[m-05 ... m-500]
+.l:[m-05 ... m-500]
+.xl:[m-05 ... m-500]
+
+The following prefixes for "strict" breakpoints
+are available:
+
+.only-s:[m-05 ... m-500]
+.only-m:[m-05 ... m-500]
+.only-l:[m-05 ... m-500]
+
+Fluid breakpoint = styling applies on the
+very breakpoint and all larger breakpoints.
+
+Strict breakpoint = styling applies only
+on the very breakpoint.
+*/
+
 @include utility-classes($className: "m", $source: $space, $property: "margin");
+
+/*
+Generates margin utilities like above, only for
+top, right, bottom and left margin. The resulting
+class names follow the same pattern only with
+the addition of:
+
+-t = top
+-r = right
+-b = bottom
+-l = left
+*/
+
 @include utility-classes($className: "m-t", $source: $space, $property: "margin-top");
 @include utility-classes($className: "m-r", $source: $space, $property: "margin-right");
 @include utility-classes($className: "m-b", $source: $space, $property: "margin-bottom");
 @include utility-classes($className: "m-l", $source: $space, $property: "margin-left");
 
+@mixin margin-utilities($breakPointPrefix: "") {
+  .#{$breakPointPrefix}m-x-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .#{$breakPointPrefix}m-0 {
+    margin: 0 !important;
+  }
+
+  .#{$breakPointPrefix}m-t-0 {
+    margin-top: 0 !important;
+  }
+
+  .#{$breakPointPrefix}m-r-0 {
+    margin-right: 0 !important;
+  }
+
+  .#{$breakPointPrefix}m-b-0 {
+    margin-bottom: 0 !important;
+  }
+
+  .#{$breakPointPrefix}m-l-0 {
+    margin-left: 0 !important;
+  }
+}
+
+@include margin-utilities();
+
+@include breakpoint-m() {
+  @include margin-utilities($breakPointPrefix: preserveEscapedString("m\:"));
+}
+
+@include breakpoint-l() {
+  @include margin-utilities($breakPointPrefix: preserveEscapedString("l\:"));
+}
+
+@include breakpoint-xl() {
+  @include margin-utilities($breakPointPrefix: preserveEscapedString("xl\:"));
+}
+
 // padding
 
+/*
+Generates padding utilities from
+design-tokens/_space.scss:
+
+.p-05
+.p-10
+...
+.p-500
+
+The following prefixes for "fluid" breakpoints
+are available:
+
+.m:[p-05 ... p-500]
+.l:[p-05 ... p-500]
+.xl:[p-05 ... p-500]
+
+The following prefixes for "strict" breakpoints
+are available:
+
+.only-s:[p-05 ... p-500]
+.only-m:[p-05 ... p-500]
+.only-l:[p-05 ... p-500]
+
+Fluid breakpoint = styling applies on the
+very breakpoint and all larger breakpoints.
+
+Strict breakpoint = styling applies only
+on the very breakpoint.
+*/
+
 @include utility-classes($className: "p", $source: $space, $property: "padding");
+
+/*
+Generates padding utilities like above, only for
+top, right, bottom and left padding. The resulting
+class names follow the same pattern only with
+the addition of:
+
+-t = top
+-r = right
+-b = bottom
+-l = left
+*/
+
 @include utility-classes($className: "p-t", $source: $space, $property: "padding-top");
 @include utility-classes($className: "p-r", $source: $space, $property: "padding-right");
 @include utility-classes($className: "p-b", $source: $space, $property: "padding-bottom");
 @include utility-classes($className: "p-l", $source: $space, $property: "padding-left");
+
+@mixin padding-utilities($breakPointPrefix: "") {
+  .#{$breakPointPrefix}p-x-auto {
+    padding-left: auto !important;
+    padding-right: auto !important;
+  }
+
+  .#{$breakPointPrefix}p-0 {
+    padding: 0 !important;
+  }
+
+  .#{$breakPointPrefix}p-t-0 {
+    padding-top: 0 !important;
+  }
+
+  .#{$breakPointPrefix}p-r-0 {
+    padding-right: 0 !important;
+  }
+
+  .#{$breakPointPrefix}p-b-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .#{$breakPointPrefix}p-l-0 {
+    padding-left: 0 !important;
+  }
+}
+
+@include padding-utilities();
+
+@include breakpoint-m() {
+  @include padding-utilities($breakPointPrefix: preserveEscapedString("m\:"));
+}
+
+@include breakpoint-l() {
+  @include padding-utilities($breakPointPrefix: preserveEscapedString("l\:"));
+}
+
+@include breakpoint-xl() {
+  @include padding-utilities($breakPointPrefix: preserveEscapedString("xl\:"));
+}

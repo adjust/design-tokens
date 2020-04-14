@@ -1,0 +1,26 @@
+/* _border.scss */
+
+@use "color" as *;
+
+// default border style
+
+@mixin darkmode-defaultBorder($important: null) {
+  border-width: 1px $important;
+  border-color: $color-neutral-120 $important;
+  border-style: solid $important;
+}
+
+@mixin lightmode-defaultBorder($important: null) {
+  border-width: 1px $important;
+  border-color: $color-neutral-40 $important;
+  border-style: solid $important;
+}
+
+// default border radius
+
+$defaultBorderRadius: 2px;
+
+@mixin defaultBorderRadius($important: null) {
+  border-radius: $defaultBorderRadius $important;
+  background-clip: padding-box $important;
+}

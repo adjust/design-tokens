@@ -4,11 +4,11 @@
   "description": "Adjust Design Tokens",
   "main": "",
   "scripts": {
-    "clear": "rm -rf dist && mkdir -p dist",
+    "clear": "rm -rf docs && mkdir -p docs",
     "build": "npm run build-templates && npm run build-styles",
-    "build-styles": "node-sass src/styles/screen.scss --output dist/",
-    "build-templates": "nunjucks *.njk --path src/templates --out dist",
-    "serve": "browser-sync start --server dist/ --files dist --port 3004 --no-notify --no-ui",
+    "build-styles": "sass src/styles/screen.scss docs/screen.css",
+    "build-templates": "nunjucks *.njk --path src/templates --out docs",
+    "serve": "browser-sync start --server docs/ --files docs --port 3004 --no-notify --no-ui",
     "start": "npm run clear && npm run build && npm run serve & npm run watch",
     "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'"
   },
@@ -17,8 +17,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "chokidar-cli": "^2.1.0",
-    "node-sass": "^4.13.1",
     "nunjucks-cli": "^1.0.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "sass": "^1.26.3"
   }
 }

@@ -1,0 +1,5 @@
+{# code.njk #}
+
+{% macro print(snippetName, language) %}
+<pre><code class="language-{{ language }}">{% filter escape %}{% include '_codeSnippets/' + snippetName + '.njk' %}{% endfilter %}</code></pre>
+{% endmacro %}

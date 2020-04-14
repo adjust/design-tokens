@@ -1,4 +1,18 @@
 /* _time.scss */
 
+/*
+Time
+
+These tokens define timing for CSS transitions or
+animations. As a rule of thumb, UI elements which are
+small in size can have faster animations than large
+lements.
+
+Hence the postfix "-small": We use these tokens below
+mostly for subtle hover effects on small components like
+buttons. We are are going to add more for large components
+as we build them.
+*/
+
 $duration-in-small: 75ms;
 $duration-out-small: 120ms;

@@ -1,0 +1,46 @@
+/* _svg.scss */
+
+// helper functions
+
+@function svg-preserveStrokeWidth($size, $stroke) {
+  /*
+  The base size of all icons is 24px × 24px and currently there is
+  no way to scale an SVG image and preserving its stroke width.
+  In order to render the intended stroke width, we need to calculate it.
+  */
+  @return $stroke * (24 / $size);
+}
+
+@function svg-encode($svg) {
+  /*
+  SVG encoder by Indrek Paas
+  https://gist.github.com/indrekpaas/4d6dfa5c29da805219d4149352c4703b
+
+  URL-encodes SVG strings in data URIs for better browser compatibility.
+  */
+
+  $encode: (
+    '"': "%22",
+    "#": "%23",
+    "%": "%25",
+    "<": "%3C",
+    ">": "%3E",
+    "{": "%7B",
+    "}": "%7D"
+  );
+
+  $string: "";
+  $character: "";
+
+  @for $i from 1 through str-length($svg) {
+    $character: str-slice($svg, $i, $i);
+
+    @if index(map-keys($encode), $character) {
+      $character: map-get($encode, $character);
+    }
+
+    $string: $string + $character;
+  }
+
+  @return url("data:image/svg+xml,#{$string}");
+}

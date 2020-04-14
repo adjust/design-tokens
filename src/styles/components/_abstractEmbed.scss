@@ -1,0 +1,13 @@
+/* _abstractEmbed.scss */
+
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+@use "../design-tokens/typography" as *;
+
+.abstractEmbed {
+}
+
+.abstractEmbed__iframe {
+  width: 100%;
+  height: $space-400;
+}

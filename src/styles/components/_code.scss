@@ -1,0 +1,12 @@
+/* _code.scss */
+
+@use "../design-tokens/space" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/border" as *;
+
+.hljs {
+  line-height: $space-30;
+  padding: $space-20;
+  background: $color-neutral-20;
+  @include defaultBorderRadius;
+}

@@ -1,0 +1,30 @@
+/* _article.scss */
+
+@use "../design-tokens/color" as *;
+@use "../design-tokens/dimension" as *;
+@use "../design-tokens/space" as *;
+@use "../design-tokens/typography" as *;
+
+.article {
+  @include uiFont();
+  max-width: $maxContentWidth;
+
+  // reset margins
+
+  > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  // general vertical space between all block elements
+
+  & > * + *,
+  & li > p + p {
+    margin-top: $defaultVerticalSpace;
+    @include typeScale-2();
+  }
+
+  & li + li {
+    margin-top: $decreasedVerticalSpace;
+  }
+}
