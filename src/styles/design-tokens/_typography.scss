@@ -71,9 +71,9 @@
 }
 
 @mixin typeScale-poster($important: null) {
-  font-size: 70px $important;
+  font-size: 120px $important;
   letter-spacing: -2px $important;
-  line-height: 80px $important;
+  line-height: 160px $important;
 }
 
 // headings

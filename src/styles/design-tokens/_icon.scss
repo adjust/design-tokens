@@ -20,3 +20,7 @@ with custom icons soon.
 @mixin icon-minus($size: 24, $stroke: 2, $color: #000000) {
   background-image: svg-encode('<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 24 24" fill="none" stroke="#{$color}" stroke-width="#{svg-preserveStrokeWidth($size, $stroke)}" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="5" y1="12" x2="19" y2="12"></line></svg>');
 }
+
+@mixin icon-arrow-right($size: 24, $stroke: 2, $color: #000000) {
+  background-image: svg-encode('<svg xmlns="http://www.w3.org/2000/svg" width="#{$size}" height="#{$size}" viewBox="0 0 24 24" fill="none" stroke="#{$color}" stroke-width="#{svg-preserveStrokeWidth($size, $stroke)}" stroke-linecap="butt" stroke-linejoin="arcs"><path d="M5 12h13M12 5l7 7-7 7"/></svg>');
+}

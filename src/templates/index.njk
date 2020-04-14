@@ -2,153 +2,134 @@
 
 {% extends '_layouts/base.njk' %}
 {% block main %}
-
-    <div class="header">
-        <h1 class="header__title">Spree <span class="header__meta">v.0.1</span></h1>
-        <h2 class="header__subTitle">Adjust’s UI Design Language</h2>
-    </div>
-
+    <img class="poster" src="images/spree.png" />
     <div class="m-x-auto p-l-30 p-r-30 w-max">
-
-        {# --- #}
-
-        <div class="flx flx-items-start">
-            <h2 class="fw-medium ts-3 w-1-2">Design Tokens</h2>
-            <p class="ts-3 w-1-2 m-l-20">The smallest pieces of a design system — basically anything that can be described using letters and numbers.</p>
+        {# Intro #}
+        <div class="m-b-400 article">
+            <h1 class="ts-poster fw-normal">Spree <span class="ts-2 c-neutral-60">v.0.1</span></h1>
+            <p class="ts-4">This is the first look at Adjust’s new UI design language, codename <i>Spree</i>. This simple page acts as a temporary tool for communication and alignment, speaking to everyone who is about to use Adjust’s soon-to-come design system.</p>
         </div>
-        <div>
+        {# Design Tokens #}
+        <div class="article m-b-40">
+            <h2 class="fw-medium ts-3">Design Tokens</h2>
+            <p class="ts-3 w-1-2">The smallest pieces of a design system — basically anything that can be described using letters and numbers.</p>
+        </div>
         {{ code.print('scss-design-tokens', 'scss') }}
-        </div>
         <ul class="linkList">
             <li class="linkList__item">
-                <a class="linkList__anchor" href="tokens/border.html">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_border.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trello"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="9"></rect><rect x="14" y="7" width="3" height="5"></rect></svg>
                     <h3 class="linkList__title">Border</h3>
                     <p class="linkList__description">Default border styles</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_breakPoint.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     <h3 class="linkList__title">Breakpoint</h3>
                     <p class="linkList__description">Strict and fluid breakpoints</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_color.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
                     <h3 class="linkList__title">Color</h3>
                     <p class="linkList__description">Color shades and semantic color variables</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_dimension.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     <h3 class="linkList__title">Dimension</h3>
                     <p class="linkList__description">Sizing scale</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_icon.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     <h3 class="linkList__title">Icon</h3>
                     <p class="linkList__description">Mixins for flexible SVG icons as CSS background-image</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_layerStyle.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     <h3 class="linkList__title">Layerstyle</h3>
                     <p class="linkList__description">Mixins reflecting layer styles from the Sketch library</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_space.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                     <h3 class="linkList__title">Space</h3>
                     <p class="linkList__description">Spacing scale (use for margin, padding, position, vertical rhythm, &hellip;)</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_time.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     <h3 class="linkList__title">Time</h3>
                     <p class="linkList__description">Timings for transitions and animations</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_typography.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
                     <h3 class="linkList__title">Typography</h3>
                     <p class="linkList__description">Type scale, headings, text formatting</p>
                 </a>
             </li>
         </ul>
-
-        {# --- #}
-
-        <div class="flx flx-items-start m-t-200">
-            <h2 class="fw-medium ts-3 w-1-2">Utility Classes</h2>
-            <p class="ts-3 w-1-2 m-l-20">Functional CSS classes that serve one particular purpose.</p>
+        {# Utility Classes #}
+        <div class="article m-t-200 m-b-40">
+            <h2 class="fw-medium ts-3">Utility Classes</h2>
+            <p class="ts-3 w-1-2">Functional CSS classes that serve one particular purpose.</p>
         </div>
         {{ code.print('css-utility-classes', 'html') }}
         <ul class="linkList">
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_border.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trello"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="9"></rect><rect x="14" y="7" width="3" height="5"></rect></svg>
                     <h3 class="linkList__title">Border</h3>
-                    <p class="linkList__description">Default border styles</p>
+                    <p class="linkList__description">Border utilities</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_color.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
                     <h3 class="linkList__title">Color</h3>
-                    <p class="linkList__description">Color shades and semantic color variables</p>
+                    <p class="linkList__description">Utilities for background-, text- and border-color</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_dimension.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     <h3 class="linkList__title">Dimension</h3>
-                    <p class="linkList__description">Sizing scale</p>
+                    <p class="linkList__description">Sizing utilities</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_flexbox.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
                     <h3 class="linkList__title">Flexbox</h3>
-                    <p class="linkList__description">xxx</p>
+                    <p class="linkList__description">Utilities for flexbox-based layout</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_space.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                     <h3 class="linkList__title">Space</h3>
-                    <p class="linkList__description">Spacing scale (use for margin, padding, position, vertical rhythm, &hellip;)</p>
+                    <p class="linkList__description">Spacing utilities (use for margin, padding, position, vertical rhythm, &hellip;)</p>
                 </a>
             </li>
             <li class="linkList__item">
-                <a class="linkList__anchor">
-                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="1" stroke-linecap="square" stroke-linejoin="arcs"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
+                <a class="linkList__anchor" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_typography.scss">
+                    <svg class="linkList__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
                     <h3 class="linkList__title">Typography</h3>
                     <p class="linkList__description">Type scale, headings, text formatting</p>
                 </a>
             </li>
         </ul>
-
-        {# --- #}
-
-        <div class="flx flx-items-start m-t-200">
-            <h2 class="fw-medium ts-3 w-1-2">Visual Specs</h2>
-            <p class="ts-3 w-1-2 m-l-20">Browse and inspect all components which we designed so far.</p>
-        </div>
-
-        {# --- #}
-
-        - announcement
-        - link to abstract
-        - link to github
-
+        <div class="ts-1 m-t-300 p-b-50 c-neutral-80">&copy; Adjust GmbH</div>
     </div>
 {% endblock %}

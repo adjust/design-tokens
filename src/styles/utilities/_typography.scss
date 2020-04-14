@@ -61,6 +61,10 @@
   @include typeScale-8(!important);
 }
 
+.ts-poster {
+  @include typeScale-poster(!important);
+}
+
 // headings
 
 .h1 {

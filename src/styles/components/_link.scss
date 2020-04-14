@@ -1,0 +1,16 @@
+/* _link.scss */
+
+@use "../design-tokens/color" as *;
+
+a:link,
+a:visited {
+  color: $color-primary-80;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: $color-primary-80;
+  text-decoration: underline;
+  text-decoration-color: $color-primary-60;
+}

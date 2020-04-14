@@ -12,7 +12,7 @@ body {
 }
 
 html::after {
-  background-color: $color-primary-60;
+  background-color: $color-neutral-160;
   content: " ";
   height: 50%;
   left: 0;
@@ -23,7 +23,11 @@ html::after {
 }
 
 body {
-  border-top: 4px solid $color-primary-60;
   position: relative;
   min-height: 90vh;
+}
+
+::selection {
+  color: $color-primary-120;
+  background-color: $color-primary-10;
 }

@@ -5562,6 +5562,12 @@ the addition of:
   line-height: 48px !important;
 }
 
+.ts-poster {
+  font-size: 120px !important;
+  letter-spacing: -2px !important;
+  line-height: 160px !important;
+}
+
 .h1 {
   font-weight: 600 !important;
   font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif !important;
@@ -5722,11 +5728,12 @@ the lighter the color.
 /* _border.scss */
 /* _code.scss */
 .hljs {
-  line-height: 24px;
-  padding: 16px;
-  background: #eceef4;
   border-radius: 2px;
   background-clip: padding-box;
+  background: #eceef4;
+  color: #6e7492;
+  line-height: 24px;
+  padding: 16px;
 }
 
 /* _color.scss */
@@ -5750,48 +5757,18 @@ the lighter the color.
   brand color, used for all kinds of CTAs -
   the lower the number, the lighter the color.
 */
-/* _width.scss */
-/* _space.scss */
-/*
-Spacing Scale
-
-You can read the numeric values as multiplicants of 8px, eg:
-$space-05  = 0,5 times 8px
-$space-20  = 2 times 8px
-$space-100 = 10 times 8px
-etc.
-*/
-/* typography.scss */
-/* _header.scss */
-.header {
-  font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
-  margin: 0 auto 320px auto;
-  max-width: 680px;
-  padding: 160px 24px 0 24px;
+/* _link.scss */
+a:link,
+a:visited {
+  color: #00a8bf;
+  text-decoration: none;
 }
 
-.header__title {
-  font-size: 70px;
-  letter-spacing: -2px;
-  line-height: 80px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.header__subTitle {
-  font-size: 27px;
-  letter-spacing: -0.5px;
-  line-height: 36px;
-  font-weight: normal;
-  margin: 16px 0 0 0;
-}
-
-.header__meta {
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-  font-weight: normal;
-  color: #b5bad0;
+a:hover,
+a:active {
+  color: #00a8bf;
+  text-decoration: underline;
+  text-decoration-color: #25d0e7;
 }
 
 /* _color.scss */
@@ -5827,6 +5804,14 @@ $space-100 = 10 times 8px
 etc.
 */
 /* typography.scss */
+/* _svg.scss */
+/* _icon.scss */
+/*
+UI icons as SVG background images
+
+Borrowed from https://iconsvg.xyz - will get replaced
+with custom icons soon.
+*/
 /* _linkList.scss */
 .linkList {
   font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
@@ -5844,6 +5829,14 @@ etc.
   display: flex;
   padding: 16px 0;
   text-decoration: none;
+  position: relative;
+  color: #353a52;
+}
+.linkList__anchor:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%221%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M5 12h13M12 5l7 7-7 7%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right;
+  text-decoration: none;
 }
 .linkList__item:last-child .linkList__anchor {
   border: 0;
@@ -5852,6 +5845,10 @@ etc.
 .linkList__icon {
   margin: 0 8px 0 0;
   flex-shrink: 0;
+  stroke: #b5bad0;
+}
+a:hover .linkList__icon {
+  stroke: #353a52;
 }
 
 .linkList__title {
@@ -5870,7 +5867,34 @@ etc.
   line-height: 24px;
   color: #858ca9;
   line-height: 24px;
-  margin: 0 0 0 16px;
+  margin: 0 0 0 8px;
+}
+
+/* _breakPoint.scss */
+/*
+Media queries with these breakpoints kick in as soon as a certain screen
+width is reached. A larger breakpoint overrides all smaller ones.
+Example: .m:* is active "from screen size m and up".
+*/
+/*
+Media queries with these breakpoints are active only in their certain range.
+Example: .only-m:* is active only on screens within the width range of breakpoint "m".
+*/
+/* _space.scss */
+/*
+Spacing Scale
+
+You can read the numeric values as multiplicants of 8px, eg:
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px
+etc.
+*/
+/* _poster.scss */
+.poster {
+  display: block;
+  margin-bottom: 160px;
+  width: 100%;
 }
 
 /* _color.scss */
@@ -5914,7 +5938,7 @@ body {
 }
 
 html::after {
-  background-color: #25d0e7;
+  background-color: #0b0d18;
   content: " ";
   height: 50%;
   left: 0;
@@ -5925,9 +5949,11 @@ html::after {
 }
 
 body {
-  border-top: 4px solid #25d0e7;
   position: relative;
   min-height: 90vh;
 }
 
-/*# sourceMappingURL=screen.css.map */
+::selection {
+  color: #00424b;
+  background-color: #e5fcff;
+}

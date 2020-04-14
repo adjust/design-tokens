@@ -4,9 +4,10 @@
   "description": "Adjust Design Tokens",
   "main": "",
   "scripts": {
-    "clear": "rm -rf docs && mkdir -p docs",
-    "build": "npm run build-templates && npm run build-styles",
-    "build-styles": "sass src/styles/screen.scss docs/screen.css",
+    "clear": "rm -rf docs && mkdir -p docs/images",
+    "copy": "cp src/images/* docs/images/",
+    "build": "npm run copy && npm run build-templates && npm run build-styles",
+    "build-styles": "sass src/styles/screen.scss docs/screen.css --no-source-map",
     "build-templates": "nunjucks *.njk --path src/templates --out docs",
     "serve": "browser-sync start --server docs/ --files docs --port 3004 --no-notify --no-ui",
     "start": "npm run clear && npm run build && npm run serve & npm run watch",

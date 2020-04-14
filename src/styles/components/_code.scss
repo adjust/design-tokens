@@ -5,8 +5,9 @@
 @use "../design-tokens/border" as *;
 
 .hljs {
+  @include defaultBorderRadius;
+  background: $color-neutral-20;
+  color: $color-neutral-80;
   line-height: $space-30;
   padding: $space-20;
-  background: $color-neutral-20;
-  @include defaultBorderRadius;
 }

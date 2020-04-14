@@ -1,0 +1,10 @@
+/* _poster.scss */
+
+@use "../design-tokens/breakpoint" as *;
+@use "../design-tokens/space" as *;
+
+.poster {
+  display: block;
+  margin-bottom: $space-200;
+  width: 100%;
+}
