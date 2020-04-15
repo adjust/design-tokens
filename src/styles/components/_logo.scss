@@ -1,0 +1,13 @@
+/* _logo.scss */
+
+@use "../design-tokens/space" as *;
+
+.logo {
+  width: $space-100;
+  height: $space-100;
+}
+
+.logo--small {
+  width: $space-30;
+  height: $space-30;
+}

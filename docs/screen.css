@@ -5870,6 +5870,27 @@ a:hover .linkList__icon {
   margin: 0 0 0 8px;
 }
 
+/* _space.scss */
+/*
+Spacing Scale
+
+You can read the numeric values as multiplicants of 8px, eg:
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px
+etc.
+*/
+/* _logo.scss */
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.logo--small {
+  width: 24px;
+  height: 24px;
+}
+
 /* _breakPoint.scss */
 /*
 Media queries with these breakpoints kick in as soon as a certain screen

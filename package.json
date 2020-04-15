@@ -9,6 +9,7 @@
     "build": "npm run copy && npm run build-templates && npm run build-styles",
     "build-styles": "sass src/styles/screen.scss docs/screen.css --no-source-map",
     "build-templates": "nunjucks *.njk --path src/templates --out docs",
+    "publish": "cleancss -o docs/screen.css docs/screen.css",
     "serve": "browser-sync start --server docs/ --files docs --port 3004 --no-notify --no-ui",
     "start": "npm run clear && npm run build && npm run serve & npm run watch",
     "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'"
@@ -18,6 +19,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "chokidar-cli": "^2.1.0",
+    "clean-css": "^4.2.3",
+    "clean-css-cli": "^4.3.0",
     "nunjucks-cli": "^1.0.0",
     "prettier": "^1.19.1",
     "sass": "^1.26.3"
