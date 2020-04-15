@@ -1,8 +1,9 @@
-Instead of manually picking values from design files,
-use the supplied SASS variables (and mixins) when you
-write your styles.
+No more manually picking values from design files!
+Use these SASS variables and mixins (= design
+tokens) when you write your styles. This is
+basically "design translated into code":
 
 .myComponent {
   color: $lightmode-color-text;
-  padding: $space-m;
+  @include defaultBorderRadius();
 }

@@ -38,13 +38,14 @@
             <h2 class="fw-medium ts-3">Design Tokens</h2>
             <p class="ts-3 w-1-2">The smallest pieces of a design system — basically anything that can be described using letters and numbers.</p>
         </div>
-        <pre><code class="language-scss">Instead of manually picking values from design files,
-use the supplied SASS variables (and mixins) when you
-write your styles.
+        <pre><code class="language-scss">No more manually picking values from design files!
+Use these SASS variables and mixins (= design
+tokens) when you write your styles. This is
+basically &quot;design translated into code&quot;:
 
 .myComponent {
   color: $lightmode-color-text;
-  padding: $space-m;
+  @include defaultBorderRadius();
 }</code></pre>
 
         <ul class="linkList">
