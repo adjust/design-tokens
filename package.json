@@ -5,14 +5,15 @@
   "main": "",
   "scripts": {
     "clear": "rm -rf docs && mkdir -p docs/images",
-    "copy": "cp src/images/* docs/images/",
-    "build": "npm run copy && npm run build-templates && npm run build-styles",
-    "build-styles": "sass src/styles/screen.scss docs/screen.css --no-source-map",
-    "build-templates": "nunjucks *.njk --path src/templates --out docs",
-    "publish": "cleancss -o docs/screen.css docs/screen.css",
+    "copy:images": "cp src/images/* docs/images/",
+    "build": "npm run copy:images && npm run build:templates && npm run build:styles",
+    "build:pagestyles": "sass src/styles/page.scss docs/page.css --no-source-map && cleancss -o docs/page.css docs/page.css",
+    "build:utilitystyles": "sass src/styles/utilities.scss docs/utilities.css --no-source-map && cleancss -o docs/utilities.css docs/utilities.css",
+    "build:styles": "npm run build:pagestyles & npm run build:utilitystyles",
+    "build:templates": "nunjucks *.njk --path src/templates --out docs",
     "serve": "browser-sync start --server docs/ --files docs --port 3004 --no-notify --no-ui",
-    "start": "npm run clear && npm run build && npm run serve & npm run watch",
-    "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'"
+    "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'",
+    "start": "npm run clear && npm run build && npm run serve & npm run watch"
   },
   "author": "Adjust Design System Team",
   "license": "ISC",

@@ -1,15 +1,4 @@
-/* screen.scss */
-
-// utility classes
-
-@import "utilities/border";
-@import "utilities/color";
-@import "utilities/dimension";
-@import "utilities/flexbox";
-@import "utilities/space";
-@import "utilities/typography";
-
-// components
+/* page.scss */
 
 @import "components/abstractEmbed";
 @import "components/article";
