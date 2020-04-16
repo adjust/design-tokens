@@ -4,13 +4,13 @@
   "description": "Adjust Design Tokens",
   "main": "",
   "scripts": {
-    "clear": "rm -rf docs && mkdir -p docs/images",
+    "clear": "rm -rf docs && mkdir -p docs/images dist",
     "copy:images": "cp src/images/* docs/images/",
-    "build": "npm run copy:images && npm run build:templates && npm run build:styles",
-    "build:pagestyles": "sass src/styles/page.scss docs/page.css --no-source-map && cleancss -o docs/page.css docs/page.css",
-    "build:utilitystyles": "sass src/styles/utilities.scss docs/utilities.css --no-source-map && cleancss -o docs/utilities.css docs/utilities.css",
-    "build:styles": "npm run build:pagestyles & npm run build:utilitystyles",
+    "build": "npm run copy:images && npm run build:templates && npm run build:utilitystyles && npm run build:pagestyles",
+    "build:utilitystyles": "sass src/styles/utilities.scss dist/utilities.css --no-source-map && cleancss -o dist/utilities.min.css dist/utilities.css",
+    "build:pagestyles": "sass src/styles/page.scss docs/page.css --no-source-map && cleancss -o docs/page.css docs/page.css dist/utilities.css",
     "build:templates": "nunjucks *.njk --path src/templates --out docs",
+    "publish": "npm run clear && npm run build",
     "serve": "browser-sync start --server docs/ --files docs --port 3004 --no-notify --no-ui",
     "watch": "chokidar 'src/**/*.{njk,scss}' -c 'npm run build && browser-sync reload --port 3004'",
     "start": "npm run clear && npm run build && npm run serve & npm run watch"

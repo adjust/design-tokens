@@ -20,4 +20,10 @@ Check out the repo to your machine. Make sure you have [node.js](https://nodejs.
 $ npm install && npm run start
 ```
 
-All changes pushed to `master` will update the page, hosted via [GitHub pages](https://adjust-design-system.github.io/design-tokens/).
+## Deployment
+
+All changes pushed to `master` will update the page, hosted via [GitHub pages](https://adjust-design-system.github.io/design-tokens/). Before pushing to `master`, run:
+
+```
+$ npm run publish
+```
