@@ -103,6 +103,7 @@
             <p class="ts-3 m:w-1-2">Functional CSS classes that serve one particular purpose.</p>
         </div>
         {{ code.print('css-utility-classes', 'html') }}
+        {{ code.print('use-css-utility-classes', 'html') }}
         <ul class="customList">
             <li class="customList__item">
                 <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_border.scss">
@@ -211,6 +212,9 @@
             </li>
         </ul>
         {# Footer #}
-        <div class="ts-1 m-t-300 p-b-50 c-neutral-80">&copy; Adjust GmbH – <a href="https://github.com/adjust-design-system/design-tokens">GitHub</a></div>
+        <div class="ts-1 m-t-300 p-b-50 c-neutral-80 flx flx-justify-between">
+            <p>&copy; Adjust GmbH</p>
+            <p><a href="https://github.com/adjust-design-system/design-tokens">GitHub</a></p>
+        </div>
     </div>
 {% endblock %}
