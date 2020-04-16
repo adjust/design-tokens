@@ -5489,6 +5489,16 @@ the addition of:
     padding-left: 0 !important;
   }
 }
+/* _breakPoint.scss */
+/*
+Media queries with these breakpoints kick in as soon as a certain screen
+width is reached. A larger breakpoint overrides all smaller ones.
+Example: .m:* is active "from screen size m and up".
+*/
+/*
+Media queries with these breakpoints are active only in their certain range.
+Example: .only-m:* is active only on screens within the width range of breakpoint "m".
+*/
 /* typography.scss */
 /* _typography.scss */
 .fw-normal {
@@ -5563,9 +5573,22 @@ the addition of:
 }
 
 .ts-poster {
-  font-size: 120px !important;
-  letter-spacing: -2px !important;
-  line-height: 160px !important;
+  font-size: 60px !important;
+  letter-spacing: -1.5px !important;
+  line-height: 64px !important;
+}
+@media (min-width: 650px) {
+  .ts-poster {
+    font-size: 90px !important;
+    line-height: 98px !important;
+  }
+}
+@media (min-width: 960px) {
+  .ts-poster {
+    font-size: 120px !important;
+    letter-spacing: -2px !important;
+    line-height: 160px !important;
+  }
 }
 
 .h1 {
@@ -5635,6 +5658,16 @@ $space-20  = 2 times 8px
 $space-100 = 10 times 8px
 etc.
 */
+/* _breakPoint.scss */
+/*
+Media queries with these breakpoints kick in as soon as a certain screen
+width is reached. A larger breakpoint overrides all smaller ones.
+Example: .m:* is active "from screen size m and up".
+*/
+/*
+Media queries with these breakpoints are active only in their certain range.
+Example: .only-m:* is active only on screens within the width range of breakpoint "m".
+*/
 /* typography.scss */
 /* _abstractEmbed.scss */
 .abstractEmbed__iframe {
@@ -5673,6 +5706,16 @@ $space-05  = 0,5 times 8px
 $space-20  = 2 times 8px
 $space-100 = 10 times 8px
 etc.
+*/
+/* _breakPoint.scss */
+/*
+Media queries with these breakpoints kick in as soon as a certain screen
+width is reached. A larger breakpoint overrides all smaller ones.
+Example: .m:* is active "from screen size m and up".
+*/
+/*
+Media queries with these breakpoints are active only in their certain range.
+Example: .only-m:* is active only on screens within the width range of breakpoint "m".
 */
 /* typography.scss */
 /* _article.scss */
@@ -5771,6 +5814,16 @@ a:active {
   text-decoration-color: #25d0e7;
 }
 
+/* _breakPoint.scss */
+/*
+Media queries with these breakpoints kick in as soon as a certain screen
+width is reached. A larger breakpoint overrides all smaller ones.
+Example: .m:* is active "from screen size m and up".
+*/
+/*
+Media queries with these breakpoints are active only in their certain range.
+Example: .only-m:* is active only on screens within the width range of breakpoint "m".
+*/
 /* _color.scss */
 /*
 "Neutral" Color Shades
@@ -5826,16 +5879,22 @@ with custom icons soon.
 .linkList__anchor {
   align-items: flex-start;
   border-bottom: 1px solid #e0e2ec;
-  display: flex;
-  padding: 16px 0;
-  text-decoration: none;
-  position: relative;
   color: #353a52;
+  display: block;
+  padding: 16px 0 16px 40px;
+  position: relative;
+  text-decoration: none;
+}
+@media (min-width: 650px) {
+  .linkList__anchor {
+    display: flex;
+    padding: 16px 0;
+  }
 }
 .linkList__anchor:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%221%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M5 12h13M12 5l7 7-7 7%22/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
   background-position: center right;
+  background-repeat: no-repeat;
   text-decoration: none;
 }
 .linkList__item:last-child .linkList__anchor {
@@ -5843,9 +5902,17 @@ with custom icons soon.
 }
 
 .linkList__icon {
-  margin: 0 8px 0 0;
   flex-shrink: 0;
+  left: 0;
+  margin: 0 12px 0 0;
+  position: absolute;
   stroke: #b5bad0;
+  top: 16px;
+}
+@media (min-width: 650px) {
+  .linkList__icon {
+    position: static;
+  }
 }
 a:hover .linkList__icon {
   stroke: #353a52;
@@ -5867,7 +5934,12 @@ a:hover .linkList__icon {
   line-height: 24px;
   color: #858ca9;
   line-height: 24px;
-  margin: 0 0 0 8px;
+  margin: 0;
+}
+@media (min-width: 650px) {
+  .linkList__description {
+    margin: 0 0 0 8px;
+  }
 }
 
 /* _space.scss */
@@ -5913,9 +5985,30 @@ etc.
 */
 /* _poster.scss */
 .poster {
-  display: block;
-  margin-bottom: 160px;
   width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.poster__image {
+  display: block;
+  position: relative;
+  width: 200vw;
+  left: -50vw;
+}
+@media (min-width: 650px) {
+  .poster__image {
+    margin-bottom: 80px;
+    width: 150vw;
+    left: -33vw;
+  }
+}
+@media (min-width: 960px) {
+  .poster__image {
+    position: static;
+    margin-bottom: 160px;
+    width: 100%;
+  }
 }
 
 /* _color.scss */

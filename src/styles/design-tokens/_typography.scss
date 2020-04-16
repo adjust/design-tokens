@@ -1,5 +1,7 @@
 /* typography.scss */
 
+@use "breakPoint" as *;
+
 // font family
 
 @mixin uiFont($important: null) {
@@ -70,10 +72,23 @@
   line-height: 48px $important;
 }
 
+// super large "poster" size
+
 @mixin typeScale-poster($important: null) {
-  font-size: 120px $important;
-  letter-spacing: -2px $important;
-  line-height: 160px $important;
+  font-size: 60px $important;
+  letter-spacing: -1.5px $important;
+  line-height: 64px $important;
+
+  @include breakpoint-m() {
+    font-size: 90px $important;
+    line-height: 98px $important;
+  }
+
+  @include breakpoint-l() {
+    font-size: 120px $important;
+    letter-spacing: -2px $important;
+    line-height: 160px $important;
+  }
 }
 
 // headings

@@ -1,10 +1,29 @@
 /* _poster.scss */
 
-@use "../design-tokens/breakpoint" as *;
+@use "../design-tokens/breakPoint" as *;
 @use "../design-tokens/space" as *;
 
 .poster {
-  display: block;
-  margin-bottom: $space-200;
   width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.poster__image {
+  display: block;
+  position: relative;
+  width: 200vw;
+  left: -50vw;
+
+  @include breakpoint-m {
+    margin-bottom: $space-100;
+    width: 150vw;
+    left: -33vw;
+  }
+
+  @include breakpoint-l {
+    position: static;
+    margin-bottom: $space-200;
+    width: 100%;
+  }
 }

@@ -1,5 +1,6 @@
 /* _linkList.scss */
 
+@use "../design-tokens/breakPoint" as *;
 @use "../design-tokens/border" as *;
 @use "../design-tokens/color" as *;
 @use "../design-tokens/space" as *;
@@ -19,16 +20,21 @@
 .linkList__anchor {
   align-items: flex-start;
   border-bottom: 1px solid $color-neutral-30;
-  display: flex;
-  padding: $space-20 0;
-  text-decoration: none;
-  position: relative;
   color: $lightmode-color-text;
+  display: block;
+  padding: $space-20 0 $space-20 $space-50;
+  position: relative;
+  text-decoration: none;
+
+  @include breakpoint-m() {
+    display: flex;
+    padding: $space-20 0;
+  }
 
   &:hover {
     @include icon-arrow-right($size: 24, $stroke: 1, $color: $color-neutral-50);
-    background-repeat: no-repeat;
     background-position: center right;
+    background-repeat: no-repeat;
     text-decoration: none;
   }
 
@@ -38,9 +44,16 @@
 }
 
 .linkList__icon {
-  margin: 0 $space-10 0 0;
   flex-shrink: 0;
+  left: 0;
+  margin: 0 $space-15 0 0;
+  position: absolute;
   stroke: $color-neutral-50;
+  top: $space-20;
+
+  @include breakpoint-m() {
+    position: static;
+  }
 
   a:hover & {
     stroke: $lightmode-color-text;
@@ -59,5 +72,9 @@
   @include typeScale-2;
   color: $color-neutral-70;
   line-height: $space-30;
-  margin: 0 0 0 $space-10;
+  margin: 0;
+
+  @include breakpoint-m() {
+    margin: 0 0 0 $space-10;
+  }
 }
