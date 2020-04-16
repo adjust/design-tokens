@@ -5865,18 +5865,18 @@ UI icons as SVG background images
 Borrowed from https://iconsvg.xyz - will get replaced
 with custom icons soon.
 */
-/* _linkList.scss */
-.linkList {
+/* _customList.scss */
+.customList {
   font-family: BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
   list-style: none;
   padding: 0;
 }
 
-.linkList__item {
+.customList__item {
   padding: 0;
 }
 
-.linkList__anchor {
+.customList__row {
   align-items: flex-start;
   border-bottom: 1px solid #e0e2ec;
   color: #353a52;
@@ -5886,22 +5886,22 @@ with custom icons soon.
   text-decoration: none;
 }
 @media (min-width: 650px) {
-  .linkList__anchor {
+  .customList__row {
     display: flex;
     padding: 16px 0;
   }
 }
-.linkList__anchor:hover {
+.customList__row:link:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23b5bad0%22 stroke-width=%221%22 stroke-linecap=%22butt%22 stroke-linejoin=%22arcs%22%3E%3Cpath d=%22M5 12h13M12 5l7 7-7 7%22/%3E%3C/svg%3E");
   background-position: center right;
   background-repeat: no-repeat;
   text-decoration: none;
 }
-.linkList__item:last-child .linkList__anchor {
+.customList__item:last-child .customList__row {
   border: 0;
 }
 
-.linkList__icon {
+.customList__bullet {
   flex-shrink: 0;
   left: 0;
   margin: 0 12px 0 0;
@@ -5910,15 +5910,21 @@ with custom icons soon.
   top: 16px;
 }
 @media (min-width: 650px) {
-  .linkList__icon {
+  .customList__bullet {
     position: static;
   }
 }
-a:hover .linkList__icon {
+a:hover .customList__bullet {
   stroke: #353a52;
 }
+.customList__bullet[src] {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
 
-.linkList__title {
+.customList__title {
   font-weight: normal;
   font-size: 16px;
   letter-spacing: 0;
@@ -5928,7 +5934,7 @@ a:hover .linkList__icon {
   margin: 0;
 }
 
-.linkList__description {
+.customList__description {
   font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
@@ -5937,7 +5943,7 @@ a:hover .linkList__icon {
   margin: 0;
 }
 @media (min-width: 650px) {
-  .linkList__description {
+  .customList__description {
     margin: 0 0 0 8px;
   }
 }

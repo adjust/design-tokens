@@ -1,4 +1,4 @@
-/* _linkList.scss */
+/* _customList.scss */
 
 @use "../design-tokens/breakPoint" as *;
 @use "../design-tokens/border" as *;
@@ -7,17 +7,17 @@
 @use "../design-tokens/typography" as *;
 @use "../design-tokens/icon" as *;
 
-.linkList {
+.customList {
   @include uiFont;
   list-style: none;
   padding: 0;
 }
 
-.linkList__item {
+.customList__item {
   padding: 0;
 }
 
-.linkList__anchor {
+.customList__row {
   align-items: flex-start;
   border-bottom: 1px solid $color-neutral-30;
   color: $lightmode-color-text;
@@ -31,19 +31,19 @@
     padding: $space-20 0;
   }
 
-  &:hover {
+  &:link:hover {
     @include icon-arrow-right($size: 24, $stroke: 1, $color: $color-neutral-50);
     background-position: center right;
     background-repeat: no-repeat;
     text-decoration: none;
   }
 
-  .linkList__item:last-child & {
+  .customList__item:last-child & {
     border: 0;
   }
 }
 
-.linkList__icon {
+.customList__bullet {
   flex-shrink: 0;
   left: 0;
   margin: 0 $space-15 0 0;
@@ -58,9 +58,17 @@
   a:hover & {
     stroke: $lightmode-color-text;
   }
+
+  // if image
+
+  &[src] {
+    width: $space-30;
+    height: $space-30;
+    @include defaultBorderRadius;
+  }
 }
 
-.linkList__title {
+.customList__title {
   @include fontWeight-normal;
   @include typeScale-2;
   color: $lightmode-color-text;
@@ -68,7 +76,7 @@
   margin: 0;
 }
 
-.linkList__description {
+.customList__description {
   @include typeScale-2;
   color: $color-neutral-70;
   line-height: $space-30;
