@@ -26,3 +26,8 @@ from design-tokens/_color.scss:
 */
 
 @include utility-classes($className: "c-neutral", $source: $color-neutral, $property: "color", $responsive: false);
+
+// xxx
+
+@include utility-classes($className: "bg", $source: $color, $property: "background-color", $responsive: false);
+@include utility-classes($className: "c", $source: $color, $property: "color", $responsive: false);

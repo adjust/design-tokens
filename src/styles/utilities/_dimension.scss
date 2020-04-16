@@ -2,6 +2,21 @@
 
 @use "../helpers/utilityClasses" as *;
 @use "../design-tokens/dimension" as *;
+@use "../design-tokens/space" as *;
+
+/*
+A scale of absolute heights and widths, generatd
+from the map $space in design-tokens/_space.scss
+
+You can read the numeric values as multiplicants of 8px, eg:
+
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px
+*/
+
+@include utility-classes($className: "h", $source: $space, $property: "height");
+@include utility-classes($className: "w", $source: $space, $property: "width");
 
 /*
 A scale of relative widths.
@@ -19,7 +34,7 @@ $relativeWidth: (
   "2-5": 40%,
   "3-4": 75%,
   "3-5": 60%,
-  "4-5": 80%
+  "4-5": 80%,
 );
 
 /*

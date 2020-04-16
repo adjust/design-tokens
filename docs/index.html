@@ -5,9 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1" />
         <title>Adjust UI Design Language</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css">
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css" />
         <link rel="stylesheet" href="page.css" />
         <link rel="stylesheet" href="utilities.css" />
     </head>
@@ -18,7 +17,7 @@
     <div class="m-x-auto p-l-30 p-r-30 w-max">
         
         <div class="m-b-100 m:m-b-400 article">
-            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.5 52.5"><defs><clipPath id="a" transform="translate(2.25 2.25)"><path d="M31.52 28.59l-1.4-1c-2.82-2.05-5.4-3.78-7.68-5.14l-.51-.34 3.32-7.5zm2 5l2.17-2.17-8.75-19.56h-3.27l-3.94 9.05-.44-.22A13.48 13.48 0 0013.76 19a3.08 3.08 0 00-2.88 1.54c-1 1.74-.41 4.15 1.69 7.39.77 1.19 1.6 2.3 2.19 3.05h3.16L19.21 28l-1.36-3.08-1.59 3.49-.53-.7c-.36-.47-.69-.95-1-1.4-1.72-2.64-2-4-1.6-4.48s2.53.14 4.9 1.31A25.74 25.74 0 0122 25.37c.94.58 2 1.23 3 1.93 3.79 2.58 7.24 5.27 8.51 6.27zm7.9-9.59A17.42 17.42 0 1124 6.56 17.44 17.44 0 0141.42 24zM44 24a20 20 0 10-20 20 20 20 0 0020-20z" fill="none" clip-rule="evenodd"/></clipPath></defs><g clip-path="url(#a)"><path fill="#08d3ff" d="M0 0h52.5v52.5H0z"/></g></svg>
+            <svg class="w-100 h-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.5 52.5"><defs><clipPath id="a" transform="translate(2.25 2.25)"><path d="M31.52 28.59l-1.4-1c-2.82-2.05-5.4-3.78-7.68-5.14l-.51-.34 3.32-7.5zm2 5l2.17-2.17-8.75-19.56h-3.27l-3.94 9.05-.44-.22A13.48 13.48 0 0013.76 19a3.08 3.08 0 00-2.88 1.54c-1 1.74-.41 4.15 1.69 7.39.77 1.19 1.6 2.3 2.19 3.05h3.16L19.21 28l-1.36-3.08-1.59 3.49-.53-.7c-.36-.47-.69-.95-1-1.4-1.72-2.64-2-4-1.6-4.48s2.53.14 4.9 1.31A25.74 25.74 0 0122 25.37c.94.58 2 1.23 3 1.93 3.79 2.58 7.24 5.27 8.51 6.27zm7.9-9.59A17.42 17.42 0 1124 6.56 17.44 17.44 0 0141.42 24zM44 24a20 20 0 10-20 20 20 20 0 0020-20z" fill="none" clip-rule="evenodd"/></clipPath></defs><g clip-path="url(#a)"><path fill="#08d3ff" d="M0 0h52.5v52.5H0z"/></g></svg>
             <h1 class="ts-poster fw-normal">Spree <span class="ts-2 c-neutral-60">v.0.0.1</span></h1>
             <p class="ts-4">This is the first look at Adjust’s new UI design language, codename <i>Spree</i>. This simple page acts as a temporary tool for communication and alignment, speaking to everyone who is about to use Adjust’s soon-to-come design system.</p>
         </div>
@@ -39,7 +38,7 @@
         
         <div class="article m-t-200 m-b-40">
             <h2 class="fw-medium ts-3">Design Tokens</h2>
-            <p class="ts-3 m:w-1-2">The smallest pieces of a design system — basically anything that can be described using letters and numbers.</p>
+            <p class="ts-3 m:w-1-2">The fundamental parts of the design that can be described using letters and numbers. Design, encoded.</p>
         </div>
         <pre><code class="language-scss">No more manually picking values from design files!
 Use these SASS variables and mixins (= design
@@ -119,20 +118,22 @@ basically &quot;design translated into code&quot;:
         
         <div class="article m-t-200 m-b-40">
             <h2 class="fw-medium ts-3">Utility Classes</h2>
-            <p class="ts-3 m:w-1-2">Functional CSS classes that serve one particular purpose.</p>
+            <p class="ts-3 m:w-1-2">Functional and highly composable CSS classes that serve one particular purpose. Atomic styling via markup.</p>
         </div>
-        <pre><code class="language-html">Compose layouts without writing CSS:
+        <pre><code class="language-html">Compose layouts without writing CSS,
+design tokens already included:
 
 m:flx   = display:flex from breakpoint M and up
-m:w-1-2 = width:50% (1/2) width from breakpoint M and up
+m:w-1-2 = width:50% (1/2) from breakpoint M and up
 p-4     = padding of factor 4 on all sides
+c-brand = brand text color
 
-&lt;div class=&quot;m:flx&quot;&gt;
+&lt;div class=&quot;m:flx c-brand&quot;&gt;
     &lt;div class=&quot;m:w-1-2 p-4&quot;&gt;1&lt;/div&gt;
     &lt;div class=&quot;m:w-1-2 p-4&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-        <pre><code class="language-html">Use the utility classes in your project via CDN:
+        <pre><code class="language-html">You may integrate the utility classes into your project via CDN:
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/adjust-design-system/design-tokens/dist/utilities.min.css&quot; /&gt;
 </code></pre>
 

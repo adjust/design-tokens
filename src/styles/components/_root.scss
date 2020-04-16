@@ -23,11 +23,11 @@ html::after {
 }
 
 body {
-  position: relative;
   min-height: 90vh;
+  position: relative;
 }
 
 ::selection {
-  color: $color-primary-120;
   background-color: $color-primary-10;
+  color: $color-primary-120;
 }

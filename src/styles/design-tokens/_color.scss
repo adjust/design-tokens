@@ -23,10 +23,8 @@ $color-neutral: (
   "130": #21253a,
   "140": #191d2f,
   "150": #121523,
-  "160": #0b0d18
+  "160": #0b0d18,
 );
-
-// numeric variables
 
 $color-neutral-10: map-get($color-neutral, "10");
 $color-neutral-20: map-get($color-neutral, "20");
@@ -69,10 +67,8 @@ $color-negative: (
   "130": #4d0f0c,
   "140": #360a07,
   "150": #200504,
-  "160": #0b0101
+  "160": #0b0101,
 );
-
-// numeric variables
 
 $color-negative-10: map-get($color-negative, "10");
 $color-negative-20: map-get($color-negative, "20");
@@ -100,32 +96,30 @@ $color-negative-160: map-get($color-negative, "160");
 */
 
 $color-primary: (
-  "10": #e5fcff,
-  "20": #bdf6fe,
-  "30": #97f0fc,
-  "40": #6ee8f8,
-  "50": #47ddf1,
-  "60": #25d0e7,
-  "70": #05bdd5,
-  "80": #00a8bf,
-  "90": #0091a4,
-  "100": #007685,
-  "110": #005b67,
-  "120": #00424b,
-  "130": #002e35,
-  "140": #002125,
-  "150": #00171a,
-  "160": #000a0b
+  "10": #edfcff,
+  "20": #ccf6ff,
+  "30": #a7efff,
+  "40": #7be6ff,
+  "50": #43dcff,
+  "60": #08d3ff,
+  "70": #07c5ee,
+  "80": #07add3,
+  "90": #0590b0,
+  "100": #047088,
+  "110": #035567,
+  "120": #023d4b,
+  "130": #012c35,
+  "140": #011f26,
+  "150": #001419,
+  "160": #00080a,
 );
-
-// numeric variables
 
 $color-primary-10: map-get($color-primary, "10");
 $color-primary-20: map-get($color-primary, "20");
 $color-primary-30: map-get($color-primary, "30");
 $color-primary-40: map-get($color-primary, "40");
 $color-primary-50: map-get($color-primary, "50");
-$color-primary-60: map-get($color-primary, "60"); // new brand color
+$color-primary-60: map-get($color-primary, "60");
 $color-primary-70: map-get($color-primary, "70");
 $color-primary-80: map-get($color-primary, "80");
 $color-primary-90: map-get($color-primary, "90");
@@ -137,23 +131,34 @@ $color-primary-140: map-get($color-primary, "140");
 $color-primary-150: map-get($color-primary, "150");
 $color-primary-160: map-get($color-primary, "160");
 
-// semantic variables: achromatic
+// other colors
 
-$color-white: #fff;
-$color-black: #030511;
+$color: (
+  "brand": map-get($color-primary, "60"),
+  "white": #fff,
+  "black": #030511,
+  "focus": #1a62ff,
+  "lightmode-text": map-get($color-neutral, "110"),
+  "lightmode-background-z1": map-get($color-neutral, "20"),
+  "lightmode-background-z2": map-get($color-neutral, "10"),
+  "lightmode-background-z3": #fff,
+  "darkmode-text": map-get($color-neutral, "10"),
+  "darkmode-background-z1": map-get($color-neutral, "160"),
+  "darkmode-background-z2": map-get($color-neutral, "150"),
+  "darkmode-background-z3": map-get($color-neutral, "140"),
+);
 
-// semantic variables: focus
+$color-brand: map-get($color, "brand");
+$color-white: map-get($color, "white");
+$color-black: map-get($color, "black");
+$color-focus: map-get($color, "focus");
 
-$color-focus: #1a62ff;
+$lightmode-color-text: map-get($color, "lightmode-text");
+$lightmode-color-background-z1: map-get($color, "lightmode-background-z1");
+$lightmode-color-background-z2: map-get($color, "lightmode-background-z2");
+$lightmode-color-background-z3: map-get($color, "lightmode-background-z3");
 
-// semantic variables: text and background
-
-$lightmode-color-text: map-get($color-neutral, "110");
-$lightmode-color-background-z1: map-get($color-neutral, "20");
-$lightmode-color-background-z2: map-get($color-neutral, "10");
-$lightmode-color-background-z3: $color-white;
-
-$darkmode-color-text: map-get($color-neutral, "10");
-$darkmode-color-background-z1: map-get($color-neutral, "160");
-$darkmode-color-background-z2: map-get($color-neutral, "150");
-$darkmode-color-background-z3: map-get($color-neutral, "140");
+$darkmode-color-text: map-get($color, "darkmode-text");
+$darkmode-color-background-z1: map-get($color, "darkmode-background-z1");
+$darkmode-color-background-z2: map-get($color, "darkmode-background-z2");
+$darkmode-color-background-z3: map-get($color, "darkmode-background-z3");

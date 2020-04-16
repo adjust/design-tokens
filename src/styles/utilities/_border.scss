@@ -38,3 +38,4 @@ from design-tokens/_color.scss:
 */
 
 @include utility-classes($className: "bc-neutral", $source: $color-neutral, $property: "border-color", $responsive: false);
+@include utility-classes($className: "bc", $source: $color, $property: "border-color", $responsive: false);

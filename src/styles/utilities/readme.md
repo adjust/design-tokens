@@ -2,7 +2,7 @@
 
 Functional CSS classes that serve one particular purpose. Use them to compose layouts without writing CSS.
 
-## Border Utilities
+## Border
 
 Default borders for dark and light mode
 
@@ -32,22 +32,22 @@ Neutral border color utilities (generated from design-tokens/\_color.scss):
 .bc-neutral-160
 ```
 
-## Color Utilities
+## Color
 
 ...
 
-## Dimension Utilities
+## Dimension
 
 ...
 
-## Flex Box Utilities
+## Flex Box
 
 ...
 
-## Space Utilities
+## Space
 
 ...
 
-## Typography Utilities
+## Typography
 
 ...

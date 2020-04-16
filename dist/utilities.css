@@ -44,15 +44,15 @@ responsive utility classes for all breakpoints
 */
 /* _border.scss */
 .b-darkmode-default {
-  border-width: 1px !important;
   border-color: #2a2f45 !important;
   border-style: solid !important;
+  border-width: 1px !important;
 }
 
 .b-lightmode-default {
-  border-width: 1px !important;
   border-color: #cdd0e0 !important;
   border-style: solid !important;
+  border-width: 1px !important;
 }
 
 .b-rounded {
@@ -121,6 +121,43 @@ from design-tokens/_color.scss:
 }
 .bc-neutral-160 {
   border-color: #0b0d18 !important;
+}
+
+.bc-brand {
+  border-color: #08d3ff !important;
+}
+.bc-white {
+  border-color: #fff !important;
+}
+.bc-black {
+  border-color: #030511 !important;
+}
+.bc-focus {
+  border-color: #1a62ff !important;
+}
+.bc-lightmode-text {
+  border-color: #353a52 !important;
+}
+.bc-lightmode-background-z1 {
+  border-color: #eceef4 !important;
+}
+.bc-lightmode-background-z2 {
+  border-color: #f4f5f9 !important;
+}
+.bc-lightmode-background-z3 {
+  border-color: #fff !important;
+}
+.bc-darkmode-text {
+  border-color: #f4f5f9 !important;
+}
+.bc-darkmode-background-z1 {
+  border-color: #0b0d18 !important;
+}
+.bc-darkmode-background-z2 {
+  border-color: #121523 !important;
+}
+.bc-darkmode-background-z3 {
+  border-color: #191d2f !important;
 }
 
 /* _color.scss */
@@ -281,6 +318,80 @@ from design-tokens/_color.scss:
   color: #0b0d18 !important;
 }
 
+.bg-brand {
+  background-color: #08d3ff !important;
+}
+.bg-white {
+  background-color: #fff !important;
+}
+.bg-black {
+  background-color: #030511 !important;
+}
+.bg-focus {
+  background-color: #1a62ff !important;
+}
+.bg-lightmode-text {
+  background-color: #353a52 !important;
+}
+.bg-lightmode-background-z1 {
+  background-color: #eceef4 !important;
+}
+.bg-lightmode-background-z2 {
+  background-color: #f4f5f9 !important;
+}
+.bg-lightmode-background-z3 {
+  background-color: #fff !important;
+}
+.bg-darkmode-text {
+  background-color: #f4f5f9 !important;
+}
+.bg-darkmode-background-z1 {
+  background-color: #0b0d18 !important;
+}
+.bg-darkmode-background-z2 {
+  background-color: #121523 !important;
+}
+.bg-darkmode-background-z3 {
+  background-color: #191d2f !important;
+}
+
+.c-brand {
+  color: #08d3ff !important;
+}
+.c-white {
+  color: #fff !important;
+}
+.c-black {
+  color: #030511 !important;
+}
+.c-focus {
+  color: #1a62ff !important;
+}
+.c-lightmode-text {
+  color: #353a52 !important;
+}
+.c-lightmode-background-z1 {
+  color: #eceef4 !important;
+}
+.c-lightmode-background-z2 {
+  color: #f4f5f9 !important;
+}
+.c-lightmode-background-z3 {
+  color: #fff !important;
+}
+.c-darkmode-text {
+  color: #f4f5f9 !important;
+}
+.c-darkmode-background-z1 {
+  color: #0b0d18 !important;
+}
+.c-darkmode-background-z2 {
+  color: #121523 !important;
+}
+.c-darkmode-background-z3 {
+  color: #191d2f !important;
+}
+
 /* _breakPoint.scss */
 /*
 Media queries with these breakpoints kick in as soon as a certain screen
@@ -302,7 +413,682 @@ responsive utility classes for all breakpoints
 (which can be disabled).
 */
 /* _width.scss */
+/* _space.scss */
+/*
+Spacing Scale
+
+You can read the numeric values as multiplicants of 8px, eg:
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px ... etc.
+*/
 /* _width.scss */
+/*
+A scale of absolute heights and widths, generatd
+from the map $space in design-tokens/_space.scss
+
+You can read the numeric values as multiplicants of 8px, eg:
+
+$space-05  = 0,5 times 8px
+$space-20  = 2 times 8px
+$space-100 = 10 times 8px
+*/
+.h-05 {
+  height: 4px !important;
+}
+.h-10 {
+  height: 8px !important;
+}
+.h-15 {
+  height: 12px !important;
+}
+.h-20 {
+  height: 16px !important;
+}
+.h-25 {
+  height: 20px !important;
+}
+.h-30 {
+  height: 24px !important;
+}
+.h-35 {
+  height: 28px !important;
+}
+.h-40 {
+  height: 32px !important;
+}
+.h-45 {
+  height: 36px !important;
+}
+.h-50 {
+  height: 40px !important;
+}
+.h-100 {
+  height: 80px !important;
+}
+.h-200 {
+  height: 160px !important;
+}
+.h-300 {
+  height: 240px !important;
+}
+.h-400 {
+  height: 320px !important;
+}
+.h-500 {
+  height: 400px !important;
+}
+
+@media (min-width: 650px) {
+  .m\:h-05 {
+    height: 4px !important;
+  }
+  .m\:h-10 {
+    height: 8px !important;
+  }
+  .m\:h-15 {
+    height: 12px !important;
+  }
+  .m\:h-20 {
+    height: 16px !important;
+  }
+  .m\:h-25 {
+    height: 20px !important;
+  }
+  .m\:h-30 {
+    height: 24px !important;
+  }
+  .m\:h-35 {
+    height: 28px !important;
+  }
+  .m\:h-40 {
+    height: 32px !important;
+  }
+  .m\:h-45 {
+    height: 36px !important;
+  }
+  .m\:h-50 {
+    height: 40px !important;
+  }
+  .m\:h-100 {
+    height: 80px !important;
+  }
+  .m\:h-200 {
+    height: 160px !important;
+  }
+  .m\:h-300 {
+    height: 240px !important;
+  }
+  .m\:h-400 {
+    height: 320px !important;
+  }
+  .m\:h-500 {
+    height: 400px !important;
+  }
+}
+@media (min-width: 960px) {
+  .l\:h-05 {
+    height: 4px !important;
+  }
+  .l\:h-10 {
+    height: 8px !important;
+  }
+  .l\:h-15 {
+    height: 12px !important;
+  }
+  .l\:h-20 {
+    height: 16px !important;
+  }
+  .l\:h-25 {
+    height: 20px !important;
+  }
+  .l\:h-30 {
+    height: 24px !important;
+  }
+  .l\:h-35 {
+    height: 28px !important;
+  }
+  .l\:h-40 {
+    height: 32px !important;
+  }
+  .l\:h-45 {
+    height: 36px !important;
+  }
+  .l\:h-50 {
+    height: 40px !important;
+  }
+  .l\:h-100 {
+    height: 80px !important;
+  }
+  .l\:h-200 {
+    height: 160px !important;
+  }
+  .l\:h-300 {
+    height: 240px !important;
+  }
+  .l\:h-400 {
+    height: 320px !important;
+  }
+  .l\:h-500 {
+    height: 400px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .xl\:h-05 {
+    height: 4px !important;
+  }
+  .xl\:h-10 {
+    height: 8px !important;
+  }
+  .xl\:h-15 {
+    height: 12px !important;
+  }
+  .xl\:h-20 {
+    height: 16px !important;
+  }
+  .xl\:h-25 {
+    height: 20px !important;
+  }
+  .xl\:h-30 {
+    height: 24px !important;
+  }
+  .xl\:h-35 {
+    height: 28px !important;
+  }
+  .xl\:h-40 {
+    height: 32px !important;
+  }
+  .xl\:h-45 {
+    height: 36px !important;
+  }
+  .xl\:h-50 {
+    height: 40px !important;
+  }
+  .xl\:h-100 {
+    height: 80px !important;
+  }
+  .xl\:h-200 {
+    height: 160px !important;
+  }
+  .xl\:h-300 {
+    height: 240px !important;
+  }
+  .xl\:h-400 {
+    height: 320px !important;
+  }
+  .xl\:h-500 {
+    height: 400px !important;
+  }
+}
+@media (min-width: 0) and (max-width: 649px) {
+  .only-s\:h-05 {
+    height: 4px !important;
+  }
+  .only-s\:h-10 {
+    height: 8px !important;
+  }
+  .only-s\:h-15 {
+    height: 12px !important;
+  }
+  .only-s\:h-20 {
+    height: 16px !important;
+  }
+  .only-s\:h-25 {
+    height: 20px !important;
+  }
+  .only-s\:h-30 {
+    height: 24px !important;
+  }
+  .only-s\:h-35 {
+    height: 28px !important;
+  }
+  .only-s\:h-40 {
+    height: 32px !important;
+  }
+  .only-s\:h-45 {
+    height: 36px !important;
+  }
+  .only-s\:h-50 {
+    height: 40px !important;
+  }
+  .only-s\:h-100 {
+    height: 80px !important;
+  }
+  .only-s\:h-200 {
+    height: 160px !important;
+  }
+  .only-s\:h-300 {
+    height: 240px !important;
+  }
+  .only-s\:h-400 {
+    height: 320px !important;
+  }
+  .only-s\:h-500 {
+    height: 400px !important;
+  }
+}
+@media (min-width: 650px) and (max-width: 959px) {
+  .only-m\:h-05 {
+    height: 4px !important;
+  }
+  .only-m\:h-10 {
+    height: 8px !important;
+  }
+  .only-m\:h-15 {
+    height: 12px !important;
+  }
+  .only-m\:h-20 {
+    height: 16px !important;
+  }
+  .only-m\:h-25 {
+    height: 20px !important;
+  }
+  .only-m\:h-30 {
+    height: 24px !important;
+  }
+  .only-m\:h-35 {
+    height: 28px !important;
+  }
+  .only-m\:h-40 {
+    height: 32px !important;
+  }
+  .only-m\:h-45 {
+    height: 36px !important;
+  }
+  .only-m\:h-50 {
+    height: 40px !important;
+  }
+  .only-m\:h-100 {
+    height: 80px !important;
+  }
+  .only-m\:h-200 {
+    height: 160px !important;
+  }
+  .only-m\:h-300 {
+    height: 240px !important;
+  }
+  .only-m\:h-400 {
+    height: 320px !important;
+  }
+  .only-m\:h-500 {
+    height: 400px !important;
+  }
+}
+@media (min-width: 960px) and (max-width: 1439px) {
+  .only-l\:h-05 {
+    height: 4px !important;
+  }
+  .only-l\:h-10 {
+    height: 8px !important;
+  }
+  .only-l\:h-15 {
+    height: 12px !important;
+  }
+  .only-l\:h-20 {
+    height: 16px !important;
+  }
+  .only-l\:h-25 {
+    height: 20px !important;
+  }
+  .only-l\:h-30 {
+    height: 24px !important;
+  }
+  .only-l\:h-35 {
+    height: 28px !important;
+  }
+  .only-l\:h-40 {
+    height: 32px !important;
+  }
+  .only-l\:h-45 {
+    height: 36px !important;
+  }
+  .only-l\:h-50 {
+    height: 40px !important;
+  }
+  .only-l\:h-100 {
+    height: 80px !important;
+  }
+  .only-l\:h-200 {
+    height: 160px !important;
+  }
+  .only-l\:h-300 {
+    height: 240px !important;
+  }
+  .only-l\:h-400 {
+    height: 320px !important;
+  }
+  .only-l\:h-500 {
+    height: 400px !important;
+  }
+}
+.w-05 {
+  width: 4px !important;
+}
+.w-10 {
+  width: 8px !important;
+}
+.w-15 {
+  width: 12px !important;
+}
+.w-20 {
+  width: 16px !important;
+}
+.w-25 {
+  width: 20px !important;
+}
+.w-30 {
+  width: 24px !important;
+}
+.w-35 {
+  width: 28px !important;
+}
+.w-40 {
+  width: 32px !important;
+}
+.w-45 {
+  width: 36px !important;
+}
+.w-50 {
+  width: 40px !important;
+}
+.w-100 {
+  width: 80px !important;
+}
+.w-200 {
+  width: 160px !important;
+}
+.w-300 {
+  width: 240px !important;
+}
+.w-400 {
+  width: 320px !important;
+}
+.w-500 {
+  width: 400px !important;
+}
+
+@media (min-width: 650px) {
+  .m\:w-05 {
+    width: 4px !important;
+  }
+  .m\:w-10 {
+    width: 8px !important;
+  }
+  .m\:w-15 {
+    width: 12px !important;
+  }
+  .m\:w-20 {
+    width: 16px !important;
+  }
+  .m\:w-25 {
+    width: 20px !important;
+  }
+  .m\:w-30 {
+    width: 24px !important;
+  }
+  .m\:w-35 {
+    width: 28px !important;
+  }
+  .m\:w-40 {
+    width: 32px !important;
+  }
+  .m\:w-45 {
+    width: 36px !important;
+  }
+  .m\:w-50 {
+    width: 40px !important;
+  }
+  .m\:w-100 {
+    width: 80px !important;
+  }
+  .m\:w-200 {
+    width: 160px !important;
+  }
+  .m\:w-300 {
+    width: 240px !important;
+  }
+  .m\:w-400 {
+    width: 320px !important;
+  }
+  .m\:w-500 {
+    width: 400px !important;
+  }
+}
+@media (min-width: 960px) {
+  .l\:w-05 {
+    width: 4px !important;
+  }
+  .l\:w-10 {
+    width: 8px !important;
+  }
+  .l\:w-15 {
+    width: 12px !important;
+  }
+  .l\:w-20 {
+    width: 16px !important;
+  }
+  .l\:w-25 {
+    width: 20px !important;
+  }
+  .l\:w-30 {
+    width: 24px !important;
+  }
+  .l\:w-35 {
+    width: 28px !important;
+  }
+  .l\:w-40 {
+    width: 32px !important;
+  }
+  .l\:w-45 {
+    width: 36px !important;
+  }
+  .l\:w-50 {
+    width: 40px !important;
+  }
+  .l\:w-100 {
+    width: 80px !important;
+  }
+  .l\:w-200 {
+    width: 160px !important;
+  }
+  .l\:w-300 {
+    width: 240px !important;
+  }
+  .l\:w-400 {
+    width: 320px !important;
+  }
+  .l\:w-500 {
+    width: 400px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .xl\:w-05 {
+    width: 4px !important;
+  }
+  .xl\:w-10 {
+    width: 8px !important;
+  }
+  .xl\:w-15 {
+    width: 12px !important;
+  }
+  .xl\:w-20 {
+    width: 16px !important;
+  }
+  .xl\:w-25 {
+    width: 20px !important;
+  }
+  .xl\:w-30 {
+    width: 24px !important;
+  }
+  .xl\:w-35 {
+    width: 28px !important;
+  }
+  .xl\:w-40 {
+    width: 32px !important;
+  }
+  .xl\:w-45 {
+    width: 36px !important;
+  }
+  .xl\:w-50 {
+    width: 40px !important;
+  }
+  .xl\:w-100 {
+    width: 80px !important;
+  }
+  .xl\:w-200 {
+    width: 160px !important;
+  }
+  .xl\:w-300 {
+    width: 240px !important;
+  }
+  .xl\:w-400 {
+    width: 320px !important;
+  }
+  .xl\:w-500 {
+    width: 400px !important;
+  }
+}
+@media (min-width: 0) and (max-width: 649px) {
+  .only-s\:w-05 {
+    width: 4px !important;
+  }
+  .only-s\:w-10 {
+    width: 8px !important;
+  }
+  .only-s\:w-15 {
+    width: 12px !important;
+  }
+  .only-s\:w-20 {
+    width: 16px !important;
+  }
+  .only-s\:w-25 {
+    width: 20px !important;
+  }
+  .only-s\:w-30 {
+    width: 24px !important;
+  }
+  .only-s\:w-35 {
+    width: 28px !important;
+  }
+  .only-s\:w-40 {
+    width: 32px !important;
+  }
+  .only-s\:w-45 {
+    width: 36px !important;
+  }
+  .only-s\:w-50 {
+    width: 40px !important;
+  }
+  .only-s\:w-100 {
+    width: 80px !important;
+  }
+  .only-s\:w-200 {
+    width: 160px !important;
+  }
+  .only-s\:w-300 {
+    width: 240px !important;
+  }
+  .only-s\:w-400 {
+    width: 320px !important;
+  }
+  .only-s\:w-500 {
+    width: 400px !important;
+  }
+}
+@media (min-width: 650px) and (max-width: 959px) {
+  .only-m\:w-05 {
+    width: 4px !important;
+  }
+  .only-m\:w-10 {
+    width: 8px !important;
+  }
+  .only-m\:w-15 {
+    width: 12px !important;
+  }
+  .only-m\:w-20 {
+    width: 16px !important;
+  }
+  .only-m\:w-25 {
+    width: 20px !important;
+  }
+  .only-m\:w-30 {
+    width: 24px !important;
+  }
+  .only-m\:w-35 {
+    width: 28px !important;
+  }
+  .only-m\:w-40 {
+    width: 32px !important;
+  }
+  .only-m\:w-45 {
+    width: 36px !important;
+  }
+  .only-m\:w-50 {
+    width: 40px !important;
+  }
+  .only-m\:w-100 {
+    width: 80px !important;
+  }
+  .only-m\:w-200 {
+    width: 160px !important;
+  }
+  .only-m\:w-300 {
+    width: 240px !important;
+  }
+  .only-m\:w-400 {
+    width: 320px !important;
+  }
+  .only-m\:w-500 {
+    width: 400px !important;
+  }
+}
+@media (min-width: 960px) and (max-width: 1439px) {
+  .only-l\:w-05 {
+    width: 4px !important;
+  }
+  .only-l\:w-10 {
+    width: 8px !important;
+  }
+  .only-l\:w-15 {
+    width: 12px !important;
+  }
+  .only-l\:w-20 {
+    width: 16px !important;
+  }
+  .only-l\:w-25 {
+    width: 20px !important;
+  }
+  .only-l\:w-30 {
+    width: 24px !important;
+  }
+  .only-l\:w-35 {
+    width: 28px !important;
+  }
+  .only-l\:w-40 {
+    width: 32px !important;
+  }
+  .only-l\:w-45 {
+    width: 36px !important;
+  }
+  .only-l\:w-50 {
+    width: 40px !important;
+  }
+  .only-l\:w-100 {
+    width: 80px !important;
+  }
+  .only-l\:w-200 {
+    width: 160px !important;
+  }
+  .only-l\:w-300 {
+    width: 240px !important;
+  }
+  .only-l\:w-400 {
+    width: 320px !important;
+  }
+  .only-l\:w-500 {
+    width: 400px !important;
+  }
+}
 /*
 A scale of relative widths.
 Hint: read eg. "1-2" like "1/2" (one half).
@@ -1908,8 +2694,7 @@ Spacing Scale
 You can read the numeric values as multiplicants of 8px, eg:
 $space-05  = 0,5 times 8px
 $space-20  = 2 times 8px
-$space-100 = 10 times 8px
-etc.
+$space-100 = 10 times 8px ... etc.
 */
 /* _preserveEscapedString.scss */
 /* _utilityClasses.scss */

@@ -61,14 +61,14 @@
     stroke: $lightmode-color-text;
   }
 
-  // if image
+  // as image
 
-  &[src] {
+  @at-root img#{&} {
     @include defaultBorderRadius;
     filter: grayscale(100%);
   }
 
-  a:hover &[src] {
+  @at-root a:hover img#{&} {
     filter: grayscale(0);
   }
 }

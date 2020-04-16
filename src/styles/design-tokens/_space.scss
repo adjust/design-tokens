@@ -6,8 +6,7 @@ Spacing Scale
 You can read the numeric values as multiplicants of 8px, eg:
 $space-05  = 0,5 times 8px
 $space-20  = 2 times 8px
-$space-100 = 10 times 8px
-etc.
+$space-100 = 10 times 8px ... etc.
 */
 
 $space: (
@@ -25,10 +24,8 @@ $space: (
   "200": 160px,
   "300": 240px,
   "400": 320px,
-  "500": 400px
+  "500": 400px,
 );
-
-// numeric variables
 
 $space-05: map-get($space, "05");
 $space-10: map-get($space, "10");
@@ -45,8 +42,6 @@ $space-200: map-get($space, "200");
 $space-300: map-get($space, "300");
 $space-400: map-get($space, "400");
 $space-500: map-get($space, "500");
-
-// semantic variables
 
 $space-xs: map-get($space, "05");
 $space-s: map-get($space, "10");

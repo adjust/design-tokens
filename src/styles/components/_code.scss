@@ -4,6 +4,11 @@
 @use "../design-tokens/color" as *;
 @use "../design-tokens/border" as *;
 
+/*
+Styling for the syntax-highlighted code
+via https://highlightjs.org
+*/
+
 .hljs {
   @include defaultBorderRadius;
   background: $color-neutral-20;
