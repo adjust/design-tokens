@@ -1,1 +1,1 @@
-https://reimar.github.io/design-tokens/
+https://adjust-design-system.github.io/design-tokens/
