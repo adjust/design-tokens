@@ -1,0 +1,22 @@
+/* _colorPalette.scss */
+
+@use "../helpers/mapToList" as *;
+
+@mixin colorPalette($colorMap) {
+  /*
+    Creates a color palette with a linear css gradient
+  */
+
+  $colorList: mapToList($colorMap, "values");
+  $paletteWidth: 100% / length($colorList);
+  $gradient: ();
+
+  @for $i from 1 through length($colorList) {
+    $color: nth($colorList, $i);
+    $gradientFraction: ();
+    $gradientFraction: $color $paletteWidth * ($i - 1), $color $paletteWidth * $i;
+    $gradient: join($gradient, $gradientFraction, comma);
+  }
+
+  background: linear-gradient(to right, $gradient);
+}

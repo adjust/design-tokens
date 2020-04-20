@@ -28,7 +28,7 @@
         </div>
         <ul class="customList">
             <li class="customList__item">
-                <a class="customList__row" href="https://share.goabstract.com/9ac4f78a-886d-4a7a-86f1-8d92ecdd4f49">
+                <a class="customList__head" href="https://share.goabstract.com/9ac4f78a-886d-4a7a-86f1-8d92ecdd4f49">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                     <h3 class="customList__title">Components Colection</h3>
                     <p class="customList__description">Browse and inspect designs</p>
@@ -52,63 +52,64 @@ basically &quot;design translated into code&quot;:
 
         <ul class="customList">
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_border.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_border.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trello"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="9"></rect><rect x="14" y="7" width="3" height="5"></rect></svg>
                     <h3 class="customList__title">Border</h3>
                     <p class="customList__description">Default border styles</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_breakPoint.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_breakPoint.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     <h3 class="customList__title">Breakpoint</h3>
                     <p class="customList__description">Strict and fluid breakpoints</p>
                 </a>
             </li>
-            <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_color.scss">
+            <li class="customList__item" x-data="{ open: false }">
+                <a class="customList__head" @click="open = true" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_color.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
                     <h3 class="customList__title">Color</h3>
                     <p class="customList__description">Color shades and semantic color variables</p>
                 </a>
+                
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_dimension.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_dimension.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     <h3 class="customList__title">Dimension</h3>
                     <p class="customList__description">Sizing scale</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_icon.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_icon.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     <h3 class="customList__title">Icon</h3>
                     <p class="customList__description">Mixins for flexible SVG icons as CSS background-image</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_layerStyle.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_layerStyle.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     <h3 class="customList__title">Layerstyle</h3>
                     <p class="customList__description">Mixins reflecting layer styles from the Sketch library</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_space.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_space.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                     <h3 class="customList__title">Space</h3>
                     <p class="customList__description">Spacing scale (use for margin, padding, position, vertical rhythm, &hellip;)</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_time.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_time.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     <h3 class="customList__title">Time</h3>
                     <p class="customList__description">Timings for transitions and animations</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_typography.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/design-tokens/_typography.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
                     <h3 class="customList__title">Typography</h3>
                     <p class="customList__description">Type scale, headings, text formatting</p>
@@ -139,42 +140,42 @@ c-brand = brand text color
 
         <ul class="customList">
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_border.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_border.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trello"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="9"></rect><rect x="14" y="7" width="3" height="5"></rect></svg>
                     <h3 class="customList__title">Border</h3>
                     <p class="customList__description">Border utilities</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_color.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_color.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
                     <h3 class="customList__title">Color</h3>
                     <p class="customList__description">Utilities for background-, text- and border-color</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_dimension.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_dimension.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     <h3 class="customList__title">Dimension</h3>
                     <p class="customList__description">Sizing utilities</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_flexbox.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_flexbox.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M15 21V9"/></svg>
                     <h3 class="customList__title">Flexbox</h3>
                     <p class="customList__description">Utilities for flexbox-based layout</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_space.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_space.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                     <h3 class="customList__title">Space</h3>
                     <p class="customList__description">Spacing utilities (use for margin, padding, position, vertical rhythm, &hellip;)</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_typography.scss">
+                <a class="customList__head" href="https://github.com/reimar/design-tokens/blob/master/src/styles/utilities/_typography.scss">
                     <svg class="customList__bullet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg>
                     <h3 class="customList__title">Typography</h3>
                     <p class="customList__description">Type scale, headings, text formatting</p>
@@ -188,56 +189,56 @@ c-brand = brand text color
         </div>
         <ul class="customList">
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/U026HFU2W">
+                <a class="customList__head" href="https://adjust.slack.com/team/U026HFU2W">
                     <img class="customList__bullet" src="images/avatar-manuel.jpg" />
                     <h3 class="customList__title">Manuel</h3>
                     <p class="customList__description">Project Supervisor</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/UEH49HKJ5">
+                <a class="customList__head" href="https://adjust.slack.com/team/UEH49HKJ5">
                     <img class="customList__bullet" src="images/avatar-lucia.jpg" />
                     <h3 class="customList__title">Lucía</h3>
                     <p class="customList__description">UX Lead</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/USAEMLNRK">
+                <a class="customList__head" href="https://adjust.slack.com/team/USAEMLNRK">
                     <img class="customList__bullet" src="images/avatar-brooke.jpg" />
                     <h3 class="customList__title">Brooke</h3>
                     <p class="customList__description">Design System Lead Designer</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/US9SJ3Y84">
+                <a class="customList__head" href="https://adjust.slack.com/team/US9SJ3Y84">
                     <img class="customList__bullet" src="images/avatar-ikshat.jpg" />
                     <h3 class="customList__title">Ikshat</h3>
                     <p class="customList__description">Design System Designer</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/U4EP377GF">
+                <a class="customList__head" href="https://adjust.slack.com/team/U4EP377GF">
                     <img class="customList__bullet" src="images/avatar-jonas-w.jpg" />
                     <h3 class="customList__title">Jonas W.</h3>
                     <p class="customList__description">Product Manager</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/UT6QYA1HS">
+                <a class="customList__head" href="https://adjust.slack.com/team/UT6QYA1HS">
                     <img class="customList__bullet" src="images/avatar-jonas-h.jpg" />
                     <h3 class="customList__title">Jonas H.</h3>
                     <p class="customList__description">Developer, freelance</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/USX3TQ0JD">
+                <a class="customList__head" href="https://adjust.slack.com/team/USX3TQ0JD">
                     <img class="customList__bullet" src="images/avatar-oleg.jpg" />
                     <h3 class="customList__title">Oleg</h3>
                     <p class="customList__description">Developer, freelance</p>
                 </a>
             </li>
             <li class="customList__item">
-                <a class="customList__row" href="https://adjust.slack.com/team/UP2BTFJBV">
+                <a class="customList__head" href="https://adjust.slack.com/team/UP2BTFJBV">
                     <img class="customList__bullet" src="images/avatar-reimar.jpg" />
                     <h3 class="customList__title">Reimar</h3>
                     <p class="customList__description">Design System Consultant, freelance</p>
@@ -251,6 +252,7 @@ c-brand = brand text color
         </div>
     </div>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

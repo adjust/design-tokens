@@ -4,19 +4,19 @@
 
 @function svg-preserveStrokeWidth($size, $stroke) {
   /*
-  The base size of all icons is 24px × 24px and currently there is
-  no way to scale an SVG image and preserving its stroke width.
-  In order to render the intended stroke width, we need to calculate it.
+    The base size of all icons is 24px × 24px and currently there is
+    no way to scale an SVG image and preserving its stroke width.
+    In order to render the intended stroke width, we need to calculate it.
   */
   @return $stroke * (24 / $size);
 }
 
 @function svg-encode($svg) {
   /*
-  SVG encoder by Indrek Paas
-  https://gist.github.com/indrekpaas/4d6dfa5c29da805219d4149352c4703b
+    SVG encoder by Indrek Paas
+    https://gist.github.com/indrekpaas/4d6dfa5c29da805219d4149352c4703b
 
-  URL-encodes SVG strings in data URIs for better browser compatibility.
+    URL-encodes SVG strings in data URIs for better browser compatibility.
   */
 
   $encode: (
@@ -26,7 +26,7 @@
     "<": "%3C",
     ">": "%3E",
     "{": "%7B",
-    "}": "%7D"
+    "}": "%7D",
   );
 
   $string: "";

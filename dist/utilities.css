@@ -34,13 +34,13 @@ Example: .only-m:* is active only on screens within the width range of breakpoin
 */
 /* _utilityClasses.scss */
 /*
-"Private" mixin to generate a set of utility classes
-from either a list or map.
+  "Private" mixin to generate a set of utility classes
+  from either a list or map.
 */
 /*
-"Public" mixin to generate utility classes and
-responsive utility classes for all breakpoints
-(which can be disabled).
+  "Public" mixin to generate utility classes and
+  responsive utility classes for all breakpoints
+  (which can be disabled).
 */
 /* _border.scss */
 .b-darkmode-default {
@@ -193,13 +193,13 @@ Example: .only-m:* is active only on screens within the width range of breakpoin
 */
 /* _utilityClasses.scss */
 /*
-"Private" mixin to generate a set of utility classes
-from either a list or map.
+  "Private" mixin to generate a set of utility classes
+  from either a list or map.
 */
 /*
-"Public" mixin to generate utility classes and
-responsive utility classes for all breakpoints
-(which can be disabled).
+  "Public" mixin to generate utility classes and
+  responsive utility classes for all breakpoints
+  (which can be disabled).
 */
 /* _color.scss */
 /*
@@ -404,13 +404,13 @@ Example: .only-m:* is active only on screens within the width range of breakpoin
 */
 /* _utilityClasses.scss */
 /*
-"Private" mixin to generate a set of utility classes
-from either a list or map.
+  "Private" mixin to generate a set of utility classes
+  from either a list or map.
 */
 /*
-"Public" mixin to generate utility classes and
-responsive utility classes for all breakpoints
-(which can be disabled).
+  "Public" mixin to generate utility classes and
+  responsive utility classes for all breakpoints
+  (which can be disabled).
 */
 /* _width.scss */
 /* _space.scss */
@@ -2699,13 +2699,13 @@ $space-100 = 10 times 8px ... etc.
 /* _preserveEscapedString.scss */
 /* _utilityClasses.scss */
 /*
-"Private" mixin to generate a set of utility classes
-from either a list or map.
+  "Private" mixin to generate a set of utility classes
+  from either a list or map.
 */
 /*
-"Public" mixin to generate utility classes and
-responsive utility classes for all breakpoints
-(which can be disabled).
+  "Public" mixin to generate utility classes and
+  responsive utility classes for all breakpoints
+  (which can be disabled).
 */
 /* _space.scss */
 /*

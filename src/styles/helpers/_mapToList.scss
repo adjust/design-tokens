@@ -1,0 +1,32 @@
+/* _mapToList.scss */
+
+@function mapToList($value, $keep: "both") {
+  /*
+    Turns a SASS map into a SASS list with the option to
+    keep either the keys or the values.
+
+    https://hugogiraudel.com/2014/04/28/casting-map-into-list/
+  */
+
+  $keep: if(index("keys" "values", $keep), $keep, "both");
+
+  @if type-of($value) == "map" {
+    $keys: ();
+    $values: ();
+
+    @each $key, $val in $value {
+      $keys: append($keys, $key);
+      $values: append($values, $val);
+    }
+
+    @if $keep == "keys" {
+      @return $keys;
+    } @else if $keep == "values" {
+      @return $values;
+    } @else {
+      @return zip($keys, $values);
+    }
+  }
+
+  @return if(type-of($value) != "list", ($value), $value);
+}

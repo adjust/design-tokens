@@ -1,0 +1,29 @@
+/* _visibility.scss */
+
+@mixin hidden {
+  display: none;
+}
+
+@mixin visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+@mixin visuallyHiddenFocusable {
+  &:active,
+  &:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+    width: auto;
+  }
+}
+
+@mixin invisible {
+  visibility: hidden;
+}

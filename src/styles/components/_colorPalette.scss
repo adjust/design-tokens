@@ -1,0 +1,27 @@
+/* _colorPalette.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+@use "../helpers/colorPalette" as *;
+
+.colorPalette {
+  font-size: 0;
+  overflow: hidden;
+  display: flex;
+  border-radius: $defaultBorderRadius;
+  border: 1px solid $color-neutral-30;
+  height: $space-50;
+}
+
+.colorPalette--neutral {
+  @include colorPalette($color-neutral);
+}
+
+.colorPalette--negative {
+  @include colorPalette($color-negative);
+}
+
+.colorPalette--primary {
+  @include colorPalette($color-primary);
+}
