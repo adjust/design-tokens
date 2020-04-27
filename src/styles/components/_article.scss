@@ -20,11 +20,61 @@
 
   & > * + *,
   & li > p + p {
-    margin-top: $defaultVerticalSpace;
     @include typeScale-2();
+    margin-top: $defaultVerticalSpace;
   }
 
   & li + li {
     margin-top: $decreasedVerticalSpace;
   }
+
+  // headings
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:not(:first-child) {
+      margin-top: $defaultVerticalSpace * 2;
+    }
+  }
+
+  h1 {
+    @include heading-1();
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include fontWeight-medium();
+    @include typeScale-3();
+  }
+
+  // table
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  th {
+  }
+
+  td {
+    border-bottom: $color-neutral-30 1px solid;
+    padding: $space-10 0;
+  }
+
+  tr:last-child td {
+    border: 0;
+  }
+}
+
+.article__intro {
+  @include typeScale-3();
 }

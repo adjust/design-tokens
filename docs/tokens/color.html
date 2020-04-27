@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1" />
+        <title>Adjust UI Design Language</title>
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css" />
+        <link rel="stylesheet" href="/design-tokens/page.css" />
+        <link rel="stylesheet" href="/design-tokens/utilities.css" />
+    </head>
+    <body>
+    <div class="m-x-auto p-l-30 p-r-30 w-max article p-t-200 p-b-200">
+        <h1>Color</h1>
+        <p class="article__intro">These tokens represent all colors in the UI – text, background, icons, etc. There are three main colors with 16 shades each.</p>
+        <h2>Alias Color Tokens</h2>
+        <p>These tokens have names which communicate their intended and purpose. They mostly global color tokens, therefore the term <i>alias</i>.</p>
+        <table>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#08d3ff">#08d3ff</span></td>
+                <td><code>$color-brand</code></td>
+                <td>The Adjust brand color</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#ffffff">#ffffff</span></td>
+                <td><code>$color-white</code></td>
+                <td>Plain white</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#0b0d18">#0b0d18</span></td>
+                <td><code>$color-black</code></td>
+                <td>The darkest UI color</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#1a62ff">#1a62ff</span></td>
+                <td><code>$color-focus</code></td>
+                <td>For focussed input elements</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#353a52">#353a52</span></td>
+                <td><code>$lightmode-color-text</code></td>
+                <td>Default text color in light mode</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#f4f5f9">#f4f5f9</span></td>
+                <td><code>$darkMode-color-text</code></td>
+                <td>Default text color in dark mode</td>
+            </tr>
+        </table>
+        <div class="info">
+            <p><b>Please Notice:</b> As the team is currently finishing up the UI design language, there will be more alias tokens available soon.</p>
+        </div>
+        <h2>Global Neutral Color Tokens</h2>
+        <p>Basic, most used colors for the whole UI – the lower the number, the lighter the color.</p>
+        <table>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#f4f5f9">#f4f5f9</span></td>
+                <td><code>$color-neutral-10</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#eceef4">#eceef4</span></td>
+                <td><code>$color-neutral-20</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#e0e2ec">#e0e2ec</span></td>
+                <td><code>$color-neutral-30</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#cdd0e0">#cdd0e0</span></td>
+                <td><code>$color-neutral-40</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#b5bad0">#b5bad0</span></td>
+                <td><code>$color-neutral-50</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#9ca2bd">#9ca2bd</span></td>
+                <td><code>$color-neutral-60</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#858ca9">#858ca9</span></td>
+                <td><code>$color-neutral-70</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#6e7492">#6e7492</span></td>
+                <td><code>$color-neutral-80</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#565c78">#565c78</span></td>
+                <td><code>$color-neutral-90</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#434862">#434862</span></td>
+                <td><code>$color-neutral-100</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#353a52">#353a52</span></td>
+                <td><code>$color-neutral-110</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#2a2f45">#2a2f45</span></td>
+                <td><code>$color-neutral-120</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#21253a">#21253a</span></td>
+                <td><code>$color-neutral-130</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#191d2f">#191d2f</span></td>
+                <td><code>$color-neutral-140</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#121523">#121523</span></td>
+                <td><code>$color-neutral-150</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#0b0d18">#0b0d18</span></td>
+                <td><code>$color-neutral-160</code></td>
+            </tr>
+        </table>
+        <h2>Global Primary Color Tokens</h2>
+        <p>Primary highlight color, also the primary brand color, used for all kinds of CTAs – the lower the number, the lighter the color.</p>
+        <table>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#edfcff">#edfcff</span></td>
+                <td><code>$color-primary-10</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#ccf6ff">#ccf6ff</span></td>
+                <td><code>$color-primary-20</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#a7efff">#a7efff</span></td>
+                <td><code>$color-primary-30</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#7be6ff">#7be6ff</span></td>
+                <td><code>$color-primary-40</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#43dcff">#43dcff</span></td>
+                <td><code>$color-primary-50</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#08d3ff">#08d3ff</span></td>
+                <td><code>$color-primary-60</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#07c5ee">#07c5ee</span></td>
+                <td><code>$color-primary-70</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#07add3">#07add3</span></td>
+                <td><code>$color-primary-80</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#0590b0">#0590b0</span></td>
+                <td><code>$color-primary-90</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#047088">#047088</span></td>
+                <td><code>$color-primary-100</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#035567">#035567</span></td>
+                <td><code>$color-primary-110</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#023d4b">#023d4b</span></td>
+                <td><code>$color-primary-120</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#012c35">#012c35</span></td>
+                <td><code>$color-primary-130</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#011f26">#011f26</span></td>
+                <td><code>$color-primary-140</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#001419">#001419</span></td>
+                <td><code>$color-primary-150</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#00080a">#00080a</span></td>
+                <td><code>$color-primary-160</code></td>
+            </tr>
+        </table>
+        <h2>Global Negative Color Tokens</h2>
+        <p>Semantic coloring to mark destructive actions or error messages - the lower the number, the lighter the color.</p>
+        <table>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#fff5f5">#fff5f5</span></td>
+                <td><code>$color-negative-10</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#ffe4e2">#ffe4e2</span></td>
+                <td><code>$color-negative-20</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#fdcecc">#fdcecc</span></td>
+                <td><code>$color-negative-30</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#f9b3b0">#f9b3b0</span></td>
+                <td><code>$color-negative-40</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#f39994">#f39994</span></td>
+                <td><code>$color-negative-50</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#ea807b">#ea807b</span></td>
+                <td><code>$color-negative-60</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#df6a63">#df6a63</span></td>
+                <td><code>$color-negative-70</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#d25650">#d25650</span></td>
+                <td><code>$color-negative-80</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#c2433c">#c2433c</span></td>
+                <td><code>$color-negative-90</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#ab332d">#ab332d</span></td>
+                <td><code>$color-negative-100</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#902520">#902520</span></td>
+                <td><code>$color-negative-110</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#6c1914">#6c1914</span></td>
+                <td><code>$color-negative-120</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#4d0f0c">#4d0f0c</span></td>
+                <td><code>$color-negative-130</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#360a07">#360a07</span></td>
+                <td><code>$color-negative-140</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#200504">#200504</span></td>
+                <td><code>$color-negative-150</code></td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleColor" style="background-color:#0b0101">#0b0101</span></td>
+                <td><code>$color-negative-160</code></td>
+            </tr>
+        </table>
+    </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

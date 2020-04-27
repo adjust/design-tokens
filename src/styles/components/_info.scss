@@ -1,0 +1,21 @@
+/* _info.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+@use "../design-tokens/typography" as *;
+
+.info {
+  @include defaultBorderRadius();
+  @include typeScale-2();
+  background: $color-neutral-20;
+  padding: $space-40;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: $space-20;
+  }
+}

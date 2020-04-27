@@ -1,0 +1,35 @@
+/* _tokenSample.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+
+.tokenSampleColor {
+  border-radius: $defaultBorderRadius;
+  border: 1px solid $color-neutral-30;
+  color: $color-neutral-70;
+  display: inline-block;
+  font-family: monospace;
+  height: $space-30;
+  margin-right: $space-100;
+  text-indent: $space-40;
+  width: $space-30;
+}
+
+.tokenSampleBorder {
+}
+
+.tokenSampleSpace {
+}
+
+.tokenSampleIcon {
+}
+
+.tokenSamplelayerStyle {
+}
+
+.tokenSampleTime {
+}
+
+.tokenSampleTypography {
+}

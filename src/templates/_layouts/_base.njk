@@ -1,3 +1,8 @@
+{% if env.NODE_ENV === 'local' %}
+    {% set baseDir = '/' %}
+{% elif env.NODE_ENV === 'ghpages' %}
+    {% set baseDir = '/design-tokens/' %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,13 +15,13 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         #}
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css" />
-        <link rel="stylesheet" href="page.css" />
-        <link rel="stylesheet" href="utilities.css" />
+        <link rel="stylesheet" href="{{ baseDir }}page.css" />
+        <link rel="stylesheet" href="{{ baseDir }}utilities.css" />
     </head>
     <body>
         {% block main %}{% endblock %}
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        {# <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> #}
         <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

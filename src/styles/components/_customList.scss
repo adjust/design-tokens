@@ -18,7 +18,7 @@
   padding: 0;
 }
 
-.customList__head {
+.customList__content {
   align-items: flex-start;
   border-bottom: 1px solid $color-neutral-30;
   color: $lightmode-color-text;
@@ -41,17 +41,6 @@
 
   .customList__item:last-child & {
     border: 0;
-  }
-}
-
-.customList__body {
-  @include noUserSelect();
-  padding: 0 $space-45;
-  border-bottom: 1px solid $color-neutral-30;
-  overflow: hidden;
-
-  p {
-    @include typeScale-2();
   }
 }
 
