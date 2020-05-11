@@ -2,25 +2,21 @@
 
 @use "color" as *;
 
-// default border style
+// application frame border
 
-@mixin darkmode-defaultBorder($important: null) {
+@mixin darkmode-applicationFrameBorder($important: null) {
   border-color: $color-neutral-120 $important;
   border-style: solid $important;
   border-width: 1px $important;
 }
 
-@mixin lightmode-defaultBorder($important: null) {
-  border-color: $color-neutral-40 $important;
+@mixin lightmode-applicationFrameBorder($important: null) {
+  border-color: $color-neutral-30 $important;
   border-style: solid $important;
   border-width: 1px $important;
 }
 
 // default border radius
 
-$defaultBorderRadius: 2px;
-
-@mixin defaultBorderRadius($important: null) {
-  border-radius: $defaultBorderRadius $important;
-  background-clip: padding-box $important;
-}
+$borderRadius-small: 4px;
+$borderRadius-large: 8px;

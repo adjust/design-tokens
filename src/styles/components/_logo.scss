@@ -1,0 +1,11 @@
+/* logo.scss */
+
+@use "../design-tokens/color" as *;
+@use "../design-tokens/space" as *;
+
+.logo--large {
+  margin-bottom: -56px;
+  margin-left: -4px;
+  height: $space-100;
+  width: $space-100;
+}

@@ -1,0 +1,62 @@
+/* _slideShow.scss */
+
+@use "../design-tokens/border" as *;
+@use "../design-tokens/breakPoint" as *;
+@use "../design-tokens/color" as *;
+@use "../design-tokens/dimension" as *;
+@use "../design-tokens/space" as *;
+
+.slideShow {
+  box-sizing: border-box;
+  height: 50%;
+  padding: 50% 0 0 0;
+  position: relative;
+  width: 100%;
+
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint-l() {
+    height: 400px;
+    margin: 80px 0 56px -84px;
+    width: 800px;
+  }
+}
+
+.slideShow__slide {
+  background-clip: padding-box;
+  border-radius: $borderRadius-large;
+  border: $color-neutral-30 1px solid;
+  display: block;
+  height: auto;
+  margin: 0 0 0 -1px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &:nth-of-type(1) {
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-name: fade;
+    z-index: 20;
+  }
+
+  &:nth-of-type(2) {
+    z-index: 10;
+  }
+
+  &:nth-of-type(n + 3) {
+    display: none;
+  }
+}
+
+.slideShow__slide--dark {
+  border-color: $color-neutral-160;
+}

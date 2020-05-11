@@ -6,9 +6,9 @@
 @use "../design-tokens/typography" as *;
 
 .info {
-  @include defaultBorderRadius();
   @include typeScale-2();
-  background: $color-neutral-20;
+  background: $color-neutral-10;
+  border-radius: $borderRadius-small;
   padding: $space-40;
 
   p {

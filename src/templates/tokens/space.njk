@@ -1,0 +1,31 @@
+{% import '_macros/_code.njk' as code %}
+
+{% extends '_layouts/_base.njk' %}
+{% block main %}
+    <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
+        <h1>Space</h1>
+        <p class="article__intro">A spacing scale for margins, paddings and positioning</p>
+        <div class="info">
+            <p><b>Hint:</b> You can read the postfix of the variable names as multiplicants of 8px, eg: $space-05  = 0,5 times 8px, $space-20  = 2 times 8px, etc.</p>
+        </div>
+        <table class="tokenSampleTable">
+            {% for i in range(1, 21) -%}
+                {% if (i * 5 === 5) %}
+                    {% set id = '05' %}
+                {% else %}
+                    {% set id = i * 5 %}
+                {% endif %}
+                <tr>
+                    <td><code class="language-scss">$space-{{ id }}</code></td>
+                    <td>{{ i * 4 }}px</td>
+                    <td><span class="tokenSampleSpace tokenSampleSpace--{{ id }}"></span></td>
+                </tr>
+            {%- endfor %}
+            <tr>
+                <td><code class="language-scss">$space-200</code></td>
+                <td>160px</td>
+                <td><span class="tokenSampleSpace tokenSampleSpace--200"></span></td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

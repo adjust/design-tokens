@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=1" />
+        <title>Adjust UI Design Language</title>
+        
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css" />
+        <link rel="stylesheet" href="/design-tokens/page.css" />
+        <link rel="stylesheet" href="/design-tokens/utilities.css" />
+    </head>
+    <body>
+    <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
+        <h1>Time</h1>
+        <p class="article__intro">Tokens to define timing for UI transitions or animations.</p>
+        <table class="tokenSampleTable">
+            <tr>
+                <td><span class="tokenSampleTime tokenSampleTime--inSmall"></span></td>
+                <td><code class="language-scss">$duration-in-small</code></td>
+                <td>75ms</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleTime tokenSampleTime--outSmall"></span></td>
+                <td><code class="language-scss">$duration-out-small</code></td>
+                <td>120ms</td>
+            </tr>
+        </table>
+        <div class="info">
+            <p>As a rule of thumb, UI elements which are small in size can have faster animations than large lements.</p>
+            <p>Hence the postfix "-small": We use these tokens below mostly for subtle hover effects on small components like buttons. We are are going to add more for large components as we build them.</p>
+        </div>
+    </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

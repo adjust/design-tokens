@@ -5,7 +5,7 @@
 
 html,
 body {
-  background-color: $lightmode-color-background-z2;
+  background-color: #fff;
   color: $lightmode-color-text;
   margin: 0;
   padding: 0;
@@ -30,4 +30,8 @@ body {
 ::selection {
   background-color: $color-primary-10;
   color: $color-primary-120;
+}
+
+* {
+  box-sizing: border-box;
 }

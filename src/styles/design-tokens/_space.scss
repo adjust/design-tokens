@@ -20,11 +20,17 @@ $space: (
   "40": 32px,
   "45": 36px,
   "50": 40px,
+  "55": 44px,
+  "60": 48px,
+  "65": 52px,
+  "70": 56px,
+  "75": 60px,
+  "80": 64px,
+  "85": 68px,
+  "90": 72px,
+  "95": 76px,
   "100": 80px,
   "200": 160px,
-  "300": 240px,
-  "400": 320px,
-  "500": 400px,
 );
 
 $space-05: map-get($space, "05");
@@ -37,17 +43,17 @@ $space-35: map-get($space, "35");
 $space-40: map-get($space, "40");
 $space-45: map-get($space, "45");
 $space-50: map-get($space, "50");
+$space-55: map-get($space, "55");
+$space-60: map-get($space, "60");
+$space-65: map-get($space, "65");
+$space-70: map-get($space, "70");
+$space-75: map-get($space, "75");
+$space-80: map-get($space, "80");
+$space-85: map-get($space, "85");
+$space-90: map-get($space, "90");
+$space-95: map-get($space, "95");
 $space-100: map-get($space, "100");
 $space-200: map-get($space, "200");
-$space-300: map-get($space, "300");
-$space-400: map-get($space, "400");
-$space-500: map-get($space, "500");
-
-$space-xs: map-get($space, "05");
-$space-s: map-get($space, "10");
-$space-m: map-get($space, "20");
-$space-l: map-get($space, "50");
-$space-xl: map-get($space, "500");
 
 // vertical rhythm
 

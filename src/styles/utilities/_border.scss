@@ -4,20 +4,24 @@
 @use "../design-tokens/color" as *;
 @use "../helpers/utilityClasses" as *;
 
-// default borders for dark and light mode
+// application frame borders for dark and light mode
 
-.b-darkmode-default {
-  @include darkmode-defaultBorder(!important);
+.b-darkmode-applicationFrameBorder {
+  @include darkmode-applicationFrameBorder(!important);
 }
 
-.b-lightmode-default {
-  @include lightmode-defaultBorder(!important);
+.b-lightmode-applicationFrameBorder {
+  @include lightmode-applicationFrameBorder(!important);
 }
 
 // default rounded corners
 
-.b-rounded {
-  @include defaultBorderRadius(!important);
+.b-rounded-small {
+  border-radius: $borderRadius-small !important;
+}
+
+.b-rounded-large {
+  border-radius: $borderRadius-large !important;
 }
 
 // solid border, no border color

@@ -65,7 +65,7 @@
   // as image
 
   @at-root img#{&} {
-    @include defaultBorderRadius;
+    border-radius: $borderRadius-small;
     filter: grayscale(100%);
   }
 

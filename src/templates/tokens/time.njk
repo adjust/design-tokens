@@ -1,0 +1,25 @@
+{% import '_macros/_code.njk' as code %}
+
+{% extends '_layouts/_base.njk' %}
+{% block main %}
+    <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
+        <h1>Time</h1>
+        <p class="article__intro">Tokens to define timing for UI transitions or animations.</p>
+        <table class="tokenSampleTable">
+            <tr>
+                <td><span class="tokenSampleTime tokenSampleTime--inSmall"></span></td>
+                <td><code class="language-scss">$duration-in-small</code></td>
+                <td>75ms</td>
+            </tr>
+            <tr>
+                <td><span class="tokenSampleTime tokenSampleTime--outSmall"></span></td>
+                <td><code class="language-scss">$duration-out-small</code></td>
+                <td>120ms</td>
+            </tr>
+        </table>
+        <div class="info">
+            <p>As a rule of thumb, UI elements which are small in size can have faster animations than large lements.</p>
+            <p>Hence the postfix "-small": We use these tokens below mostly for subtle hover effects on small components like buttons. We are are going to add more for large components as we build them.</p>
+        </div>
+    </div>
+{% endblock %}

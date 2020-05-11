@@ -1,0 +1,77 @@
+{% import '_macros/_code.njk' as code %}
+
+{% extends '_layouts/_base.njk' %}
+{% block main %}
+    <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
+        <h1>Breakpoint</h1>
+        <p class="article__intro">Global mixins to create responsive layouts.</p>
+        <h2>Fluid Breakpoint Mixins</h2>
+        <p>Media queries with these breakpoints kick in as soon as a certain screen width is reached. A larger breakpoint overrides all smaller ones. Example: <code>breakpoint-m</code> is active <i>from screen size M and up</i>.</p>
+        <table class="tokenSampleTable">
+            <tr>
+                <td><code class="language-scss">breakpoint-m()</code></td>
+                <td>Screen width range from <code>$bp-m-minWidth</code> up to breakpoint L</td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">breakpoint-l()</code></td>
+                <td>Screen width range from <code>$bp-l-minWidth</code> up to breakpoint XL</td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">breakpoint-xl()</code></td>
+                <td>Screen width range from <code>$bp-xl-minWidth</code> up to any larger width</td>
+            </tr>
+        </table>
+        <div class="tokenSampleBreakPoint"></div>
+        <div class="info">
+            <p><b>Where is breakpoint S?</b> We follow a <i>Mobile-First</i> approach – which means all styling applies to small screens by default. Other breakpoints need explicit declaration.</p>
+        </div>
+        <h2>Strict Breakpoint Mixins</h2>
+        <p>Media queries with these breakpoints are active only in their certain range. Example: <code>breakpoint-only-m</code> is active only on screens within the width range of breakpoint M.</p>
+        <table class="tokenSampleTable">
+            <tr>
+                <td><code class="language-scss">breakpoint-only-s()</code></td>
+                <td>Only affects the screen width range S</td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">breakpoint-only-m()</code></td>
+                <td>Only affects the screen width range M</td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">breakpoint-only-l()</code></td>
+                <td>Only affects the screen width range L</td>
+            </tr>
+        </table>
+        <div class="info">
+            <p><b>Fluid over Strict:</b> Use fluid breakpoints over strict breakpoints. Only use strict breakpoints sparely, eg. for tweaking a component layout for certain screen width ranges only.</p>
+        </div>
+        <h2>How to Use Breakpoint Mixins</h2>
+        {{ code.print('_breakpoint-mixin', 'scss') }}
+        <div class="info">
+            <p><b>I need more breakpoints for my component!</b> We decided to start with only a few <i>global</i> breakpoints. Feel free to introduce component-specific breakpoints – you will need to do this anyways to tweak component layout issues. As soon as we discover the need for more global breakpoints, we will add them.</p>
+        </div>
+        <h2>Screen-Width Ranges</h2>
+        <p>These are rather internal variables which you most likely don’t need to use in your code since you might want to use the breakpoint mixins instead.</p>
+        <table class="tokenSampleTable">
+            <tr>
+                <td><code class="language-scss">$bp-s-maxWidth</code></td>
+                <td><code>649px</code></td>
+                <td>Maximum width to define where the <i>screen width range S</i> ends</td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">$bp-m-minWidth<br />$bp-m-maxWidth</code></td>
+                <td><code>650px<br />959px</code></td>
+                <td>Minimum and maximum widths to define the <i>screen width range M</i></td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">$bp-l-minWidth<br />$bp-l-maxWidth</code></td>
+                <td><code>650px<br />959px</code></td>
+                <td>Minimum and maximum widths to define the <i>screen width range L</i></td>
+            </tr>
+            <tr>
+                <td><code class="language-scss">$bp-xl-minWidth</code></td>
+                <td><code>650px</code></td>
+                <td>Minimum width from which the <i>screen width range XL</i> starts</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

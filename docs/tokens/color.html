@@ -11,12 +11,12 @@
         <link rel="stylesheet" href="/design-tokens/utilities.css" />
     </head>
     <body>
-    <div class="m-x-auto p-l-30 p-r-30 w-max article p-t-200 p-b-200">
+    <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
         <h1>Color</h1>
         <p class="article__intro">These tokens represent all colors in the UI – text, background, icons, etc. There are three main colors with 16 shades each.</p>
         <h2>Alias Color Tokens</h2>
-        <p>These tokens have names which communicate their intended and purpose. They mostly global color tokens, therefore the term <i>alias</i>.</p>
-        <table>
+        <p>These tokens have names which communicate their intended and purpose. They mostly reference other color tokens, therefore the term <i>alias</i>.</p>
+        <table class="tokenSampleTable">
             <tr>
                 <td><span class="tokenSampleColor" style="background-color:#08d3ff">#08d3ff</span></td>
                 <td><code>$color-brand</code></td>
@@ -49,11 +49,11 @@
             </tr>
         </table>
         <div class="info">
-            <p><b>Please Notice:</b> As the team is currently finishing up the UI design language, there will be more alias tokens available soon.</p>
+            <p><b>Please Notice:</b> As the team is currently finishing up the UI design language, more alias tokens will be available soon.</p>
         </div>
         <h2>Global Neutral Color Tokens</h2>
         <p>Basic, most used colors for the whole UI – the lower the number, the lighter the color.</p>
-        <table>
+        <table class="tokenSampleTable">
             <tr>
                 <td><span class="tokenSampleColor" style="background-color:#f4f5f9">#f4f5f9</span></td>
                 <td><code>$color-neutral-10</code></td>
@@ -121,7 +121,7 @@
         </table>
         <h2>Global Primary Color Tokens</h2>
         <p>Primary highlight color, also the primary brand color, used for all kinds of CTAs – the lower the number, the lighter the color.</p>
-        <table>
+        <table class="tokenSampleTable">
             <tr>
                 <td><span class="tokenSampleColor" style="background-color:#edfcff">#edfcff</span></td>
                 <td><code>$color-primary-10</code></td>
@@ -189,7 +189,7 @@
         </table>
         <h2>Global Negative Color Tokens</h2>
         <p>Semantic coloring to mark destructive actions or error messages - the lower the number, the lighter the color.</p>
-        <table>
+        <table class="tokenSampleTable">
             <tr>
                 <td><span class="tokenSampleColor" style="background-color:#fff5f5">#fff5f5</span></td>
                 <td><code>$color-negative-10</code></td>
@@ -255,6 +255,9 @@
                 <td><code>$color-negative-160</code></td>
             </tr>
         </table>
+        <div class="info">
+            <p><b>Good to know:</b> The color shades are carefully visually corrected and not the result of an algorithm. We made sure that shades from different colors match closely in perceived luminosity, eg. <code>$color-neutral-80</code> appears as bright as <code>$color-primary-80</code>.</p>
+        </div>
     </div>
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
         

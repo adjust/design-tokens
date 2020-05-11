@@ -5,6 +5,14 @@
 @use "../design-tokens/space" as *;
 @use "../design-tokens/typography" as *;
 
+.foo {
+  color: blue;
+
+  &__bar {
+    color: red;
+  }
+}
+
 .article {
   @include uiFont();
   max-width: $maxContentWidth;
@@ -52,26 +60,6 @@
   h6 {
     @include fontWeight-medium();
     @include typeScale-3();
-  }
-
-  // table
-
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-  }
-
-  th {
-  }
-
-  td {
-    border-bottom: $color-neutral-30 1px solid;
-    padding: $space-10 0;
-  }
-
-  tr:last-child td {
-    border: 0;
   }
 }
 

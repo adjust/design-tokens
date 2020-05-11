@@ -1,35 +1,300 @@
 /* _tokenSample.scss */
 
 @use "../design-tokens/border" as *;
+@use "../design-tokens/breakpoint" as *;
 @use "../design-tokens/color" as *;
 @use "../design-tokens/space" as *;
+@use "../design-tokens/time" as *;
+
+// table
+
+.tokenSampleTable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th {
+  }
+
+  td {
+    border-bottom: $color-neutral-30 1px solid;
+    padding: $space-10 0;
+    vertical-align: top;
+  }
+
+  td + td {
+    padding-left: $space-20;
+  }
+
+  tr:last-child td {
+    border: 0;
+  }
+}
+
+// color
 
 .tokenSampleColor {
-  border-radius: $defaultBorderRadius;
+  border-radius: 50%;
   border: 1px solid $color-neutral-30;
   color: $color-neutral-70;
-  display: inline-block;
+  display: block;
   font-family: monospace;
+  font-size: 14px;
   height: $space-30;
   margin-right: $space-100;
   text-indent: $space-40;
   width: $space-30;
 }
 
+// border
+
 .tokenSampleBorder {
+  border-radius: $borderRadius-small;
+  border: 1px solid $color-neutral-30;
+  box-sizing: border-box;
+  display: block;
+  height: $space-100;
+  position: relative;
+  width: $space-100;
+
+  &:after {
+    content: " ";
+    left: $space-20;
+    position: absolute;
+    right: $space-20;
+    top: 50%;
+  }
+
+  &--small,
+  &--large {
+    background: $color-neutral-10;
+
+    &:after {
+      border-color: $color-neutral-60;
+      border-style: solid;
+      border-width: 1px;
+      bottom: $space-20;
+      left: $space-20;
+      position: absolute;
+      right: $space-20;
+      top: $space-20;
+    }
+  }
+
+  &--small:after {
+    border-radius: $borderRadius-small;
+  }
+
+  &--large:after {
+    border-radius: $borderRadius-large;
+  }
+
+  &--darkMode-applicationFrame {
+    background: $color-neutral-160;
+    border: 0;
+
+    &:after {
+      @include darkmode-applicationFrameBorder();
+    }
+  }
+
+  &--lightMode-applicationFrame {
+    background: $color-neutral-10;
+
+    &:after {
+      @include lightmode-applicationFrameBorder();
+    }
+  }
+
+  &--darkMode-applicationFrame:after,
+  &--lightMode-applicationFrame:after {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
 }
 
-.tokenSampleSpace {
+// breakpoint
+
+.tokenSampleBreakPoint {
+  border-radius: $borderRadius-small;
+  background: #cbdcff;
+  padding: $space-10 $space-15;
+
+  &:after {
+    content: "You are on a small screen";
+  }
+
+  @include breakpoint-m() {
+    background: #ceffd4;
+
+    &:after {
+      content: "You are on a medium wide screen";
+    }
+  }
+
+  @include breakpoint-l() {
+    background: #ffdfe6;
+
+    &:after {
+      content: "You are on a wide screen";
+    }
+  }
+
+  @include breakpoint-xl() {
+    background: #ffe2ce;
+
+    &:after {
+      content: "You are on a extra wide screen";
+    }
+  }
 }
+
+// space
+
+.tokenSampleSpace {
+  background: $color-neutral-50;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  top: -2px;
+
+  &--05 {
+    width: $space-05;
+  }
+
+  &--10 {
+    width: $space-10;
+  }
+
+  &--15 {
+    width: $space-15;
+  }
+
+  &--20 {
+    width: $space-20;
+  }
+
+  &--25 {
+    width: $space-25;
+  }
+
+  &--30 {
+    width: $space-30;
+  }
+
+  &--35 {
+    width: $space-35;
+  }
+
+  &--40 {
+    width: $space-40;
+  }
+
+  &--45 {
+    width: $space-45;
+  }
+
+  &--50 {
+    width: $space-50;
+  }
+
+  &--55 {
+    width: $space-55;
+  }
+
+  &--60 {
+    width: $space-60;
+  }
+
+  &--65 {
+    width: $space-65;
+  }
+
+  &--70 {
+    width: $space-70;
+  }
+
+  &--75 {
+    width: $space-75;
+  }
+
+  &--80 {
+    width: $space-80;
+  }
+
+  &--85 {
+    width: $space-85;
+  }
+
+  &--90 {
+    width: $space-90;
+  }
+
+  &--95 {
+    width: $space-95;
+  }
+
+  &--100 {
+    width: $space-100;
+  }
+
+  &--200 {
+    width: $space-200;
+  }
+}
+
+// icon
 
 .tokenSampleIcon {
 }
 
+// layer style
+
 .tokenSamplelayerStyle {
 }
 
+// time
+
 .tokenSampleTime {
+  border-radius: 50%;
+  border: 1px solid $color-neutral-30;
+  display: inline-block;
+  height: $space-30;
+  position: relative;
+  transition: all;
+  width: $space-30;
+
+  &:after {
+    background: $color-neutral-30;
+    content: " ";
+    height: 1px;
+    left: -1px;
+    position: absolute;
+    top: 50%;
+    width: $space-30;
+  }
+
+  &:hover {
+    animation-name: rotate;
+    border-color: $color-neutral-80;
+    transform: rotate(180deg);
+
+    &:after {
+      background-color: $color-neutral-80;
+    }
+  }
+
+  &--inSmall {
+    transition-duration: $duration-in-small;
+  }
+
+  &--outSmall {
+    transition-duration: $duration-out-small;
+  }
 }
+
+// typography
 
 .tokenSampleTypography {
 }

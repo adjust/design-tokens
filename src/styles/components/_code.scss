@@ -9,9 +9,13 @@ Styling for the syntax-highlighted code
 via https://highlightjs.org
 */
 
+code {
+  font-size: 14px;
+}
+
 .hljs {
-  @include defaultBorderRadius;
-  background: $color-neutral-20;
+  background: $color-neutral-10;
+  border-radius: $borderRadius-small;
   color: $color-neutral-80;
   line-height: $space-30;
   padding: $space-20;

@@ -15,7 +15,7 @@ $bp-l-maxWidth: $bp-xl-minWidth - 1px;
 /*
 Media queries with these breakpoints kick in as soon as a certain screen
 width is reached. A larger breakpoint overrides all smaller ones.
-Example: .m:* is active "from screen size m and up".
+Example: breakpoint-m is active from screen size M and up.
 */
 
 @mixin breakpoint-m {
@@ -40,7 +40,7 @@ Example: .m:* is active "from screen size m and up".
 
 /*
 Media queries with these breakpoints are active only in their certain range.
-Example: .only-m:* is active only on screens within the width range of breakpoint "m".
+Example: breakpoint-only-m is active only on screens within the width range of breakpoint M.
 */
 
 @mixin breakpoint-only-s {
