@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,8 +8,8 @@
         <title>Adjust UI Design Language</title>
         
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/color-brewer.min.css" />
-        <link rel="stylesheet" href="/design-tokens/page.css" />
-        <link rel="stylesheet" href="/design-tokens/utilities.css" />
+        <link rel="stylesheet" href="/page.css" />
+        <link rel="stylesheet" href="/utilities.css" />
     </head>
     <body>
     <div class="m-x-auto p-l-30 p-r-30 w-max article l:p-t-200 l:p-b-200 m:p-t-80 m:p-b-80 p-t-40 p-b-40">
@@ -83,23 +84,19 @@
         <p>These are rather internal variables which you most likely don’t need to use in your code since you might want to use the breakpoint mixins instead.</p>
         <table class="tokenSampleTable">
             <tr>
-                <td><code class="language-scss">$bp-s-maxWidth</code></td>
-                <td><code>649px</code></td>
+                <td><code class="language-scss">$bp-s-maxWidth (649px)</code></td>
                 <td>Maximum width to define where the <i>screen width range S</i> ends</td>
             </tr>
             <tr>
-                <td><code class="language-scss">$bp-m-minWidth<br />$bp-m-maxWidth</code></td>
-                <td><code>650px<br />959px</code></td>
+                <td><code class="language-scss">$bp-m-minWidth (650px)<br />$bp-m-maxWidth (959px)</code></td>
                 <td>Minimum and maximum widths to define the <i>screen width range M</i></td>
             </tr>
             <tr>
-                <td><code class="language-scss">$bp-l-minWidth<br />$bp-l-maxWidth</code></td>
-                <td><code>650px<br />959px</code></td>
+                <td><code class="language-scss">$bp-l-minWidth (960px)<br />$bp-l-maxWidth (1439px)</code></td>
                 <td>Minimum and maximum widths to define the <i>screen width range L</i></td>
             </tr>
             <tr>
-                <td><code class="language-scss">$bp-xl-minWidth</code></td>
-                <td><code>650px</code></td>
+                <td><code class="language-scss">$bp-xl-minWidth (1440px)</code></td>
                 <td>Minimum width from which the <i>screen width range XL</i> starts</td>
             </tr>
         </table>
